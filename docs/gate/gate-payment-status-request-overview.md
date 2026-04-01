@@ -1,0 +1,14 @@
+# Payment status overview
+
+`payment/status`While working with the Platform payment platform, you can monitor up-to-date payment processing information using different capabilities (to learn more, see a dedicated overview). Alongside other interfaces, specialised requests to theendpoint group of the Gate API can be used for this purpose. These requests allow you to promptly retrieve information about specific payments at the time that is relevant to the merchant's web service and can be deeply integrated into the service functionality.
+
+To retrieve payment status information via the Gate API, two search options are available:
+
+`200error`Regardless of the search option, all payment status requests are processed according to the synchronous model of interaction between the web service and the payment platform. This implies that each such request is fully processed within one HTTP session and uses only the resources of the payment platform. The response to the correct request contains an HTTP response status code () and the required data without detailed request processing information. If the request is incorrect, or there have been issues with its acceptance and processing, then the response contains an HTTP response status code, request processing status, and the detailed description of the error that occurred. To learn more about HTTP response status codes, see , and to learn more about the response codes that provide information on operation processing in the payment platform, see .
+
+- *Search by payment ID*If the payment has been registered, the response to the payment status request contains up-to-date information about the payment.If the payment has not been registered (for example, when Payment Widget was opened and the customer closed it without confirming the payment), the response to the payment status request contains information that the payment has not been registered.. This is the primary option and it can be used at any time. The response content when using this option depends on whether the target payment has been registered in the platform.
+- *Search by request ID*. This is a supplementary option that, for correct information retrieval, should be used no earlier than 10 seconds after sending the request to process the target payment. Using this option can be relevant, for instance, when a payment request has not been accepted due to identified errors in the request format or content. In such cases, the response to the payment status request contains information about the errors that prevented the payment from being initiated.
+
+::: tip
+Generally, searching by request ID is not recommended as a replacement for the primary search by payment ID. Retrieving information about any payment after the request has been accepted is preferably done using the payment ID.
+:::

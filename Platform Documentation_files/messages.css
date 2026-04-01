@@ -1,0 +1,74 @@
+#warning-message-wrapper {
+    background-color: #FFF7D4;
+    width: 100%;
+    position: relative;
+    top: 40px;
+    min-width: 1197px;
+}
+
+.warning-message-lines {
+    background-image: url(../../dist/img/lines-background.svg);
+    width: 100%;
+    background-position: center;
+    background-position-y: -35px;
+    min-height: 40px;
+}
+
+.warning-message-container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.warning-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.warning-message-icon {
+    min-width: 24px;
+    min-height: 24px;
+    background-image: url(../../dist/img/WarningNoteBlock.svg);
+    margin-right: 16px;
+    background-position: top;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+}
+
+.warning-message-icon-and-text {
+    display: flex;
+    min-height: 40px;
+}
+
+.warning-message-text {
+    align-self: center;
+    padding-right: 16px;
+    padding-top: 11.5px;
+    margin-bottom: 11.5px;
+    color: #212121;
+    display: flex;
+    letter-spacing: 0.25px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.warning-message-cross {
+    align-self: start;
+    margin-top: 14px;
+    padding-right: 8px;
+}
+
+#warning-message-cross-icon {
+    width: 8px;
+    height: 8px;
+}
+
+#warning-message-cross-icon:hover {
+    cursor: pointer;
+}

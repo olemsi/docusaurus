@@ -1,0 +1,19 @@
+import { ssrRenderAttrs } from "vue/server-renderer";
+import { useSSRContext } from "vue";
+import { _ as _export_sfc } from "./plugin-vue_export-helper.1tPrXgE0.js";
+const __pageData = JSON.parse('{"title":"Workflow","description":"","frontmatter":{},"headers":[],"relativePath":"gate/gate-payment-auth-workflow.md","filePath":"gate/gate-payment-auth-workflow.md"}');
+const _sfc_main = { name: "gate/gate-payment-auth-workflow.md" };
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<div${ssrRenderAttrs(_attrs)}><h1 id="workflow" tabindex="-1">Workflow <a class="header-anchor" href="#workflow" aria-label="Permalink to &quot;Workflow&quot;">​</a></h1><p>When processing a two-step purchase by using Gate, the merchant web service is required to do the following:</p><p>The following diagram provides the detailed picture of an ordinary (without additional requests) two-step purchase processing procedure with cancelling an authorisation hold.</p><p>The sections that follow discuss in more details the request format and the required parameters and the information about the format of callbacks with payment results. For the general information on how to use the API, see . Information about possible statuses of this payment type can be found in the corresponding article.</p><ol><li>Send the request for an authorisation hold with payment details to the following endpoint:.</li><li><em>3‑D Secure authentication</em>. This authentication is intended to provide security to online payments by payment cards. For more information on the authentication workflow, as well as request and callback formats, see .<strong>Customer authentication on merchant&#39;s request</strong>. This authentication is intended to make purchases with payment cards more secure. For more information on the authentication workflow, as well as request and callback formats, see .<em>Additional payment information submission</em>. This procedure is intended for cases, where the initial request did not contain the information necessary for any payment process stakeholders. For more information on this procedure, see .If necessary, complete the additional procedures:</li><li>Receive a callback with the authorisation hold result from the payment platform.</li><li><code>/v2/payment/card/incremental</code>—to increase the authorised amount<code>/v2/payment/card/cancel</code>—to decrease the authorised amountThen, you need to receive a callback with the result of your authorised amount change request.If you need to change previously authorised amount without actually debiting customer account, send a request with the corresponding parameters to one of the following endpoints:</li><li><code>/v2/payment/card/capture</code>If you need debit amount different from the authorised amount, simply specify the debit amount and the currency in a request to theendpoint.Send the request for debiting customer account to theendpoint or the request for cancelling an authorisation hold to theendpoint.</li><li>Receive a callback with the payment result from the payment platform.</li><li>If needed, after completing a one-time one-step purchase you can return your customers their money, if the payment method supports refunds. For more information on this procedure, see .</li></ol></div>`);
+}
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("gate/gate-payment-auth-workflow.md");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const gatePaymentAuthWorkflow = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
+export {
+  __pageData,
+  gatePaymentAuthWorkflow as default
+};

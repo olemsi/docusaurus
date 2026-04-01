@@ -1,0 +1,19 @@
+import { ssrRenderAttrs } from "vue/server-renderer";
+import { useSSRContext } from "vue";
+import { _ as _export_sfc } from "./plugin-vue_export-helper.1tPrXgE0.js";
+const __pageData = JSON.parse('{"title":"Request format","description":"","frontmatter":{},"headers":[],"relativePath":"gate/gate-cof-gate-side-request.md","filePath":"gate/gate-cof-gate-side-request.md"}');
+const _sfc_main = { name: "gate/gate-cof-gate-side-request.md" };
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<div${ssrRenderAttrs(_attrs)}><h1 id="request-format" tabindex="-1">Request format <a class="header-anchor" href="#request-format" aria-label="Permalink to &quot;Request format&quot;">​</a></h1><p>using a payment cardThere are several things you need to consider when sending a request for a COF purchase with automatic debiting:</p><p>Thus, a correct request must contain the project identifier, basic payment information (identifier, amount, and currency code), customer IP address, signature, and the identifier of the debiting series record.</p><ol><li>To initiate each purchase, send a separate POST request to theendpoint.</li><li><code>general\`\`project_id</code>—project identifier obtained from Platform during integration.<code>payment_id</code>—payment identifier, unique within the project.<code>signature</code>—request signature generated after all required parameters are specified (details—in ).—object with general request identification information:<code>customer\`\`id</code>Using different customer identifiers for operations performed as part of the COF purchase is not allowed.—customer identifier, unique within the project, the same identifier as the one used to register this COF purchase.<code>ip_address</code>—customer IP address relevant for the initiated payment.—object with customer information:<code>payment\`\`amount</code>—payment amount in the smallest currency unit.<code>currency</code>—payment currency code in the ISO-4217 alpha-3 format.<code>cryptocurrency_type\`\`cbdc</code>—a central bank digital currency or tokenized deposit issued by a central bank, reserve bank, or other national monetary authority;<code>stablecoins_fiat_backed</code>—a fiat-backed digital asset with reserves held by a licensed financial institution;<code>native_tokens</code>—a digital currency native to a specific blockchain, required for transactions within its network, including fee payments;<code>other</code>—a non-fiat digital asset that does not fit other types or cannot be classified at the time of transaction initiation.—the indicator that specifies the type of the cryptocurrency, required for Visa payments involving cryptocurrencies. This parameter should be assigned one of the following values:—object with payment information:<code>recurring\`\`id</code>—identifier of the debit series received in the callback with the COF purchase registration data or assigned when the COF purchase information was migrated from another acquirer.—object with the COF payment information:Each request must include the following objects and parameters:</li><li>The set of parameters required for executing a payment can vary depending on the regional characteristics and other aspects of the payment services providers. Refer to your Platform account manager to learn more about the providers&#39; specifics and requirements.</li><li>Additionally, any other parameters included in the specification can be used.</li></ol></div>`);
+}
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("gate/gate-cof-gate-side-request.md");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const gateCofGateSideRequest = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
+export {
+  __pageData,
+  gateCofGateSideRequest as default
+};

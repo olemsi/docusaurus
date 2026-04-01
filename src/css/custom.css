@@ -1,0 +1,92 @@
+:root {
+  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'SFMono-Regular', monospace;
+  --ifm-color-primary: #b7a6ff;
+  --ifm-color-primary-dark: #a08aff;
+  --ifm-color-primary-darker: #967cff;
+  --ifm-color-primary-darkest: #7552ff;
+  --ifm-color-primary-light: #cebfff;
+  --ifm-color-primary-lighter: #d8ccff;
+  --ifm-color-primary-lightest: #ece5ff;
+  --ifm-background-color: #020202;
+  --ifm-background-surface-color: #0b0b0c;
+  --ifm-navbar-background-color: rgba(2, 2, 2, 0.82);
+  --ifm-footer-background-color: #060606;
+  --ifm-color-content: #ededed;
+  --ifm-color-content-secondary: #a1a1aa;
+  --ifm-border-color: #1c1c20;
+  --ifm-global-radius: 14px;
+  --ifm-code-font-size: 92%;
+}
+
+html[data-theme='dark'] {
+  --ifm-toc-border-color: #1c1c20;
+  --ifm-hr-border-color: #1c1c20;
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(211, 184, 255, 0.07), transparent 24%),
+    radial-gradient(circle at 88% 8%, rgba(108, 179, 255, 0.08), transparent 24%),
+    #020202;
+}
+
+.navbar {
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar__link {
+  border-radius: 8px;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: #e6dcff;
+}
+
+.theme-doc-sidebar-container,
+.theme-doc-sidebar-menu {
+  background: transparent;
+}
+
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible,
+.menu__link {
+  border-radius: 10px;
+}
+
+.menu__link:hover,
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible:hover {
+  background: rgba(183, 166, 255, 0.06);
+}
+
+.menu__link--active {
+  background: rgba(183, 166, 255, 0.08);
+  border: 1px solid rgba(183, 166, 255, 0.12);
+}
+
+.theme-doc-markdown h1,
+.theme-doc-markdown h2,
+.theme-doc-markdown h3 {
+  letter-spacing: -0.03em;
+}
+
+.theme-doc-markdown h2 {
+  border-bottom: 1px solid #1c1c20;
+  padding-bottom: 0.6rem;
+}
+
+.theme-doc-markdown p,
+.theme-doc-markdown li {
+  color: #b3b3bb;
+}
+
+.theme-code-block,
+pre {
+  border: 1px solid #1c1c20;
+}
+
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}

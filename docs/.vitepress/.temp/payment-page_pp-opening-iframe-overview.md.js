@@ -1,0 +1,19 @@
+import { ssrRenderAttrs } from "vue/server-renderer";
+import { useSSRContext } from "vue";
+import { _ as _export_sfc } from "./plugin-vue_export-helper.1tPrXgE0.js";
+const __pageData = JSON.parse('{"title":"Opening in iframe","description":"","frontmatter":{},"headers":[],"relativePath":"payment-page/pp-opening-iframe-overview.md","filePath":"payment-page/pp-opening-iframe-overview.md"}');
+const _sfc_main = { name: "payment-page/pp-opening-iframe-overview.md" };
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<div${ssrRenderAttrs(_attrs)}><h1 id="opening-in-iframe" tabindex="-1">Opening in iframe <a class="header-anchor" href="#opening-in-iframe" aria-label="Permalink to &quot;Opening in iframe&quot;">​</a></h1><p>When opened in an iframe element, the Payment Widget payment form is embedded in the merchant&#39;s web service HTML page. This option may not necessarily focus the customer&#39;s attention on the purchase but keeps the customer in the context of the web service, without interrupting their interaction with it and redirecting them to a different page.</p><p>For opening the payment form in an iframe element, the following should be performed on the web service side:</p><p>When processing Apple Pay payments via Payment Widget with the option to open the payment form in an iframe element, register your merchant domains with the Apple Pay service (learn more).</p><ol><li><code>https://paymentpage.platform.dev/shared/merchant.css</code>Link the CSS library from Platform on the client side of the web service for the payment form to be displayed correctly. The library is available at.</li><li>Define the events that will trigger the opening of the payment form (for example, the purchase button click).</li><li><code>https://paymentpage.platform.dev/shared/merchant.js</code>Set up the payment form to open upon the required events by using your in house-solutions or the JavaScript library from Platform available at.</li></ol><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>For the payment form to be displayed correctly, the minimum dimensions of the iframe element should be 320 and 600 pixels in width and height accordingly—if smaller dimensions are specified, the form does not fit into the element. For responsive display on desktop computers, the minimum width of the element should be 480 pixels. The restrictions on the maximum size are not imposed.</p></div><div class="warning custom-block"><p class="custom-block-title">WARNING</p><p>Keep in mind that to ensure correct behaviour of the payment form, you must link the Platform CSS library via the CDN (Content Delivery Network). Storing this library locally is not allowed.</p></div></div>`);
+}
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("payment-page/pp-opening-iframe-overview.md");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const ppOpeningIframeOverview = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
+export {
+  __pageData,
+  ppOpeningIframeOverview as default
+};

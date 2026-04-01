@@ -1,0 +1,5 @@
+# Interaction model
+
+When the Data API is used, the Platform payment platform and the merchant's web service interact by exchanging request and response messages in the HTTP format: the web service issues requests and the payment platform responds to those requests. The interaction model is synchronous as the request gets fully processed within one HTTP session and the one-time response is returned as a result, either with the requested information or the information about the error that occurred.
+
+This interaction model implies that all Data API requests (for instance, for balance information on the merchant's projects) are processed using only the resources of the payment platform, without resorting to other services and systems. At the same time, depending on the complexity of the request and the volume of the compiled data, the time to process an individual request in the payment platform can significantly vary: from several milliseconds to several minutes (as a rule, it does not exceed five minutes).

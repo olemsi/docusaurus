@@ -1,0 +1,65 @@
+# Migration workflow
+
+The information about COF purchases and tokens is migrated through an encrypted communication channel established between Platform and your current acquirer that provides the information. Migration timelines usually make up a maximum of one week for tokens and a maximum of two weeks for COF purchases. These timelines depend on various factors and can vary if it is required to set up additional parameters, they also can be discussed by the involved parties. If migration of the token information is completed and necessary for payment processing prior to the migration of the COF purchases information, its early usage can be arranged with the Platform specialists.
+
+To have the data migrated, the merchant should:
+
+Basic parameters for migration are covered below. Contact your Platform account manager for additional parameters setup.
+
+1. Agree with the other acquirer on the migration availability and conditions.
+2. an applicationIf you are not an Platform client, submitto connect and proceed with the onboarding process.Inform the Platform account manager that data migration is needed and agree on the migration timelines and the date to start payment processing.
+3. If it is necessary to migrate information for several projects in the platform, the migration is carried out for each project individually.The projects that require information migration.The set can include either only basic parameters described further and required for use or, if relevant, the basic parameters alongside additional ones supported in the platform.The set of parameters that should be migrated to the Platform platform.`scheduled_payment_idregister_payment_id``Platform–yyyymmddnnn`These values can be in the format used by default () or in the formats specified by the merchant (with regards to the 255-character limit).If you need to migrate information about COF purchases—the identifiers that should be assigned to these purchases (as the values for the parameter) and the series of debits within these purchases (as the values for the parameter).`tokenrecurring_id`This set must include the new identifiers (and), particular parameters from the basic set that are marked as ‘required for verification’ and, if relevant, can include additional parameters from the migrated ones.The set of parameters that should be used by the merchant's specialists to verify that the target information has been migrated to the platform correctly and can be used for payment processing.The contact information of the specialists in charge of migration on the side of the merchant, the acquirer, from which the information should be obtained, and Platform—for organising the interaction and addressing arising questions, including questions related to the information correctness.Agree with the Platform specialists on the following:
+4. When it comes to migrating data to the Platform platform, this data is usually encrypted via the PGP (Pretty Good Privacy) algorithm; however, in certain cases, other methods can be used upon the coordination with the Platform specialists.Public key from Platform for PGP encryption-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+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
+=jMHf
+-----END PGP PUBLIC KEY BLOCK-----If the direct interaction between the specialists of your current acquirer and Platform is not organised, receive the encrypted file with data from the acquirer and submit it to the specialists responsible for migration on the Platform side. Contact your Platform account manager to set up a communication channel with the dedicated Platform specialists responsible for the data migration.
+5. The verification file contains all parameters that were previously agreed on and is sent in the CSV format, with the password to access the file provided separately. Besides, if decided on step 2, separate verification files for tokens and COF purchases can be created and provided.After a verification file is received from the Platform specialists is received at the provided email address, check whether the information in the file is complete and correct.
+6. If the information in the file is correct, the merchant can start using the migrated information after the confirmation. If inconsistencies or mistakes have been detected, the Platform specialists compare the details in the file with those received from the previous acquirer and, depending on the outcome, proceed with the following:If the information does not match, they correct the details upon the coordination with the merchant.If the information matches, they recommend that the merchant contact the previous acquirer for updating the information and then provide the Platform specialists with the updated details.Processing of payments with the use of the migrated information via the Platform platform is only possible after the confirmation of the information correctness is received from the merchant.Send an email to the Platform specialists either confirming information correctness or reporting inconsistencies.
+7. Thus, for working with tokens, update their values (replacing them by the ones generated in the payment platform), and for working with COF purchases, set up the usage of new identifiers of payments and debits. After that, you are all set to work with the migrated informationSet up the usage of relevant information in the web service.

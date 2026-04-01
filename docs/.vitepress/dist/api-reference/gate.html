@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Host-to-host API Reference</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(211, 184, 255, 0.08), transparent 24%),
+        radial-gradient(circle at 90% 10%, rgba(108, 179, 255, 0.11), transparent 28%),
+        #000;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+      padding: 0 24px;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid #1a1a1a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topbar-left { display: flex; align-items: center; gap: 24px; }
+    .topbar-brand { font-weight: 700; font-size: 15px; color: #ededed; text-decoration: none; }
+    .topbar-nav { display: flex; gap: 4px; }
+    .topbar-nav a {
+      font-size: 14px; font-weight: 500; color: #888;
+      text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.15s;
+    }
+    .topbar-nav a:hover { color: #ededed; background: rgba(255,255,255,0.06); }
+    .topbar-nav a.active { color: #e6dcff; background: rgba(143,124,255,0.12); }
+    .topbar-right { display: flex; align-items: center; gap: 8px; }
+    .topbar-right a {
+      font-size: 13px; font-weight: 500; color: #888;
+      text-decoration: none; padding: 6px 12px; border-radius: 6px;
+    }
+    .topbar-right a:hover { color: #ededed; background: rgba(255,255,255,0.06); }
+
+    /* Ask AI */
+    .ask-ai-wrap { position: relative; }
+    .ask-ai-btn {
+      display: flex; align-items: center; gap: 5px;
+      padding: 6px 14px; background: linear-gradient(135deg, #efe9ff 0%, #b8a8ff 55%, #9dc3ff 100%); color: #05111f; border: none;
+      border-radius: 8px; font-size: 13px; font-weight: 600;
+      font-family: inherit; cursor: pointer; transition: all 0.15s;
+    }
+    .ask-ai-btn:hover { filter: brightness(0.96); }
+    .ask-ai-menu {
+      display: none; position: absolute; top: calc(100% + 6px); right: 0;
+      width: 220px; background: #0a0a0a; border: 1px solid rgba(143,124,255,0.16); border-radius: 10px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5); padding: 6px; z-index: 200;
+    }
+    .ask-ai-menu.open { display: block; }
+    .ask-ai-menu .section { padding: 6px 10px 2px; font-size: 10px; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.05em; }
+    .ask-ai-menu .divider { height: 1px; background: #1a1a1a; margin: 4px 8px; }
+    .ask-ai-menu button {
+      display: flex; align-items: center; gap: 8px; width: 100%;
+      padding: 8px 10px; background: none; border: none; border-radius: 6px;
+      color: #ededed; font-size: 13px; font-weight: 500;
+      font-family: inherit; cursor: pointer; text-align: left;
+    }
+    .ask-ai-menu button:hover { background: rgba(143,124,255,0.1); color: #fff; }
+    .ask-ai-menu .ext { margin-left: auto; font-size: 11px; color: #555; }
+    .ask-ai-toast {
+      position: fixed; top: 68px; right: 24px;
+      padding: 8px 16px; background: #0a0a0a; color: #ededed;
+      font-size: 13px; font-weight: 500; border-radius: 8px;
+      border: 1px solid rgba(143,124,255,0.16);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4); z-index: 300;
+      animation: fadeInOut 3s ease forwards;
+    }
+    @keyframes fadeInOut { 0% { opacity:0; transform:translateY(-4px); } 10% { opacity:1; transform:translateY(0); } 80% { opacity:1; } 100% { opacity:0; } }
+
+    rapi-doc { height: calc(100vh - 56px); }
+
+    @media (max-width: 768px) {
+      .topbar-nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-left">
+      <a href="/" class="topbar-brand">Platform Docs</a>
+      <div class="topbar-nav">
+        <a href="/gate/">Host-to-host API</a>
+        <a href="/payment-page/">Payment Widget</a>
+        <a href="/payment-methods/">Payment Methods</a>
+        <a href="/dashboard/">Dashboard</a>
+        <a href="/api-reference/gate.html" class="active">Host-to-host API</a>
+        <a href="/api-reference/data.html">Data API</a>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="ask-ai-wrap">
+        <button class="ask-ai-btn" onclick="toggleAI()">✨ Ask AI ▾</button>
+        <div class="ask-ai-menu" id="aiMenu">
+          <div class="section">Ask AI</div>
+          <button onclick="openAI('claude')">❋ Claude <span class="ext">↗</span></button>
+          <button onclick="openAI('chatgpt')">◎ ChatGPT <span class="ext">↗</span></button>
+          <div class="divider"></div>
+          <button onclick="copyMd()">📋 Copy Markdown</button>
+        </div>
+      </div>
+      <a href="/">← Back to Docs</a>
+    </div>
+  </nav>
+  <div id="toast" class="ask-ai-toast" style="display:none"></div>
+  <script>
+    function toggleAI() {
+      document.getElementById('aiMenu').classList.toggle('open');
+    }
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.ask-ai-wrap')) document.getElementById('aiMenu').classList.remove('open');
+    });
+    function getContent() {
+      const el = document.querySelector('rapi-doc');
+      const shadow = el?.shadowRoot;
+      const main = shadow?.querySelector('.main-content') || shadow?.querySelector('.regular-font');
+      return main?.innerText?.slice(0, 4000) || document.title;
+    }
+    function getPrompt() {
+      return `Hi! Can you please read [this page](${window.location.href}) and prepare to answer questions about it?`;
+    }
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg; t.style.display = 'block';
+      setTimeout(() => { t.style.display = 'none'; }, 3000);
+    }
+    function openAI(type) {
+      const prompt = getPrompt();
+      navigator.clipboard.writeText(prompt);
+      const url = type === 'claude'
+        ? `https://claude.ai/new?q=${encodeURIComponent(prompt)}`
+        : `https://chat.openai.com/?q=${encodeURIComponent(prompt)}`;
+      showToast('Copied — paste into ' + (type === 'claude' ? 'Claude' : 'ChatGPT'));
+      window.open(url, '_blank');
+      document.getElementById('aiMenu').classList.remove('open');
+    }
+    function copyMd() {
+      navigator.clipboard.writeText(getContent());
+      showToast('Copied to clipboard');
+      document.getElementById('aiMenu').classList.remove('open');
+    }
+  </script>
+
+  <rapi-doc
+    spec-url="/api-docs/gate-api.json"
+    render-style="focused"
+    show-header="false"
+    show-info="true"
+    allow-authentication="false"
+    allow-server-selection="true"
+    allow-try="true"
+    theme="dark"
+    primary-color="#b7a6ff"
+    bg-color="#0c0c0c"
+    text-color="#e0e0e0"
+    nav-bg-color="#111111"
+    nav-text-color="#aaaaaa"
+    nav-hover-bg-color="#1e1e1e"
+    nav-hover-text-color="#ffffff"
+    nav-accent-color="#b7a6ff"
+    nav-accent-text-color="#ffffff"
+    nav-item-spacing="compact"
+    font-size="regular"
+    regular-font="Inter, -apple-system, sans-serif"
+    mono-font="JetBrains Mono, SF Mono, monospace"
+    schema-style="tree"
+    schema-expand-level="1"
+    default-schema-tab="example"
+    response-area-height="400px"
+    show-method-in-nav-bar="as-colored-text"
+    use-path-in-nav-bar="true"
+    sort-endpoints-by="method"
+    layout="row"
+    show-components="true"
+    schema-description-expanded="true"
+  >
+  </rapi-doc>
+</body>
+</html>

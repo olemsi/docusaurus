@@ -1,0 +1,37 @@
+# Issuing refunds
+
+## Requirements
+
+Dashboard interface allows users to refund all types of purchases either in full or in part, which includes refunding individual debits executed as part of the COF purchase. Issuing refunds can be done with the use of individual and batch requests, and in each case, the following requirements must be met:
+
+If any issues regarding these requirements occur, they can be solved with the specialists in charge of granting access rights and working with balances.
+
+- The user account has been granted the right to issue refunds.
+- The purchase (the individual debit executed as part of the COF purchase) has been fully processed.
+- Refunds of the required type are supported for the payment method used to make the purchase.
+- The balance under which an initial payment was performed has enough funds for issuing a refund.
+
+## Single refunds
+
+In Dashboard you can issue single refunds (full and partial, for all types of purchases) both in the payments list and in the payment information tabs (for example, if you need to refund a specific operation within a COF purchase).
+
+To refund a single purchase:
+
+`decline`If the refund has been declined, the status of the operation switches towhile the status of the payment remains unchanged. The decline can happen due to a variety of reasons. For example, it can be caused by the lack of funds, in which case you can add funds to the balance and try to issue a refund again.
+
+1. **Payments**`purchaserecurringinvoiceaccount verification`You can use the Search function (for example, search by payment identifier) or go to thesection and apply necessary filters in the lists (for example, filter by payment type:,,, or).If necessary, locate the purchase that needs to be refunded.
+2. **Refund**Click thebutton in the corresponding row of the payments list, or open the payment information tab and click thebutton located on the payment management panel or on the panel with the information about the specific operation of the COF purchase.**Refund**If thebutton is disabled, it can mean that the purchase has not been fully processed yet. If this button is not shown at all, it can mean that refunding purchases is not supported for the utilised payment method (in which case refer to your Platform account manager for more details).Open the window to initiate a refund.
+3. **Refund**In the window that opens, specify the amount you need to refund—full available or its part (the amount available for refund is also shown in this window), then click.**Create fiscal receiptCreate receipt and refund**In the window that opens, specify the amount you need to refund—full available or its part (the amount available for refund is also shown in this window), if necessary, select, and then click.**Refund**Keep in mind that clicking thebutton initiates the refunding operation. You will not be separately asked to confirm your request.Send a refund request.
+4. `refundsuccessrefundedreversedpartially refunded`You can check the status of theoperation in the payment information tab (it should state) or the status of the payment in the payments list (when the payment is refunded in full, the status isor; when only the part of the payment amount is returned, the status is).Make sure that the refund has been issued.
+
+## Mass refunds
+
+To issue multiple refunds using a batch request:
+
+If you have any questions about issuing refunds, contact technical support specialists.
+
+1. You can find the file requirements with the template and a file sample below.`general.payment_idgeneral.operation_id`When preparing the file, keep in mind that to refund purchases, you must specify the identifier of the payment to be refunded in thefield while to refund an individual debiting operation performed as part of the COF purchase, you must also include the identifier of the operation to be refunded in thefield.Create and prepare the file with the refund data in the specified format.
+2. **Mass Refunds****Manual paymentsRequestMass refunds**Go to, clickon the left of the filtering panel and switch to thetab.Go to thetab.
+3. **Browse**Drag the file or usebutton to upload.**Send requestFile previewFile details**Following the validity check, either thebutton is enabled or the error message is shown. In the latter case, you can view the details of the error (using thetoggle and then thebutton), correct the error and re-upload the file.Upload the file with the list of refunds and check it for data consistency.
+4. **Send request**Send the batch request by clicking.
+5. `Done`**Mass requestsManual paymentsIndicator**After the batch request has been sent and you can see the notification that it has been accepted, it is important to check that the refunds have been processed. Look up the batch status in the list of mass requests—the status should state(clickon the filtering panel in thesection and find the row of the batch you need in the list). You can also monitor status information of individual refunds using the column. Keep in mind that the time it takes to process refunds and to update their status information can significantly vary depending on the number of refunds in the batch.`refundedreversedpartially refundedsuccessdecline`To check the status of individual refunds, check the status of the payments that need to be refunded in the payments list (they should have the statusorwhen the payment is refunded in full andwhen only the part of the payment amount is returned). You can also check the status of a refund in the corresponding payment information tab (it should stateordepending on the operation result).Make sure the refunds have been processed.

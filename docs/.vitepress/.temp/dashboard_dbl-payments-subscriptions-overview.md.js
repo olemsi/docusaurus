@@ -1,0 +1,19 @@
+import { ssrRenderAttrs } from "vue/server-renderer";
+import { useSSRContext } from "vue";
+import { _ as _export_sfc } from "./plugin-vue_export-helper.1tPrXgE0.js";
+const __pageData = JSON.parse('{"title":"Managing subscriptions","description":"","frontmatter":{},"headers":[],"relativePath":"dashboard/dbl-payments-subscriptions-overview.md","filePath":"dashboard/dbl-payments-subscriptions-overview.md"}');
+const _sfc_main = { name: "dashboard/dbl-payments-subscriptions-overview.md" };
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<div${ssrRenderAttrs(_attrs)}><h1 id="managing-subscriptions" tabindex="-1">Managing subscriptions <a class="header-anchor" href="#managing-subscriptions" aria-label="Permalink to &quot;Managing subscriptions&quot;">​</a></h1><p><em>regular COF purchasessubscriptions</em>Along with other types and categories of payments, the Platform payment platform allows you to process, which a type of purchase when the merchant initiates a series of regularly recurring fund transfers from the customer to the merchant according to a set schedule. These debit operations are performed automatically in the platform, thus allowing the customers to pay forfor specific services of the merchant.</p><p><em>subscriptions</em>register regular COF purchases () and monitor their processing. You canDashboard allows users to:</p><p><strong>Subscriptions</strong>To utilise these capabilities, you can use thesection in Dashboard that can be accessed with an appropriate set of permissions (details). This section has a subscriptions list and payment information tabs containing information about regular COF purchases.</p><p>You can view information about a regular COF purchase in the subscriptions list after this purchase has been registered in the platform. The following statuses can be assigned to a regular COF purchase:</p><p><strong>Registration paymentRecurring payment</strong>Each tab with information about a regular COF purchase (subscription) has several panels including the payment management panel, thepanel with information about the regular COF purchase registration, and thepanel with the data of all regular COF purchase debits performed so far. To view information about any of the operations executed as part of the regular COF purchase, click the item you need in the list of operations on the panel. You can also manage subscription settings, cancel subsequent debiting executed as part of the subscription, and view change history in this tab. The buttons for performing these actions become active on the payment management panel if you have the appropriate permissions.</p><div class="tip custom-block"><p class="custom-block-title">TIP</p><p><em>subscriptionrecurring paymentregular recurring</em>In the Dashboard interface, a regular COF purchase can be referred to as,, and, all used synonymously.</p></div></div>`);
+}
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("dashboard/dbl-payments-subscriptions-overview.md");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const dblPaymentsSubscriptionsOverview = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
+export {
+  __pageData,
+  dblPaymentsSubscriptionsOverview as default
+};

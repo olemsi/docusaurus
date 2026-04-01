@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>API Reference</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(211, 184, 255, 0.08), transparent 24%),
+        radial-gradient(circle at 90% 10%, rgba(108, 179, 255, 0.11), transparent 28%),
+        #020202;
+      color: #ededed;
+      min-height: 100vh;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+      padding: 0 24px;
+      background: rgba(2, 2, 2, 0.82);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topbar-left { display: flex; align-items: center; gap: 24px; }
+    .topbar-brand {
+      font-weight: 700;
+      font-size: 15px;
+      color: #ededed;
+      text-decoration: none;
+    }
+    .topbar-nav { display: flex; gap: 4px; }
+    .topbar-nav a {
+      font-size: 14px;
+      font-weight: 500;
+      color: #a1a1aa;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 7px;
+      transition: all 0.15s;
+    }
+    .topbar-nav a:hover {
+      color: #fff;
+      background: rgba(255,255,255,0.04);
+    }
+    .topbar-nav a.active {
+      color: #e6dcff;
+      background: rgba(143, 124, 255, 0.12);
+    }
+    .topbar-right a {
+      font-size: 13px;
+      font-weight: 500;
+      color: #a1a1aa;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 7px;
+    }
+    .topbar-right a:hover {
+      color: #fff;
+      background: rgba(255,255,255,0.04);
+    }
+
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 72px 24px 96px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(143, 124, 255, 0.22);
+      background: rgba(143, 124, 255, 0.08);
+      color: #e6dcff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin-top: 18px;
+      max-width: 760px;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+      font-weight: 750;
+      color: #fff;
+    }
+
+    .accent {
+      color: transparent;
+      background: linear-gradient(120deg, #ffffff 0%, #b8a8ff 40%, #8ec5ff 78%, #eadcff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .lead {
+      margin-top: 20px;
+      max-width: 720px;
+      color: #a1a1aa;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 42px;
+    }
+
+    .card {
+      display: block;
+      padding: 24px;
+      border-radius: 18px;
+      border: 1px solid #1c1c20;
+      background: linear-gradient(180deg, rgba(11, 11, 12, 0.98), rgba(8, 8, 10, 0.98));
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.15s, border-color 0.15s, background 0.15s;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(143, 124, 255, 0.26);
+      background: rgba(255, 255, 255, 0.018);
+    }
+
+    .card-label {
+      color: #d8ccff;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .card h2 {
+      margin-top: 14px;
+      font-size: 26px;
+      letter-spacing: -0.03em;
+      color: #fff;
+    }
+
+    .card p {
+      margin-top: 10px;
+      color: #a1a1aa;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .meta {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+      color: #d4d4d8;
+      font-size: 14px;
+    }
+
+    .card-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #c8baff;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .quick-link {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: start;
+      padding: 18px 20px;
+      border-radius: 16px;
+      border: 1px solid #1c1c20;
+      background: rgba(255, 255, 255, 0.012);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.15s, border-color 0.15s, background 0.15s;
+    }
+
+    .quick-link:hover {
+      transform: translateY(-2px);
+      border-color: rgba(143, 124, 255, 0.26);
+    }
+
+    .quick-link h3 {
+      font-size: 16px;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+
+    .quick-link p {
+      margin-top: 8px;
+      color: #a1a1aa;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .quick-link span {
+      color: #c8baff;
+      font-size: 13px;
+      font-weight: 650;
+      white-space: nowrap;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 18px;
+      font-size: 13px;
+      color: #64646b;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    @media (max-width: 860px) {
+      .topbar-nav { display: none; }
+      .cards,
+      .quick-links { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      main { padding: 48px 16px 72px; }
+      .topbar { padding: 0 16px; }
+      h1 { font-size: 42px; }
+      .lead { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-left">
+      <a href="/" class="topbar-brand">Platform Docs</a>
+      <div class="topbar-nav">
+        <a href="/gate/">Host-to-host API</a>
+        <a href="/payment-page/">Payment Widget</a>
+        <a href="/payment-methods/">Payment Methods</a>
+        <a href="/dashboard/">Dashboard</a>
+        <a href="/api-reference/" class="active">API Reference</a>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <a href="/">← Back to Docs</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="eyebrow">Reference</div>
+    <h1>
+      API references for
+      <span class="accent">payments and reporting</span>
+    </h1>
+    <p class="lead">
+      Use the transactional API when your backend creates payments and handles callbacks. Use the data API when you need balances, operations, and reporting data.
+    </p>
+
+    <div class="cards">
+      <a href="/api-reference/gate.html" class="card">
+        <div class="card-label">Transactional</div>
+        <h2>Host-to-host API</h2>
+        <p>Direct server-to-server API for payment creation, refunds, payouts, verification, and status checks.</p>
+        <div class="meta">
+          <div>`POST` + JSON body</div>
+          <div>Signed payloads with `project_id` and `secret_key`</div>
+          <div>Synchronous responses plus backend callbacks</div>
+        </div>
+        <span class="card-link">Open reference</span>
+      </a>
+
+      <a href="/api-reference/data.html" class="card">
+        <div class="card-label">Reporting</div>
+        <h2>Data API</h2>
+        <p>Retrieval API for balances, operations, payments, and other reporting-oriented data from the platform.</p>
+        <div class="meta">
+          <div>`POST` + JSON body</div>
+          <div>Access with `token` and request `signature`</div>
+          <div>Built for reporting, reconciliation, and analytics access</div>
+        </div>
+        <span class="card-link">Open reference</span>
+      </a>
+    </div>
+
+    <div class="section-title">Start here</div>
+    <div class="quick-links">
+      <a href="/payment-page/pp-quickstart-overview" class="quick-link">
+        <div>
+          <h3>Payment Widget quickstart</h3>
+          <p>Fastest route to first payment for most teams.</p>
+        </div>
+        <span>Open</span>
+      </a>
+      <a href="/gate/gate-quickstart" class="quick-link">
+        <div>
+          <h3>Host-to-host API quickstart</h3>
+          <p>Backend-first integration with direct payment control.</p>
+        </div>
+        <span>Open</span>
+      </a>
+      <a href="/gate/signature-gate" class="quick-link">
+        <div>
+          <h3>Signature generation</h3>
+          <p>Rules and examples for generating signed requests correctly.</p>
+        </div>
+        <span>Open</span>
+      </a>
+      <a href="/dashboard/dbl-api-protocol" class="quick-link">
+        <div>
+          <h3>Using Data API</h3>
+          <p>How to use reporting endpoints together with Dashboard workflows.</p>
+        </div>
+        <span>Open</span>
+      </a>
+    </div>
+  </main>
+</body>
+</html>

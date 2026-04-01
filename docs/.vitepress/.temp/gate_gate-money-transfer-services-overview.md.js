@@ -1,0 +1,19 @@
+import { ssrRenderAttrs } from "vue/server-renderer";
+import { useSSRContext } from "vue";
+import { _ as _export_sfc } from "./plugin-vue_export-helper.1tPrXgE0.js";
+const __pageData = JSON.parse('{"title":"Transfer services overview","description":"","frontmatter":{},"headers":[],"relativePath":"gate/gate-money-transfer-services-overview.md","filePath":"gate/gate-money-transfer-services-overview.md"}');
+const _sfc_main = { name: "gate/gate-money-transfer-services-overview.md" };
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<div${ssrRenderAttrs(_attrs)}><h1 id="transfer-services-overview" tabindex="-1">Transfer services overview <a class="header-anchor" href="#transfer-services-overview" aria-label="Permalink to &quot;Transfer services overview&quot;">​</a></h1><p><em>debitcredit</em>The Platform payment platform supports the capabilities of Mastercard MoneySend and Visa Direct networks that significantly simplify transferring money between customers and merchants. These services offer the functionality that utilises specific operations to withdraw (i.e.) funds from the accounts of customers (senders) and to deliver (i.e.) funds to the accounts of customers (recipients). These debiting and crediting operations can be executed separately or combined, and since global card schemes require that the funds reach the target accounts in 30 minutes or less, using Mastercard MoneySend and Visa Direct services makes transferring funds fast and efficient as well as convenient for customers.</p><p>Main characteristics of these operations can be summed up as follows:</p><p><code>salepayout</code>and mobile SDKsSince these operations are executed asandin the Platform payment platform (utilising the corresponding sets of required parameters), you can initiate them in any interface that fits your needs: debiting operations can be initiated not only via Gate but also via Payment Widgetwhile crediting operations can be initiated via Gate and Dashboard.</p><p>If you have any questions regarding the possible restrictions imposed by the global card schemes when these services are used and how to connect to them, refer to your Platform account manager.</p><table tabindex="0"><thead><tr><th></th><th>Debiting</th><th>Crediting</th></tr></thead><tbody><tr><td>Mastercard MoneySend operation</td><td>Funding transaction (FT)</td><td>Payment transaction (PT)</td></tr><tr><td>Visa Direct operation</td><td>Account Funding Transaction (AFT)</td><td>Original Credit Transaction (OCT)</td></tr><tr><td>Platform platform equivalent operation</td><td><code>sale</code></td><td><code>payout</code></td></tr><tr><td>Available payment methods</td><td>Card paymentsCard paymentsApple PayGoogle Pay</td><td>Card payments</td></tr><tr><td>Available payment instruments</td><td>Mastercard or Visa cards</td><td>Mastercard or Visa cards</td></tr><tr><td>after it has been processedOperation can be cancelled</td><td>with certain time restrictions+</td><td>–</td></tr><tr><td>Use cases</td><td>Adding funds to the customer’s account in the merchant’s service.The first step of the card-to-card money transfer (with funds debited from the account of the sender).</td><td>A payout to a customer.The second step of the card to card money transfer (with funds credited to the account of the recipient)</td></tr></tbody></table></div>`);
+}
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("gate/gate-money-transfer-services-overview.md");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const gateMoneyTransferServicesOverview = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
+export {
+  __pageData,
+  gateMoneyTransferServicesOverview as default
+};

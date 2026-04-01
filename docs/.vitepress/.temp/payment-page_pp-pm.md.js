@@ -1,0 +1,19 @@
+import { ssrRenderAttrs } from "vue/server-renderer";
+import { useSSRContext } from "vue";
+import { _ as _export_sfc } from "./plugin-vue_export-helper.1tPrXgE0.js";
+const __pageData = JSON.parse('{"title":"Redirect options","description":"","frontmatter":{},"headers":[],"relativePath":"payment-page/pp-pm.md","filePath":"payment-page/pp-pm.md"}');
+const _sfc_main = { name: "payment-page/pp-pm.md" };
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<div${ssrRenderAttrs(_attrs)}><h1 id="redirect-options" tabindex="-1">Redirect options <a class="header-anchor" href="#redirect-options" aria-label="Permalink to &quot;Redirect options&quot;">​</a></h1><h2 id="overview" tabindex="-1">Overview <a class="header-anchor" href="#overview" aria-label="Permalink to &quot;Overview&quot;">​</a></h2><p>, such as banks, payment systems, and providers,. This can be necessary for customer authentication, payment confirmation by customers, and other actions.Customer redirection can look as follows.During payment processing, customer redirection from the payment form pages to the services of third partiescan be required</p><p>in an iframe object,(a new tab can be opened automatically or by the click of the button, with the forced redirection once the specified time period expires)Depending on a payment method and considering the special aspects of its use, one of these options is applied in the payment platform by default. At the same time, when setting up a method within a certain project, the merchant can coordinate the application of another option (from the available ones) with the technical support specialists. Finally, for individual payments, it is possible to select the option of redirection in a separate tab by using the parameters for opening Payment Widget.In the Platform payment platform, various options for such redirections are supported: with the pages of the third-party services openedin the current or in a new browser tab.</p><h2 id="request-format" tabindex="-1">Request format <a class="header-anchor" href="#request-format" aria-label="Permalink to &quot;Request format&quot;">​</a></h2><p>, disregarding the option specified for the method in general<code>force_acs_new_window10</code>If for a separate payment, it is required to specify the option of opening the page of a third-party service in a new browser tab, the request should contain the boolean parameterwith the value. (Using this parameter with the valuedoes not affect the redirection options.)</p><p>In the following example of a request for purchase processing, the preselected method is Open Banking in Romania and the page of the bank Banca Comerciala Romana, which supports the purchase by using this method, is set to open in a separate tab.</p><h2 id="related-topics" tabindex="-1">Related topics <a class="header-anchor" href="#related-topics" aria-label="Permalink to &quot;Related topics&quot;">​</a></h2><p>When working with various customer redirections, the following articles can come in handy:</p><ul><li>—with the information about customer redirections from the payment form pages to the web service.</li><li>Methods—with the information about payment methods and the work with them.</li><li>—with the descriptions of parameters that can be used in requests for opening Payment Widget.</li></ul></div>`);
+}
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("payment-page/pp-pm.md");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const ppPm = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
+export {
+  __pageData,
+  ppPm as default
+};

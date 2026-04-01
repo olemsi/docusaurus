@@ -1,0 +1,7 @@
+# Introduction
+
+Like most contemporary software products, Payment Widget is constantly evolving, and its user interface and internal operation make use of the new technologies, innovations, and trends of the online payment industry. At the same time, merchants need the payment form that is reliable—the form that is invoked and functions failure-free (which includes the way it is embedded into interfaces and the operation of the web service). To combine the advantages of dynamic growth and reliable operation while also ensuring flexibility in design options and capabilities of implementation, Platform develops new generations of the Payment Widget design that seamlessly follow one another but also work simultaneously. Along with that, each subsequent Payment Widget generation comes with the significant improvements of reliability, processing speed, interface, and functionality.
+
+In addition, the 4th and 5th generations of the payment form support customisation with the use of specialised designer tools embedded in the Dashboard interface (in case of previous generations, even the most minimal changes had to be agreed upon with the account manager and required time for implementation).
+
+This article covers the information about customising the Payment Widget design and using different design options when working with the payment form of the 4th and 5th generations. It also describes how to transfer the styles already in use when you switch from the 4th generation Payment Widget to the 5th generation.

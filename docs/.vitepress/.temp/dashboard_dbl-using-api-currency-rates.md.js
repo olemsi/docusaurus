@@ -1,0 +1,19 @@
+import { ssrRenderAttrs } from "vue/server-renderer";
+import { useSSRContext } from "vue";
+import { _ as _export_sfc } from "./plugin-vue_export-helper.1tPrXgE0.js";
+const __pageData = JSON.parse('{"title":"Currency rates data","description":"","frontmatter":{},"headers":[],"relativePath":"dashboard/dbl-using-api-currency-rates.md","filePath":"dashboard/dbl-using-api-currency-rates.md"}');
+const _sfc_main = { name: "dashboard/dbl-using-api-currency-rates.md" };
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<div${ssrRenderAttrs(_attrs)}><h1 id="currency-rates-data" tabindex="-1">Currency rates data <a class="header-anchor" href="#currency-rates-data" aria-label="Permalink to &quot;Currency rates data&quot;">​</a></h1><p>Requests to retrieve information on currency conversion rates applied to operating and non-operating inflows and outflows in the payment platform should be sent to theendpoint. Conversion rates information is provided for reference use only.</p><p>The request to theendpoint must contain the following objects and parameters:</p><ul><li><code>token</code>—a token associated with the specific Dashboard user account that has permissions to access all required projects.</li><li><code>signature</code>—a request signature generated after all required parameters have been specified (details).</li><li><code>filter\`\`merchant97</code>—an internal identifier of the merchant in the payment platform provided by the Platform technical support upon request (specified as an integer, for example,).<code>currency</code>—the code of the required currency in the ISO-4217 alpha-3 format (learn more).<code>interval\`\`fromYYYY-MM-DD hh:mm:ss</code>—start date and time of the interval, informat.<code>toYYYY-MM-DD hh:mm:ss</code>—end date and time of the interval, informat.<code>from</code>If the specified time period is less than one hour (including cases when start and end times match), the retrieved conversion rates data will be relevant for the time specified in theparameter. If the specified time period is invalid (set in the future, for example), the response to such request will not contain conversion rates data.—an object with the specified start and end dates of the time period:—an object with parameters to filter currency conversion rates by:</li><li><code>tz+10:30Asia/Singapore</code>—time zone specified in the UTC offsets format (for example,) or in the IANA Time Zone Database format (for example,).</li></ul><div class="tip custom-block"><p class="custom-block-title">TIP</p><p><code>operations</code>To obtain information about the actual rates applied to currency conversion in case of specific operations (that can be used for final analysis and reconciliation), refer to regular operating reports from Platform or retrieve operation data via requests to theendpoints.</p></div></div>`);
+}
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("dashboard/dbl-using-api-currency-rates.md");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const dblUsingApiCurrencyRates = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
+export {
+  __pageData,
+  dblUsingApiCurrencyRates as default
+};

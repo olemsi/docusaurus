@@ -1,0 +1,420 @@
+.home {
+  --c-bg: #020202;
+  --c-border: #1c1c20;
+  --c-text: #ededed;
+  --c-text-2: #a1a1aa;
+  --c-text-3: #64646b;
+  --c-border-soft: rgba(255, 255, 255, 0.06);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(211, 184, 255, 0.07), transparent 24%),
+    radial-gradient(circle at 88% 8%, rgba(108, 179, 255, 0.08), transparent 24%),
+    #020202;
+  color: var(--c-text);
+  min-height: 100vh;
+}
+
+.home section {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero {
+  position: relative;
+  padding-top: 126px;
+  padding-bottom: 30px;
+}
+
+.heroShell {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.76fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.heroCopy {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
+.heroOrb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(60px);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.heroOrbA {
+  top: 72px;
+  left: 8%;
+  width: 240px;
+  height: 240px;
+  background: rgba(143, 124, 255, 0.1);
+}
+
+.heroOrbB {
+  top: 26px;
+  right: 10%;
+  width: 180px;
+  height: 180px;
+  background: rgba(108, 179, 255, 0.06);
+}
+
+.heroGrid {
+  position: absolute;
+  inset: 90px 24px 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.42), transparent 76%);
+  pointer-events: none;
+}
+
+.heroBadge,
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(143, 124, 255, 0.22);
+  background: rgba(143, 124, 255, 0.08);
+  color: #e6dcff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  max-width: 700px;
+  margin: 18px 0 0;
+  font-size: clamp(40px, 5.8vw, 64px);
+  line-height: 1.06;
+  letter-spacing: -0.05em;
+  font-weight: 740;
+  color: #fff;
+  padding-bottom: 0.14em;
+  overflow: visible;
+}
+
+.heroAccent {
+  display: inline;
+  color: transparent;
+  background: linear-gradient(120deg, #ffffff 0%, #b8a8ff 38%, #8ec5ff 72%, #eadcff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  line-height: inherit;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.heroDesc {
+  max-width: 520px;
+  margin: 14px 0 0;
+  color: var(--c-text-2);
+  font-size: 16px;
+  line-height: 1.46;
+}
+
+.heroPanel {
+  position: relative;
+  z-index: 1;
+  padding: 13px;
+  border-radius: 16px;
+  border: 1px solid var(--c-border-soft);
+  background: linear-gradient(180deg, rgba(16, 16, 18, 0.9), rgba(8, 8, 10, 0.97));
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.22);
+}
+
+.panelHeading {
+  color: #6f6f78;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.panelStack {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.panelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 13px 14px;
+  border-radius: 13px;
+  border: 1px solid var(--c-border);
+  background: rgba(255, 255, 255, 0.014);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+}
+
+.panelRow:hover {
+  transform: translateY(-1px);
+  border-color: rgba(183, 166, 255, 0.18);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.panelRowPrimary {
+  background: linear-gradient(135deg, rgba(211, 184, 255, 0.07), rgba(143, 124, 255, 0.06), rgba(108, 179, 255, 0.05));
+  border-color: rgba(183, 166, 255, 0.12);
+}
+
+.panelKicker {
+  color: #eadcff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.panelTitle {
+  margin-top: 5px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.panelRow span,
+.panelMeta a,
+.pathLink {
+  color: #c8baff;
+  text-decoration: none;
+  font-weight: 650;
+  font-size: 12px;
+}
+
+.panelMeta {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 16px;
+  border-top: 1px solid var(--c-border-soft);
+}
+
+.panelMeta span {
+  color: var(--c-text-3);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.panelLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.paths,
+.proof,
+.links {
+  padding-top: 18px;
+  padding-bottom: 56px;
+}
+
+.sectionHead {
+  margin-bottom: 16px;
+}
+
+.sectionHead h2 {
+  max-width: 720px;
+  margin: 10px 0 0;
+  font-size: clamp(28px, 3.2vw, 36px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+
+.pathsGrid,
+.secondaryGrid,
+.linksGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.proofGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.pathCard,
+.secondaryCard,
+.proofCard,
+.linkCard {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pathCard {
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid var(--c-border);
+  background: linear-gradient(180deg, rgba(11, 11, 12, 0.98), rgba(8, 8, 10, 0.98));
+  transition: transform 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.pathCard:hover,
+.secondaryCard:hover,
+.linkCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(183, 166, 255, 0.18);
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.pathTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.pathLabel,
+.pathTag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.pathLabel {
+  color: var(--c-text-3);
+}
+
+.pathTag {
+  color: #d8ccff;
+}
+
+.pathCard h3,
+.secondaryCard h3,
+.linkCard h3 {
+  margin: 12px 0 0;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: -0.03em;
+}
+
+.pathCard p,
+.secondaryCard p,
+.proofCard p,
+.linkCard p {
+  margin: 8px 0 0;
+  color: var(--c-text-2);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.pathCard ul {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.pathCard li {
+  position: relative;
+  padding-left: 16px;
+  color: #d0d7df;
+  font-size: 13px;
+}
+
+.pathCard li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #b8a8ff;
+}
+
+.pathLink {
+  display: inline-block;
+  margin-top: 18px;
+}
+
+.secondaryGrid {
+  margin-top: 14px;
+}
+
+.secondaryCard {
+  padding: 16px 18px;
+  border-radius: 16px;
+  border: 1px solid var(--c-border);
+  background: rgba(255, 255, 255, 0.012);
+  transition: transform 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.proofCard {
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid var(--c-border);
+  background: rgba(255, 255, 255, 0.012);
+}
+
+.proofValue {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.linkCard {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: start;
+  padding: 16px 18px;
+  border-radius: 16px;
+  border: 1px solid var(--c-border);
+  background: rgba(255, 255, 255, 0.012);
+  transition: transform 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.linkCard span {
+  color: #c8baff;
+  font-size: 13px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+@media (max-width: 996px) {
+  .heroShell,
+  .pathsGrid,
+  .proofGrid,
+  .linksGrid,
+  .secondaryGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .home section {
+    padding: 0 16px;
+  }
+
+  .hero {
+    padding-top: 96px;
+    padding-bottom: 24px;
+  }
+
+  .pathCard,
+  .proofCard,
+  .secondaryCard,
+  .linkCard,
+  .heroPanel {
+    padding: 18px;
+  }
+}

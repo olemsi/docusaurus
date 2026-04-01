@@ -1,0 +1,13 @@
+# Authorisation hold overview
+
+*the first stepthe second step*Information on two-step purchases with direct use of payment cards is presented in this section, while the information on such purchases by using of alternative payment methods—in the Methods section.In the payment platform, two-step purchases are processed according to the payment processing model ():is initiated by request sent from merchant's web service to the payment platform, andis initiated by request from merchant's web service or the payment platform may automatically perform the step after specific time elapses.
+
+Merchant web service may request change of the amount authorised on the first step. The change may be performed on a one-time basis with the following initiation of the second step or the web services may change the authorised amount multiple times with the final initiation of the second step, on request or automatically.
+
+To configure automatic initiation of the second step (automatic withdrawal or release of the held funds), contact Platform technical support (support@platform.dev). The time lag and the type of the operation to be performed once the time lag expires are specified by the merchant.
+
+When performing an one-time two-step purchase, you can use one of the following options to transfer payment details:
+
+- *Transfer of complete payment details*MO/TO (Mail Order/Telephone Order) payment is a special case in which you transfer complete payment details. MO/TO is a card-not-present payment in which a customer may phone or email the merchant, place an order and pay by providing the payment card details over the phone or by email. For more information about MO/TO payments, see .. This is a basic option in which you collect all payment details from the customer, and then submit the data inside a payment request.
+- *Transfer of payment details identifier*`account_idcard_id`You need to specify this ID each time you submit to the payment platform a request for payment using stored credentials, see. To enable this option, you need to perform an initial COF payment. Once you do this, the payment platform creates a payment instrument record and returns a callback with the ID of the record in theorparameter.
+- *Transfer of payment token*`token`For more information about using tokens, see .. To enable this option, you need to perform an initial payment. Once you do this, the payment platform creates a payment token and returns a callback with the token in theparameter. You need to specify this ID each time you submit to the payment platform a request for payment using stored credentials.

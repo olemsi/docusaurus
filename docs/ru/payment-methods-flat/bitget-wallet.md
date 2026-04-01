@@ -1,0 +1,107 @@
+# Выплата через Gate
+
+## Общая информация
+
+Чтобы выполнить выплату через Gate с использованием метода title:
+
+Полная схема выплаты с использованием метода title выглядит следующим образом.
+
+1. Отправьте запрос с нужными параметрами и подписью на рабочий URL-адрес платежной платформы Some Platform.
+2. Примите от платежной платформы Some Platform оповещение (callback) с результатом выплаты.
+
+## Запрос
+
+Далее представлена информация, необходимая для создания и отправки запроса на выплату с использованием метода 
+        title.
+
+Вот пример тела запроса на выплату с использованием метода title:
+
+| HTTP-метод запроса | POST |
+| --- | --- |
+| Формат тела запроса | JSON |
+| Конечная точка | `/v2/payment/wallet/bitget/payout` |
+| Полная спецификация конечной точки |  |
+
+| type_strictly_required — параметр обязательно должен присутствовать в начальном запросе. |  |  |
+| --- | --- | --- |
+| Объект | Параметр | Описание |
+| generaltype_object type_strictly_required | project_idtype_integer type_strictly_required | `1234`Пример:Идентификатор проекта, полученный от Some Platform при интеграции. |
+| payment_idtype_string type_strictly_required | `payment_47`Пример:Идентификатор платежа, уникальный в рамках проекта. |  |
+| signaturetype_string type_strictly_required | Использование подписи к даннымПодпись запроса, составленная после определения всех параметров запроса. Подробнее о составлении подписи см.. |  |
+| customertype_object type_strictly_required | idtype_string type_strictly_required | `customer_123`Пример:Идентификатор пользователя, уникальный в рамках проекта. |
+| ip_addresstype_string type_strictly_required | `198.51.100.47`Пример:IP-адрес устройства пользователя. |  |
+| first_nametype_string type_strictly_required | `John`Пример:Имя пользователя. |  |
+| last_nametype_string type_strictly_required | `Doe`Пример:Фамилия пользователя. |  |
+| emailtype_string type_strictly_required | `johndoe@example.com`Пример:Адрес электронной почты пользователя. |  |
+| accounttype_object type_strictly_required | numbertype_string type_strictly_required | `TD4xA1a*************RDQeyX9qdQ5tY`Пример:Номер счета пользователя. |
+| paymenttype_object type_strictly_required | currencytype_string type_strictly_required | `example_currency`Пример:Код валюты платежа в формате ISO-4217 alpha-3. |
+| amounttype_integer type_strictly_required | *за исключением*Сумма платежа в дробных единицах валюты без десятичного разделителя (точки или запятой) и пробеловслучаев, когда у валюты нет дробной части.*основных единицах валюты*ru_currency_units.ditaru_currency_codes.ditaЕсли у валюты нет дробных единиц (то есть количество разрядов дробных единиц равно нулю), то в этом параметре нужно указывать сумму в. Подробнее о разрядах дробных единиц у валют см.и.`example_amount`Пример: example_amount_in_majors example_currency передается как |  |
+| extra_paramtype_string type_strictly_required | Возможные значения:`"USDT:TRON"`Пример:`USDT`BSCTRONETHSOL— Криптовалюта Tether (stablecoin). Доступна на следующих блокчейнах:— BNB Smart Chain,— Tronix,— Ethereum,— Solana.`USDC`BSCTRONETHSOLBASE— Криптовалюта USD Coin (stablecoin). Доступна на следующих блокчейнах:— BNB Smart Chain,— Tronix,— Ethereum,— Solana,— BASE.Доступные валюты и блокчейны. |  |
+| API ReferenceПри необходимости добавьте в запрос необязательные параметры, указанные в спецификации                     Gate:. |  |  |
+
+## Оповещение (callback)
+
+ru_gate_callbacks.ditaВ методе title результат выплаты платежная платформа возвращает в оповещении. Подробнее о структуре оповещений см..
+
+Вот пример тела оповещения с информацией об успешно выполненной выплате:
+
+Вот пример тела оповещения с информацией об отклоненной выплате.
+
+## Дополнительные материалы
+
+- ru_gate_interaction_scheme.dita
+- ru_gate_payment_model.dita
+- ru_gate_authentication.dita
+- ru_gate_statuses_and_response_codes.dita
+
+---
+
+## Оплата через Payment Widget
+
+### Общая информация
+
+Чтобы выполнить оплату через Payment Widget с использованием метода title:
+
+Полная схема оплаты через Payment Widget выглядит следующим образом.
+
+1. Отправьте запрос с нужными параметрами и подписью на рабочий URL-адрес платежной платформы Some Platform.
+2. Примите от платежной платформы Some Platform оповещение (callback) с результатом оплаты.
+
+### Запрос
+
+В запросе на открытие страницы оплаты с использованием метода 
+        title укажите необходимые параметры:
+
+`EPayWidget`Вот пример параметров из запроса на открытие страницы оплаты с использованием виджета:
+
+| type_strictly_required — параметр обязательно должен присутствовать в начальном запросе.type_optional — параметр необязателен, но в общем случае его наличие в запросе способствует оптимизации проведения платежа, например упрощает процесс платежа для пользователя или повышает процент успешных платежей. |  |
+| --- | --- |
+| Параметр | Описание |
+| project_idtype_integer type_strictly_required | `1234`Пример:Идентификатор проекта, полученный от Some Platform при интеграции. |
+| payment_idtype_string type_strictly_required | `payment_47`Пример:Идентификатор платежа, уникальный в рамках проекта. |
+| customer_idtype_string type_strictly_required | `customer_123`Пример:Идентификатор пользователя, уникальный в рамках проекта. |
+| customer_first_nametype_string type_strictly_required | `John`Пример:Имя пользователя. |
+| customer_last_nametype_string type_strictly_required | `Doe`Пример:Фамилия пользователя. |
+| customer_emailtype_string type_strictly_required | `johndoe@example.com`Пример:Адрес электронной почты пользователя. |
+| payment_currencytype_string type_strictly_required | `example_currency`Пример:Код валюты платежа в формате ISO-4217 alpha-3. |
+| payment_amounttype_integer type_strictly_required | *за исключением*Сумма платежа в дробных единицах валюты без десятичного разделителя (точки или запятой) и пробеловслучаев, когда у валюты нет дробной части.*основных единицах валюты*ru_currency_units.ditaru_currency_codes.ditaЕсли у валюты нет дробных единиц (то есть количество разрядов дробных единиц равно нулю), то в этом параметре нужно указывать сумму в. Подробнее о разрядах дробных единиц у валют см.и.`example_amount`Пример: example_amount_in_majors example_currency передается как |
+| force_payment_methodtype_string type_optional | force_payment_method`force_pm`ru_pp__preselectingps.ditaЧтобы пропустить страницу выбора метода и принудительно выбрать title в качестве платежного метода, добавьте в запрос параметрсо значением. (Подробнее о предварительном выборе метода см..)`force_payment_method: 'force_pm'`Пример:Параметр, позволяющий пропустить страницу выбора метода и принудительно выбрать title в качестве платежного метода. |
+| payment_extra_paramtype_string type_strictly_required | Возможные значения:`"USDT:TRX"`Пример:`USDT`BNBTRXETHSOLBASE— Криптовалюта Tether (stablecoin). Доступна на следующих блокчейнах:— BNB Smart Chain,— Tronix,— Ethereum,— Solana,— BASE.`USDC`BNBTRXETHSOLBASE— Криптовалюта USD Coin (stablecoin). Доступна на следующих блокчейнах:— BNB Smart Chain,— Tronix,— Ethereum,— Solana,— BASE.Доступные валюты и блокчейны. |
+| signaturetype_string type_strictly_required | ru_pp_authentication.ditaПодпись запроса, составленная после определения всех параметров запроса. Подробнее о составлении подписи см.. |
+| ru_pp_parameters.ditaПри необходимости добавьте в запрос необязательные параметры из числа доступных для работы                  с Payment Widget. Подробнее о параметрах запросов в Payment Widget см.. |  |
+
+### Оповещение (callback)
+
+ru_pp_callbacks.ditaВ методе title результат оплаты платежная платформа возвращает в оповещении. Подробнее о структуре оповещений см..
+
+Вот пример тела оповещения с информацией об успешно выполненной оплате:
+
+Вот пример тела оповещения с информацией об отклоненной оплате.
+
+### Дополнительные материалы
+
+- ru_pp_interaction_organisation.dita
+- ru_pp_payment_model.dita
+- ru_pp_authentication.dita
+- ru_pp_statuses_and_response_codes.dita
+

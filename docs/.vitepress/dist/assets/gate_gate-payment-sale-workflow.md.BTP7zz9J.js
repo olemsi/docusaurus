@@ -1,0 +1,13 @@
+import { _ as _export_sfc, o as openBlock, c as createElementBlock, a2 as createStaticVNode } from "./chunks/framework.BFJzPV4p.js";
+const __pageData = JSON.parse('{"title":"Workflow","description":"","frontmatter":{},"headers":[],"relativePath":"gate/gate-payment-sale-workflow.md","filePath":"gate/gate-payment-sale-workflow.md"}');
+const _sfc_main = { name: "gate/gate-payment-sale-workflow.md" };
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("div", null, [..._cache[0] || (_cache[0] = [
+    createStaticVNode('<h1 id="workflow" tabindex="-1">Workflow <a class="header-anchor" href="#workflow" aria-label="Permalink to &quot;Workflow&quot;">​</a></h1><p>When processing a one-step purchase by using Gate, the merchant web service is required to do the following:</p><p>The following diagram provides the detailed picture of an ordinary one-step purchase processing procedure without additional requests.</p><p>The sections that follow discuss in greater detail the request format and the required parameters and the information about the format of callbacks with payment results. Information about possible statuses of this payment type can be found in the corresponding article.</p><ol><li><code>{payment method}card/v2/payment//sale[/specifying payment details]</code>Send the one-step purchase request with payment details to one of the relevant endpoints in the following group:.</li><li><em>3‑D Secure authentication</em>. This authentication is intended to provide security to online payments by payment cards. For more information on the authentication workflow, as well as request and callback formats, see .<strong>Customer authentication on merchant&#39;s request</strong>. This authentication is intended to make purchases with payment cards more secure. For more information on the authentication workflow, as well as request and callback formats, see .<em>Additional payment information submission</em>. This procedure is intended for cases in which the initial request did not contain the information needed by one of the payment process stakeholders. For more information on this procedure, see .If necessary, complete the additional procedures:</li><li>Receive a callback with the payment result from the payment platform.</li><li>, if the payment method supports refundsIf needed, after completing a one-time one-step purchase you can return your customers their money. For more information on this procedure, see .</li></ol>', 5)
+  ])]);
+}
+const gatePaymentSaleWorkflow = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
+export {
+  __pageData,
+  gatePaymentSaleWorkflow as default
+};

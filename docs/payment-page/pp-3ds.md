@@ -1,0 +1,17 @@
+# 3‑D Secure authentication
+
+## Overview
+
+3‑D Secure (Three-Domain Secure) customer authentication is aimed to increase secure processing of online card payments. This authentication procedure is essential for processing purchases and can be carried out in a variety of ways: the customer may be required to perform certain actions to confirm their identity or their involvement can be bypassed altogether.
+
+3‑D Secure supports the following authentication flows:
+
+The merchant cannot select the authentication flow. While the merchant can indicate which flow selection is preferable, the final decision is made by the issuer. In addition to specifying the preferred flow, the merchant can pass a range of optional parameters in the request for opening the payment form which increases the possibility of the frictionless flow selection. The information about these parameters is presented in the sections that follow.
+
+::: tip
+Global card schemes such as American Express, Mastercard, and Visa as well as Platform currently support the second version of the 3‑D Secure protocol, 3‑D Secure 2. Here is the information about working with this protocol version.
+:::
+
+::: tip
+There are two main versions of the 3‑D Secure protocol: 3‑D Secure 1 and 3‑D Secure 2. The 3‑D Secure 2 version differs from 3‑D Secure 1 mostly by the range of available mechanisms for customer identity verification and the authentication parameters used. For example, the customer's biometric verification (with the use of fingerprints) or the customer's verification without any actions on the customer's part is available only in the second version of the protocol. The first version is no longer supported by such global card schemes as Mastercard and Visa, but other card schemes may still support this version. The information presented in this article will allow you to work with both versions.
+:::

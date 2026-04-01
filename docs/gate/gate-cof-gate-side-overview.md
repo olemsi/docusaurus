@@ -1,0 +1,3 @@
+# COF on platform side
+
+*COF purchase with automatic debiting*is a payment type which uses a single initial request to make a series of regularly recurring funds transfers (debits) from the customer to the merchant by using stored payment credentials without verification of the payment instrument (i.e. by entering a card verification code). The Platform payment platform performs COF purchases with automatic debiting according to the payment model (learn more). If one attempt to perform a scheduled debiting is not enough (for example, if the customer's card account has insufficient balance), the debiting can be retried in the payment platform automatically (details).

@@ -1,0 +1,19 @@
+import { ssrRenderAttrs } from "vue/server-renderer";
+import { useSSRContext } from "vue";
+import { _ as _export_sfc } from "./plugin-vue_export-helper.1tPrXgE0.js";
+const __pageData = JSON.parse('{"title":"Customising email and payment form","description":"","frontmatter":{},"headers":[],"relativePath":"gate/gate-invoice-custom.md","filePath":"gate/gate-invoice-custom.md"}');
+const _sfc_main = { name: "gate/gate-invoice-custom.md" };
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<div${ssrRenderAttrs(_attrs)}><h1 id="customising-email-and-payment-form" tabindex="-1">Customising email and payment form <a class="header-anchor" href="#customising-email-and-payment-form" aria-label="Permalink to &quot;Customising email and payment form&quot;">​</a></h1><h2 id="email-content-and-design" tabindex="-1">Email content and design <a class="header-anchor" href="#email-content-and-design" aria-label="Permalink to &quot;Email content and design&quot;">​</a></h2><p>(sender)<code>Payment Link from Cosmoshop</code>, for example,By default, the email sent to the customer includes the sender&#39;s email address, the subject line with the name of the merchant or the project used (as specified in the platform), as well as the following information from the request to generate a payment link:</p><p>If needed, the merchant can designate a specific email address that will be shown to the customer as a sender&#39;s address, change the language and the information included in the email, or provide their own customised version of the email design and layout.</p><p>To customise the template of payment link email, contact the Platform technical support at support@platform.dev.</p><ul><li><code>payment_id</code>payment identifier (from theparameter)</li><li><code>amountcurrency</code>payment amount and currency (from theandparameters, respectively)</li><li><code>best_before</code>payment link expiry date and time (from theparameter)</li><li><code>description</code>payment description (from theparameter)</li></ul><h2 id="payment-form-design" tabindex="-1">Payment form design <a class="header-anchor" href="#payment-form-design" aria-label="Permalink to &quot;Payment form design&quot;">​</a></h2><p>By default, the payment form displayed to the customer has the standard design provided by Platform. If desired, it is possible to customise the design with the application of various changes to separate payment form elements by using the corresponding design builder. With questions that do not cover the design builder capabilities, contact your account manager.</p></div>`);
+}
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("gate/gate-invoice-custom.md");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const gateInvoiceCustom = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
+export {
+  __pageData,
+  gateInvoiceCustom as default
+};

@@ -1,0 +1,498 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!-- saved from url=(0053)https://developers.platform.dev/en/en_dbl_about.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="description" content="This section provides the information about working with the Dashboard interface. Overview and getting started The information about the Dashboard interface and how to start using it: Overview ..."><meta name="copyright" content="(C) Copyright 2026"><meta name="DC.rights.owner" content="(C) Copyright 2026"><meta name="DC.Type" content="topic"><meta name="DC.Title" content="Dashboard"><meta name="DC.subject" content="dashboard"><meta name="keywords" content="dashboard"><meta name="DC.Relation" scheme="URI" content="en_dbl_overview.html#en_dbl_overview"><meta name="DC.Relation" scheme="URI" content="en_dbl_roles_overview.html#en_dbl_roles_overview"><meta name="DC.Relation" scheme="URI" content="en_dbl_interfaces.html#en_dbl_interfaces"><meta name="DC.Relation" scheme="URI" content="en_dbl_projects.html#en_dbl_projects"><meta name="DC.Relation" scheme="URI" content="en_dbl_payments.html#en_dbl_payments"><meta name="DC.Relation" scheme="URI" content="en_dbl_balances.html#en_dbl_balances"><meta name="DC.Relation" scheme="URI" content="en_dbl_risks.html#en_dbl_risks"><meta name="DC.Relation" scheme="URI" content="en_dbl_api_protocol.html"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="en_dbl_about"><meta name="DC.Language" content="en"><title>Dashboard</title><!--  Generated with Oxygen version 20.0-SNAPSHOT, build number 2018042310.  --><meta name="wh-path2root" content=""><meta name="wh-toc-id" content="en_dbl_about-d46e1952">
+        <!-- pageNameReplaceOnBuild -->
+		<meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="-1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="noindex, nofollow">
+
+		<!-- Build tag -->
+		 <!-- local build -->
+		
+        <!-- Google Tag Manager -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK8XW56" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <script type="text/javascript" async="" src="./Dashboard_files/js"></script><script async="" src="./Dashboard_files/gtm.js"></script><script type="text/javascript">/**/(function(w,d,s,l,i){w[l]=w[l]||[];
+            w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';
+            j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK8XW56');
+        /**/</script>
+        <!-- End Google Tag Manager -->
+
+        <link rel="shortcut icon" href="https://developers.platform.dev/en/oxygen-webhelp/template/images/favicon.ico">
+        <link rel="stylesheet" href="./Dashboard_files/jquery-ui.min.css">
+		<link rel="stylesheet" href="./Dashboard_files/topMenu.css">
+        <link rel="stylesheet" href="./Dashboard_files/cookie-bot.css">
+		<link rel="stylesheet" href="./Dashboard_files/helpfull.css">
+        <link rel="stylesheet" href="./Dashboard_files/leftSideMenu.css">
+        <link rel="stylesheet" href="./Dashboard_files/rightSideMenu.css">
+        <link rel="stylesheet" href="./Dashboard_files/jq-scrollbars-left-side.css">
+        <link rel="stylesheet" href="./Dashboard_files/jq-scrollbars-right-side.css">
+        <link rel="stylesheet" href="./Dashboard_files/newSideMenusButtons.css">
+
+        <link rel="stylesheet" href="./Dashboard_files/shop.css">
+
+        <!-- Template default styles  -->
+        <link rel="stylesheet" type="text/css" href="./Dashboard_files/wt_default.css">
+
+        <link rel="stylesheet" href="./Dashboard_files/style.css">
+
+        <!--Roboto web-font-->
+        <link href="./Dashboard_files/css" rel="stylesheet">
+
+        <script type="text/javascript" src="./Dashboard_files/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="./Dashboard_files/jquery.cookie.js"></script>
+        <script type="text/javascript" src="./Dashboard_files/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="./Dashboard_files/jquery.highlight-3.js"></script>
+        <script src="./Dashboard_files/jquery.tablesorter.js"></script>
+        <script src="./Dashboard_files/jquery.treetable.js"></script>
+        
+        <script src="./Dashboard_files/wt_default.js" type="text/javascript"></script>
+        <!-- Expand/collapse support -->
+        <script src="./Dashboard_files/wt_expand.js" type="text/javascript"></script>
+        
+
+        <!-- Search autocomplete -->
+        <script type="text/javascript" src="./Dashboard_files/keywords.js"><!----></script>
+        <script type="text/javascript" src="./Dashboard_files/searchAutocomplete.js"><!----></script>
+        <script type="text/javascript" src="./Dashboard_files/searchHistoryItems.js"><!----></script>
+        <script type="text/javascript" src="./Dashboard_files/strings.js"></script>
+        <script type="text/javascript" src="./Dashboard_files/localization.js"></script>
+        <script type="text/javascript" src="./Dashboard_files/parseuri.js"></script>
+        <script src="./Dashboard_files/index.js"></script>
+        <script src="./Dashboard_files/main.js"></script>
+        <script src="./Dashboard_files/event-tr.js"></script>
+        <script src="./Dashboard_files/topMenu.js"></script>
+        <script src="./Dashboard_files/helpfull.js"></script>
+        <script src="./Dashboard_files/filterPopup.js"></script>
+        <script src="./Dashboard_files/modalMailForm.js"></script>
+		
+		<!--Gallery start-->		
+        <script src="./Dashboard_files/jquery.kinetic.js"></script>
+        <script src="./Dashboard_files/jquery.scrollbar.js"></script>
+        <script src="./Dashboard_files/doc-gallery.js"></script>
+		<!--Gallery end-->
+        <script src="./Dashboard_files/leftSideMenu.js"></script>
+        <script src="./Dashboard_files/rightSideMenu.js"></script>
+        <script src="./Dashboard_files/newSideMenusButtons.js"></script>
+
+        <script src="./Dashboard_files/tableSpecialFilter.js"></script>
+
+        <script src="./Dashboard_files/filterContent.js"></script>
+        <script src="./Dashboard_files/platformDetection.js"></script>
+        <script>
+            /**
+             * If an old URL is given, redirect to the corresponding topic from the WebHelp Responsive
+             */
+            var actualLocation = window.location.href;
+            var newLocation;
+            if (actualLocation.indexOf('/#')!=-1) {
+                newLocation = actualLocation.replace(/\/#/g, "/");
+                window.location.replace(newLocation);
+            }
+            if (actualLocation.match(/\/index\.(.*)#/gi)!=null) {
+                newLocation = actualLocation.replace(/\/index\.(.*)#/gi, "/");
+                window.location.replace(newLocation);
+            }
+
+            function debug(msg, object){
+                console.log(msg, object);
+            }
+            function executeQuery(){
+                $('#searchForm').submit();
+                return true;
+            }
+        </script>
+
+        <!-- Skin resources -->
+        <link rel="stylesheet" type="text/css" href="./Dashboard_files/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="./Dashboard_files/vars.css"><link rel="stylesheet" type="text/css" href="./Dashboard_files/fonts.css"><link rel="stylesheet" type="text/css" href="./Dashboard_files/jquery.treetable.css"><link rel="stylesheet" type="text/css" href="./Dashboard_files/wt_default(1).css"><link rel="stylesheet" type="text/css" href="./Dashboard_files/wt_expand.css"><link rel="stylesheet" type="text/css" href="./Dashboard_files/skin.css"><link rel="stylesheet" type="text/css" href="./Dashboard_files/doc-gallery.css"><link rel="stylesheet" type="text/css" href="./Dashboard_files/topMenu(1).css"><link rel="stylesheet" type="text/css" href="./Dashboard_files/leftSideMenu(1).css"><link rel="stylesheet" type="text/css" href="./Dashboard_files/rightSideMenu(1).css"><link rel="stylesheet" type="text/css" href="./Dashboard_files/jq-scrollbars-left-side(1).css"><link rel="stylesheet" type="text/css" href="./Dashboard_files/jq-scrollbars-right-side(1).css"><link rel="stylesheet" type="text/css" href="./Dashboard_files/newSideMenusButtons(1).css"><link rel="stylesheet" type="text/css" href="./Dashboard_files/cookie-bot(1).css"><link rel="stylesheet" type="text/css" href="./Dashboard_files/helpfull(1).css"><link rel="stylesheet" type="text/css" href="./Dashboard_files/newLinks.css"><link rel="stylesheet" type="text/css" href="./Dashboard_files/shop(1).css"><link rel="stylesheet" type="text/css" href="./Dashboard_files/tables.css">
+        <!-- EXM-36950 - Expand the args.hdf parameter here -->
+        
+        
+
+        <script>
+          function debug(msg, object){
+              console.log(msg, object);
+          }
+          function executeQuery(){
+              $('#searchForm').submit();
+              return true;
+          }
+        </script>
+
+    <style id="custom-cursor" type="text/css">body button, body [type='button'], body input[type='reset'], body input[type='submit'], body [role="button"], ::-webkit-search-cancel-button, ::-webkit-search-decoration, ::-webkit-scrollbar-button, ::-webkit-file-upload-button, [role^=button], .cc_pointer, [type="search"]::-webkit-search-cancel-button, a, select, [type="search"]::-webkit-search-decoration, .paper-button, .ytp-progress-bar-container, input[type=submit], :link, :visited, a > *, img,  ::-webkit-scrollbar-button, .ogdlpmhglpejoiomcodnpjnfgcpmgale_pointer, ::-webkit-file-upload-button, .ytp-volume-panel, #myogdlpmhglpejoiomcodnpjnfgcpmgale .icon, body .custom-cursor-on-hover {cursor: url("data:image/png;base64,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") 15 3, pointer !important;} html,body,body select,body .custom-cursor-default-hover {cursor: url("data:image/png;base64,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") 4 2, auto !important;}</style></head>
+
+    <body class="wh_topic_page frmBody chrome macintosh empty-left-menu left-side-menu-close right-side-menu-close page-ready-to-show" id="en_dbl_about">
+	
+	<!-- Google Tag Manager -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK8XW56" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager -->
+
+    <div class="burger-mobile__wrapper">
+        <div class="burger-mobile">
+            <div class="burger-mobile__line"></div>
+        </div>
+    </div>
+
+
+    <div class="wrapper">
+        <div class="breadcrumbs">
+            <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol xmlns:html="http://www.w3.org/1999/xhtml" class="hidden-print"><li><span class="home"><a href="https://developers.platform.dev/en/index.html"><span>Tools</span></a></span></li>
+   <li class="active"><span class="topicref" data-id="en_dbl_about"><span class="title"><a href="https://developers.platform.dev/en/en_dbl_about.html"><span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph">Dashboard</span></a></span></span></li>
+</ol></div>
+        </div>
+        <header style="display: block;">
+<div class="header__wrapper macintosh chrome">
+    <div class="sidebar__logo-container">
+        
+                <a href="https://platform.dev/" class="sidebar__logo_double-first" title=" Platform Main Site">
+                    <img class="sidebar__logo_double-first-image-desktop" src="./Dashboard_files/logo.svg">
+                    <img class="sidebar__logo_double-first-image-mobile" src="./Dashboard_files/logo.svg">
+                </a>
+                <a href="https://developers.platform.dev/landing-en/" class="sidebar__logo_double-second" title="Platform Documentation Portal">
+                    <img class="sidebar__logo_double-second-image-desktop" src="./Dashboard_files/documentation.svg">
+                    <img class="sidebar__logo_double-second-image-mobile" src="./Dashboard_files/doc.svg">
+                </a>
+            
+    </div>
+    
+    
+        <nav class="navbar-mobile">            
+            <div class="top-menu__mobile-menu-first-level-section">
+                <div class="top-menu__mobile-menu-home-header-container">
+                    <a class="top-menu__mobile-menu-home-header-link" href="https://developers.platform.dev/en/index.html"></a>
+                    <div class="top-menu__mobile-menu-home-header">Sections</div>
+                </div>            
+                <div class="top-menu__mobile-menu-home-header-underline"></div>
+            
+                <a class="top-menu__menu-section-name top-menu__menu-section-name-mobile" href="https://developers.platform.dev/en/en_platform_about.html" data-second-section-id="0">Platform</a>
+                    
+                <span class="top-menu__menu-section-name top-menu__menu-section-name-mobile has-children active" data-second-section-id="1">Tools</span>
+                    
+                <a class="top-menu__menu-section-name top-menu__menu-section-name-mobile" href="https://developers.platform.dev/en/en_faq.html" data-second-section-id="2">FAQ</a>
+                    
+                <a class="top-menu__menu-section-name top-menu__menu-section-name-mobile" href="https://developers.platform.dev/en/en_directory.html" data-second-section-id="3">References</a>
+                    
+                <a class="top-menu__menu-section-name top-menu__menu-section-name-mobile" href="https://developers.platform.dev/en/en_all_versions.html" data-second-section-id="4">What's new</a>
+            
+        </div>
+        
+                <div class="top-menu__mobile-menu-second-level-section" data-second-section-id="1">
+                    <div class="top-menu__mobile-menu-home-header-container top-menu__mobile-menu-second-level-section-name">
+                        <span class="top-menu__mobile-menu-back-header-link" href="index.html"></span>
+                        <span class="top-menu__mobile-menu-section-header">Tools</span>
+                    </div>            
+                    <div class="top-menu__mobile-menu-home-header-underline"></div>
+                
+                    <a class="top-menu__child-link" href="https://developers.platform.dev/en/en_PP_about.html">Payment Page</a><a class="top-menu__child-link" href="https://developers.platform.dev/en/en_Gate_Integration_About.html">Gate</a><a class="top-menu__child-link active-page" href="https://developers.platform.dev/en/en_dbl_about.html">Dashboard</a> 
+                </div>
+            
+    </nav>
+    
+    
+    <nav class="navbar navbar-default navbar-tablet  wh_header">
+        <div class="top-menu__menu-current-section">Tools</div>
+        <div class="top-menu__menu-section-items-container">
+            
+        
+            <div class="top-menu__menu-section-item ">
+                <a class="top-menu__menu-section-name not-serchable" href="https://developers.platform.dev/en/en_platform_about.html" data-second-section-id="0">Platform</a>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">Platform</div>
+                    <div class="top-menu__section-dropdown-info-description">Payment platform, its structure and operation. Refer to this section when you have general questions about working with the platform.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container">
+                        
+                    </div>
+                </div>
+            </div>       
+        
+            <div class="top-menu__menu-section-item has-children active">
+                <span class="top-menu__menu-section-name" data-second-section-id="1">Tools</span>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">Tools</div>
+                    <div class="top-menu__section-dropdown-info-description">The&nbsp;platform's interfaces and components. Refer to this&nbsp;section when you configure various ways of interaction with the&nbsp;platform.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container">
+                        <a class="top-menu__child-link" href="https://developers.platform.dev/en/en_PP_about.html">Payment Page</a><a class="top-menu__child-link" href="https://developers.platform.dev/en/en_Gate_Integration_About.html">Gate</a><a class="top-menu__child-link active-page" href="https://developers.platform.dev/en/en_dbl_about.html">Dashboard</a>
+                    </div>
+                </div>
+            </div>       
+        
+            <div class="top-menu__menu-section-item ">
+                <a class="top-menu__menu-section-name not-serchable" href="https://developers.platform.dev/en/en_faq.html" data-second-section-id="2">FAQ</a>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">FAQ</div>
+                    <div class="top-menu__section-dropdown-info-description">Answers to commonly asked questions concerning the&nbsp;platform and its use.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container">
+                        
+                    </div>
+                </div>
+            </div>       
+        
+            <div class="top-menu__menu-section-item ">
+                <a class="top-menu__menu-section-name not-serchable" href="https://developers.platform.dev/en/en_directory.html" data-second-section-id="3">References</a>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">References</div>
+                    <div class="top-menu__section-dropdown-info-description">Reference information and glossary of the&nbsp;terms used in the&nbsp;documentation.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container">
+                        
+                    </div>
+                </div>
+            </div>       
+        
+            <div class="top-menu__menu-section-item ">
+                <a class="top-menu__menu-section-name not-serchable" href="https://developers.platform.dev/en/en_all_versions.html" data-second-section-id="4">What's new</a>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">What's new</div>
+                    <div class="top-menu__section-dropdown-info-description">Information about documentation updates and changes.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container">
+                        
+                    </div>
+                </div>
+            </div>       
+        
+        </div>
+    </nav>
+    
+    <nav class="navbar navbar-default navbar-desktop wh_header">
+        <div class="top-menu__menu-section-items-container">
+            
+            <div class="top-menu__menu-section-item  ">
+                <a class="top-menu__menu-section-name" data-second-section-id="0" href="https://developers.platform.dev/en/en_platform_about.html">Platform</a>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">Platform</div>
+                    <div class="top-menu__section-dropdown-info-description">Payment platform, its structure and operation. Refer to this section when you have general questions about working with the platform.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container less-than-four-children">
+                       <div></div>                        
+                       <div></div>                       
+                    </div>
+                </div>
+            </div>              
+        
+            <div class="top-menu__menu-section-item has-children active">
+                <span class="top-menu__menu-section-name" data-second-section-id="1">Tools</span>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">Tools</div>
+                    <div class="top-menu__section-dropdown-info-description">The&nbsp;platform's interfaces and components. Refer to this&nbsp;section when you configure various ways of interaction with the&nbsp;platform.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container less-than-four-children">
+                       <div><a class="top-menu__child-link" href="https://developers.platform.dev/en/en_PP_about.html">Payment Page</a><a class="top-menu__child-link" href="https://developers.platform.dev/en/en_Gate_Integration_About.html">Gate</a><a class="top-menu__child-link active-page" href="https://developers.platform.dev/en/en_dbl_about.html">Dashboard</a></div>                        
+                       <div></div>                       
+                    </div>
+                </div>
+            </div>              
+        
+            <div class="top-menu__menu-section-item  ">
+                <a class="top-menu__menu-section-name" data-second-section-id="2" href="https://developers.platform.dev/en/en_faq.html">FAQ</a>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">FAQ</div>
+                    <div class="top-menu__section-dropdown-info-description">Answers to commonly asked questions concerning the&nbsp;platform and its use.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container less-than-four-children">
+                       <div></div>                        
+                       <div></div>                       
+                    </div>
+                </div>
+            </div>              
+        
+            <div class="top-menu__menu-section-item  ">
+                <a class="top-menu__menu-section-name" data-second-section-id="3" href="https://developers.platform.dev/en/en_directory.html">References</a>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">References</div>
+                    <div class="top-menu__section-dropdown-info-description">Reference information and glossary of the&nbsp;terms used in the&nbsp;documentation.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container less-than-four-children">
+                       <div></div>                        
+                       <div></div>                       
+                    </div>
+                </div>
+            </div>              
+        
+            <div class="top-menu__menu-section-item  ">
+                <a class="top-menu__menu-section-name" data-second-section-id="4" href="https://developers.platform.dev/en/en_all_versions.html">What's new</a>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">What's new</div>
+                    <div class="top-menu__section-dropdown-info-description">Information about documentation updates and changes.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container less-than-four-children">
+                       <div></div>                        
+                       <div></div>                       
+                    </div>
+                </div>
+            </div>              
+        
+        </div>
+    </nav>
+    
+<!--  фильтрация контента  -->
+    <div class="content-filtration content-filtration--more" data-title-more-text="Read shortened version" data-title-less-text="Read full article" title="Read shortened version"></div>
+<!--  фильтрация контента  -->      
+    <!-- Search form -->
+    <div class=" wh_search_input navbar-form wh_main_page_search " title="Search" role="form">
+        <form id="searchForm" method="get" action="https://developers.platform.dev/en/search.html">
+            <div>
+                <input type="search" placeholder="Documentation search…" class="wh_search_textfield" id="textToSearch" name="searchQuery">
+                <button type="submit" class="wh_search_button"></button>
+            </div>
+            <script>
+             <!--
+                $(document).ready(function () {
+                    $('#searchForm').submit(function (e) {
+                        if ($('.wh_search_textfield').val().length < 1) {
+                            e.preventDefault();
+                        }
+                    });
+                });-->
+            </script>
+        </form>
+        <div class="mobile-search-cancel"></div>
+    </div>
+    <!-- Envelope -->
+    <span class="user-nav__write-btn" title="Contact us" onclick="showDocModalForm(event)"></span>
+    <!-- Lang switch -->
+    <div class="lang-switch"></div>
+    <div class="top-menu__mobile-menu-toggle"></div>
+</div>
+    </header><div class="top-menu__layout"></div>
+
+        <aside class="sidebar">
+            <nav role="navigation" id="wh_side_toc">
+                <div class=" wh_publication_toc "><ul>
+   <li class="active"><span data-tocid="en_dbl_about-d46e1952" class="topicref" data-id="en_dbl_about" data-state="expanded"><span class="wh-expand-btn"></span><span class="title"><a href="https://developers.platform.dev/en/en_dbl_about.html"><span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph">Dashboard</span></a></span></span><ul class="nav nav-list">
+         <li><span data-tocid="en_dbl_overview-d46e1961" class="topicref" data-id="en_dbl_overview" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="https://developers.platform.dev/en/en_dbl_overview.html#en_dbl_overview">Overview</a></span></span></li>
+         <li><span data-tocid="en_dbl_roles_overview-d46e1985" class="topicref" data-id="en_dbl_roles_overview" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="https://developers.platform.dev/en/en_dbl_roles_overview.html#en_dbl_roles_overview">Core capabilities and role-based access model</a></span></span></li>
+         <li><span data-tocid="en_dbl_interfaces-d46e2025" class="topicref" data-id="en_dbl_interfaces" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="https://developers.platform.dev/en/en_dbl_interfaces.html#en_dbl_interfaces">Interaction with the interface</a></span></span></li>
+         <li><span data-tocid="en_dbl_projects-d46e2065" class="topicref" data-id="en_dbl_projects" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="https://developers.platform.dev/en/en_dbl_projects.html#en_dbl_projects">Managing projects</a></span></span></li>
+         <li><span data-tocid="en_dbl_payments-d46e2089" class="topicref" data-id="en_dbl_payments" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="https://developers.platform.dev/en/en_dbl_payments.html#en_dbl_payments">Monitoring and performing payments</a></span></span></li>
+         <li><span data-tocid="en_dbl_balances-d46e2289" class="topicref" data-id="en_dbl_balances" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="https://developers.platform.dev/en/en_dbl_balances.html#en_dbl_balances"><span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph">Monitoring balances</span></a></span></span></li>
+         <li><span data-tocid="en_dbl_risks-d46e2361" class="topicref" data-id="en_dbl_risks" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="https://developers.platform.dev/en/en_dbl_risks.html#en_dbl_risks">Risk management</a></span></span></li>
+         <li><span data-tocid="en_dbl_api_protocol-d46e2516" class="topicref" data-id="en_dbl_api_protocol" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="https://developers.platform.dev/en/en_dbl_api_protocol.html">Using Data API</a></span></span></li>
+      </ul>
+   </li>
+</ul></div>
+            </nav>
+        </aside>
+        <!-- EXM-36950 - Expand the args.hdr parameter here -->
+        
+        
+
+        <div class="container">
+
+
+            <div class="wh_content_area" style="min-height: calc(-91px + 100vh); padding-bottom: 136px;">
+                <div class="row">
+                    <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1"><span class="ph">Dashboard</span></h1>
+
+    <div class="body">
+                <p class="p">This section provides the information about working with the <span class="ph">Dashboard</span> interface.</p>
+
+                <section class="section" id="en_dbl_about__section_b5y_grc_c5b"><h2 class="title topictitle2">Overview and getting started</h2>
+                        
+                        <p class="p">The information about the <span class="ph">Dashboard</span> interface and how to start using it:</p>
+
+                        <ul class="ul" id="en_dbl_about__ul_cqx_hrc_c5b">
+                                <li class="li"><a class="xref" href="https://developers.platform.dev/en/en_dbl_overview.html#en_dbl_overview"><i></i>Overview</a><span class="ph show_more"> introduces the interface, its special characteristics, and how to access it.</span></li>
+
+                                <li class="li"><a class="xref" href="https://developers.platform.dev/en/en_dbl_roles_overview.html#en_dbl_roles_overview"><i></i>Core capabilities and role-based access model</a><span class="ph show_more"> covers core capabilities, supported access roles and their specific characteristics as well as distribution of access rights to different roles.</span></li>
+
+                                <li class="li"><a class="xref" href="https://developers.platform.dev/en/en_dbl_interfaces.html#en_dbl_interfaces"><i></i>Interaction with the interface</a><span class="ph show_more"> describes essential interface elements: main menu, sections, and lists.</span></li>
+
+                                <li class="li"><a class="xref" href="https://developers.platform.dev/en/en_dbl_projects.html#en_dbl_projects"><i></i>Managing projects</a><span class="ph show_more"> goes over individual settings of your projects you can configure in <span class="ph">Dashboard</span> and working with callback settings.</span></li>
+
+                        </ul>
+
+                </section>
+
+                <section class="section" id="en_dbl_about__section_wn2_vrc_c5b"><h2 class="title topictitle2">Working with the interface</h2>
+                        
+                        <p class="p">The information about a range of tasks that <span class="ph">Dashboard</span> allows you to accomplish and the necessary instructions:</p>
+
+                        <ul class="ul" id="en_dbl_about__ul_xdh_wrc_c5b">
+                                <li class="li"><a class="xref" href="https://developers.platform.dev/en/en_dbl_payments.html#en_dbl_payments"><i></i>Monitoring and performing payments</a><span class="ph show_more"> covers monitoring payments, performing various types of purchases<span class="ph">, refunds, and payouts as well as managing regular COF purchases (subscriptions) via <span class="ph">Dashboard</span></span>.</span></li>
+
+                                <li class="li"><a class="xref" href="https://developers.platform.dev/en/en_dbl_balances.html#en_dbl_balances"><i></i>Monitoring balances</a><span class="ph show_more"> discusses balances and the special aspects of their use as well as monitoring balances via <span class="ph">Dashboard</span>.</span></li>
+
+                                
+                                <li class="li"><a class="xref" href="https://developers.platform.dev/en/en_dbl_risks.html#en_dbl_risks"><i></i>Risk management</a><span class="ph show_more"> introduces the basics of risk management and goes over monitoring fraudulent operations and using whitelists and blacklists via <span class="ph">Dashboard</span>.</span></li>
+
+                        </ul>
+
+                </section>
+
+                <section class="section" id="en_dbl_about__section_q21_bsc_c5b"><h2 class="title topictitle2">Related interfaces</h2>
+                        
+                        
+                        
+                        <p class="p">The information about features and technical aspects of the Data API interface that allows you to get data about operations and balances–<a class="xref" href="https://developers.platform.dev/en/en_dbl_api_protocol.html"><i></i>Using Data API</a>.</p>
+
+                </section>
+
+        </div>
+
+</article></main></div>
+
+                    
+                    
+                    
+                </div>
+				
+                        <nav role="navigation" id="wh_topic_toc" class="col-lg-2 hidden-md hidden-sm hidden-xs navbar hidden-print" style="height: 940px;"> 
+                            <div class="wh_topic_toc hide-bottom-blur hide-top-blur"><div class="wh_topic_label">On this page</div><div class="scroll-wrapper scrollbar-outer" style="position: relative;"><ul class="scrollbar-outer scroll-content scroll-scrollx_visible" style="height: 790px; margin-bottom: 0px; margin-right: 0px; max-height: 790px;"><li class="section-item"><div class="section-title"><a href="https://developers.platform.dev/en/en_dbl_about.html#en_dbl_about__section_b5y_grc_c5b" data-tocid="en_dbl_about__section_b5y_grc_c5b">Overview and getting started</a></div></li><li class="section-item"><div class="section-title"><a href="https://developers.platform.dev/en/en_dbl_about.html#en_dbl_about__section_wn2_vrc_c5b" data-tocid="en_dbl_about__section_wn2_vrc_c5b">Working with the interface</a></div></li><li class="section-item"><div class="section-title"><a href="https://developers.platform.dev/en/en_dbl_about.html#en_dbl_about__section_q21_bsc_c5b" data-tocid="en_dbl_about__section_q21_bsc_c5b">Related interfaces</a></div></li></ul><div class="scroll-element scroll-x scroll-scrollx_visible"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar" style="width: 99px; left: 0px;"></div></div></div><div class="scroll-element scroll-y scroll-scrollx_visible"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar" style="height: 86px;"></div></div></div></div></div>
+                        </nav>
+                
+            <!-- start -->
+                <div class="side-menu__layout"></div><div class="helpful link-vertical" style="width: calc(897px);">
+                    <div class="helpful__inner">
+                        <div class="doc-copyright-text">© Platform LTD, 2026</div>
+                        <div class="doc-copyright-line"></div>
+                        <div class="helpful__helpful-container">
+                            <div class="helpful__q">Is this helpful?</div>
+                            <div class="helpful__link-container">
+                                <div class="helpful__btns">
+                                    <div class="answer-popup hidden"><span class="answer-popup__text"><!-- Thank you for the feedback! -->Thank you for the feedback!</span></div>
+                                    <input class="helpful__btn helpful__btn--yes" type="button" name="yes" value="Yes">
+                                    <input class="helpful__btn helpful__btn--no" type="button" name="no" value="No">
+                                </div>
+                                <a class="helpful__link" href="https://developers.platform.dev/en/en_dbl_about.html">Tell us more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="helpful__sep-line"></div>
+                </div>
+				<!-- end -->
+            </div>
+        </div>
+        <button id="button_up" style="opacity: 0;"></button>
+
+        <!--<nav class="navbar navbar-default wh_footer" xmlns="http://www.w3.org/1999/xhtml"-->
+  <!--xmlns:whc="http://www.oxygenxml.com/webhelp/components">-->
+  <!--<div class=" footer-container text-center ">-->
+    <!--<whc:include_html href="${webhelp.fragment.footer}"/>-->
+  <!--</div>-->
+<!--</nav>-->
+ <!-- Latest compiled and minified JavaScript -->
+    </div>
+    <div class="fader"></div>
+
+    <div class="side-menu-button side-menu-button-left button-disable"></div>
+    <div class="side-menu-button side-menu-button-right"></div>
+
+    
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"><div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div></div></body></html>

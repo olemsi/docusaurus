@@ -1,0 +1,3 @@
+# Вспомогательные процедуры
+
+ru_gate_payment_3ds.ditaru_3ds2_about_gate.ditaru_gate_payment_ps_auth.ditaru_gate_payment_merch_auth.ditaru_gate_clarification.ditaru_gate_conversion.ditaВ этом разделе приведена подробная информация о процедурах, использование которых может потребоваться при проведении платежей.

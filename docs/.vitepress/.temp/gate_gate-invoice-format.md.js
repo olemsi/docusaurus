@@ -1,0 +1,19 @@
+import { ssrRenderAttrs } from "vue/server-renderer";
+import { useSSRContext } from "vue";
+import { _ as _export_sfc } from "./plugin-vue_export-helper.1tPrXgE0.js";
+const __pageData = JSON.parse('{"title":"Callback format","description":"","frontmatter":{},"headers":[],"relativePath":"gate/gate-invoice-format.md","filePath":"gate/gate-invoice-format.md"}');
+const _sfc_main = { name: "gate/gate-invoice-format.md" };
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<div${ssrRenderAttrs(_attrs)}><h1 id="callback-format" tabindex="-1">Callback format <a class="header-anchor" href="#callback-format" aria-label="Permalink to &quot;Callback format&quot;">​</a></h1><h2 id="callback-with-information-about-payment-link-generation-and-delivery" tabindex="-1">Callback with information about payment link generation and delivery <a class="header-anchor" href="#callback-with-information-about-payment-link-generation-and-delivery" aria-label="Permalink to &quot;Callback with information about payment link generation and delivery&quot;">​</a></h2><p>Callbacks with payment link delivery information use the standard format for callbacks described in greater detail in .</p><p><code>12.99 GBPbaskerville@mail.ukstapleton</code>The following is the example of a callback with information about successful generation and delivery of a payment link for apurchase to emailof the customer. The expiration date and time of the payment link is October 11, 2026, 11:50.</p><p><code>stapleton</code>The following is the example of a callback with information about successful generation of a payment link that will be sent to the customervia the merchant web service.</p><h2 id="callback-with-payment-cancellation-information" tabindex="-1">Callback with payment cancellation information <a class="header-anchor" href="#callback-with-payment-cancellation-information" aria-label="Permalink to &quot;Callback with payment cancellation information&quot;">​</a></h2><p>Callbacks with payment cancellation information use the standard format for callbacks described in greater detail in .</p><p><code>456789invoice canceled</code>The following is the example of a callback with information about cancellation of thepayment; the payment status is.</p><h2 id="callback-with-payment-link-expiry-information" tabindex="-1">Callback with payment link expiry information <a class="header-anchor" href="#callback-with-payment-link-expiry-information" aria-label="Permalink to &quot;Callback with payment link expiry information&quot;">​</a></h2><p>Callbacks with payment link expiry information use standard format for callbacks described in greater details in .</p><p><code>baskerville@mail.ukstapleton</code>The following is the example of a callback with information that the payment link which was previously delivered to emailof the customerexpired on February 11, 2025 at 11:50.</p><h2 id="callback-with-payment-result" tabindex="-1">Callback with payment result <a class="header-anchor" href="#callback-with-payment-result" aria-label="Permalink to &quot;Callback with payment result&quot;">​</a></h2><p>Callbacks with payment result information use the standard format for callbacks described in greater details in .</p><p><code>12.99 GBPstapleton</code>The following is the example of a callback with information about apayment completion for the customer.</p></div>`);
+}
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("gate/gate-invoice-format.md");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const gateInvoiceFormat = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
+export {
+  __pageData,
+  gateInvoiceFormat as default
+};

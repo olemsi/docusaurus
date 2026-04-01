@@ -1,0 +1,9 @@
+# Conditions and limitations
+
+When using the capability of data migration, the merchant should consider the conditions and limitations from both the acquirer providing the information and Platform receiving the data. Platform applies the following restrictions:
+
+- American Express,,For working with cards of other card networks, the generation of tokens and registration of COF purchases should be carried out directly in the platform, with the use of the corresponding options supported.The information migration is only available for the following card networks:Mastercardand Visa.
+- When working via third parties, the merchant should discuss with them whether it is possible to interact directly with the acquirers.The information can only be migrated directly from other acquirers.
+- an applicationIf not yet an Platform client, the merchant should submitto connect and proceed with the onboarding process.The information migration is only possible within the production projects in the Platform payment platform.
+- After the migration, a verification file is sent to the merchant's specialists. If they confirm the correctness of the data in this file, the information is considered valid and the responsibility for any consequences (for example, the occurrence of a chargeback due to an erroneous withdrawal of funds from a customer) is placed on the merchant.The merchant is responsible for keeping the migrated information up-to-date and correct.
+- Prior to the data migration, the Platform specialists and the merchant's specialists agree on the date for payment processing with the use of the migrated information to start. In order to avoid double debits (via the two acquirers), the merchant should ensure that the processing of payments via the previous acquirer will be terminated by the agreed date.The merchant is responsible for double debits.

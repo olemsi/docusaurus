@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://developers.platform.dev/en/ -->
+<html class="js-tabby"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" async="" src="./Platform Documentation_files/js"></script><script async="" src="./Platform Documentation_files/gtm.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-PK8XW56');</script>
+        <title>Platform Documentation</title>
+        
+        <meta name="description" content="Platform developers portal offers a wide range of innovative tools for e-commerce, with detailed instructions on how to integrate with our payment platform GATE 2025.">
+        <meta name="yandex-verification" content="59be1ca0dc2e3548">
+        <link href="https://developers.platform.dev/en/dist/img/favicon.ico" type="image/x-icon" rel="icon">
+        <link href="./Platform Documentation_files/style.css" rel="stylesheet" type="text/css">
+        <link href="./Platform Documentation_files/tabby.css" rel="stylesheet" type="text/css">
+        <!-- top menu styles -->
+        <link rel="stylesheet" href="./Platform Documentation_files/topMenu.css" type="text/css">
+        <!-- Warning messages styles -->
+        <link href="./Platform Documentation_files/messages.css" rel="stylesheet" type="text/css">
+    <style id="custom-cursor" type="text/css">body button, body [type='button'], body input[type='reset'], body input[type='submit'], body [role="button"], ::-webkit-search-cancel-button, ::-webkit-search-decoration, ::-webkit-scrollbar-button, ::-webkit-file-upload-button, [role^=button], .cc_pointer, [type="search"]::-webkit-search-cancel-button, a, select, [type="search"]::-webkit-search-decoration, .paper-button, .ytp-progress-bar-container, input[type=submit], :link, :visited, a > *, img,  ::-webkit-scrollbar-button, .ogdlpmhglpejoiomcodnpjnfgcpmgale_pointer, ::-webkit-file-upload-button, .ytp-volume-panel, #myogdlpmhglpejoiomcodnpjnfgcpmgale .icon, body .custom-cursor-on-hover {cursor: url("data:image/png;base64,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") 15 3, pointer !important;} html,body,body select,body .custom-cursor-default-hover {cursor: url("data:image/png;base64,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") 4 2, auto !important;}</style></head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK8XW56"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+        <header class="header" style="display: block;">
+<div class="header__wrapper macintosh chrome">
+    <div class="sidebar__logo-container">
+        
+                <a href="https://platform.dev/" class="sidebar__logo_double-first" title=" Platform Main Site">
+                    <img class="sidebar__logo_double-first-image-desktop" src="./Platform Documentation_files/logo.svg">
+                    <img class="sidebar__logo_double-first-image-mobile" src="./Platform Documentation_files/logo.svg">
+                </a>
+                <a href="https://developers.platform.dev/en/index.html" class="sidebar__logo_double-second" title="Platform Documentation Portal">
+                    <img class="sidebar__logo_double-second-image-desktop" src="./Platform Documentation_files/documentation.svg">
+                    <img class="sidebar__logo_double-second-image-mobile" src="./Platform Documentation_files/doc.svg">
+                </a>
+            
+    </div>
+    
+    
+        <nav class="navbar-mobile">            
+            <div class="top-menu__mobile-menu-first-level-section">
+                <div class="top-menu__mobile-menu-home-header-container">
+                    <a class="top-menu__mobile-menu-home-header-link" href="https://developers.platform.dev/en/index.html"></a>
+                    <div class="top-menu__mobile-menu-home-header">Sections</div>
+                </div>            
+                <div class="top-menu__mobile-menu-home-header-underline"></div>
+            
+                <a class="top-menu__menu-section-name top-menu__menu-section-name-mobile" href="https://developers.platform.dev/en/en_platform_about.html" data-second-section-id="0">Platform</a>
+                    
+                <span class="top-menu__menu-section-name top-menu__menu-section-name-mobile has-children" data-second-section-id="1">Tools</span>
+                    
+                <a class="top-menu__menu-section-name top-menu__menu-section-name-mobile" href="https://developers.platform.dev/en/en_faq.html" data-second-section-id="2">FAQ</a>
+                    
+                <a class="top-menu__menu-section-name top-menu__menu-section-name-mobile" href="https://developers.platform.dev/en/en_directory.html" data-second-section-id="3">References</a>
+                    
+                <a class="top-menu__menu-section-name top-menu__menu-section-name-mobile" href="https://developers.platform.dev/en/en_all_versions.html" data-second-section-id="4">What's new</a>
+                    
+                <span class="top-menu__menu-section-name top-menu__menu-section-name-mobile has-children" data-second-section-id="5">☑ Become a client</span>
+            
+        </div>
+        
+                <div class="top-menu__mobile-menu-second-level-section" data-second-section-id="1">
+                    <div class="top-menu__mobile-menu-home-header-container top-menu__mobile-menu-second-level-section-name">
+                        <span class="top-menu__mobile-menu-back-header-link" href="index.html"></span>
+                        <span class="top-menu__mobile-menu-section-header">Tools</span>
+                    </div>            
+                    <div class="top-menu__mobile-menu-home-header-underline"></div>
+                
+                    <a class="top-menu__child-link" href="https://developers.platform.dev/en/en_PP_about.html">Payment Page</a><a class="top-menu__child-link" href="https://developers.platform.dev/en/en_Gate_Integration_About.html">Gate</a><a class="top-menu__child-link" href="https://developers.platform.dev/en/en_dbl_about.html">Dashboard</a> 
+                </div>
+            
+                <div class="top-menu__mobile-menu-second-level-section" data-second-section-id="5">
+                    <div class="top-menu__mobile-menu-home-header-container top-menu__mobile-menu-second-level-section-name">
+                        <span class="top-menu__mobile-menu-back-header-link" href="index.html"></span>
+                        <span class="top-menu__mobile-menu-section-header">☑ Become a client</span>
+                    </div>            
+                    <div class="top-menu__mobile-menu-home-header-underline"></div>
+                
+                    <a class="top-menu__child-link" href="https://developers.platform.dev/en/">Apply now</a><a class="top-menu__child-link" href="https://developers.platform.dev/en/">Contact us</a> 
+                </div>
+            
+    </nav>
+    
+    
+    <nav class="navbar navbar-default navbar-tablet wh_header custom-cursor-default-hover">
+        <div class="top-menu__menu-current-section no-selection">Sections</div>
+        <div class="top-menu__menu-section-items-container">
+            
+        
+            <div class="top-menu__menu-section-item ">
+                <a class="top-menu__menu-section-name not-serchable" href="https://developers.platform.dev/en/en_platform_about.html" data-second-section-id="0">Platform</a>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">Platform</div>
+                    <div class="top-menu__section-dropdown-info-description">Payment platform, its structure and operation. Refer to this section when you have general questions about working with the platform.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container">
+                        
+                    </div>
+                </div>
+            </div>       
+        
+            <div class="top-menu__menu-section-item has-children">
+                <span class="top-menu__menu-section-name" data-second-section-id="1">Tools</span>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">Tools</div>
+                    <div class="top-menu__section-dropdown-info-description">The&nbsp;platform's interfaces and components. Refer to this&nbsp;section when you configure various ways of interaction with the&nbsp;platform.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container">
+                        <a class="top-menu__child-link" href="https://developers.platform.dev/en/en_PP_about.html">Payment Page</a><a class="top-menu__child-link" href="https://developers.platform.dev/en/en_Gate_Integration_About.html">Gate</a><a class="top-menu__child-link" href="https://developers.platform.dev/en/en_dbl_about.html">Dashboard</a>
+                    </div>
+                </div>
+            </div>       
+        
+            <div class="top-menu__menu-section-item ">
+                <a class="top-menu__menu-section-name not-serchable" href="https://developers.platform.dev/en/en_faq.html" data-second-section-id="2">FAQ</a>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">FAQ</div>
+                    <div class="top-menu__section-dropdown-info-description">Answers to commonly asked questions concerning the&nbsp;platform and its use.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container">
+                        
+                    </div>
+                </div>
+            </div>       
+        
+            <div class="top-menu__menu-section-item ">
+                <a class="top-menu__menu-section-name not-serchable" href="https://developers.platform.dev/en/en_directory.html" data-second-section-id="3">References</a>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">References</div>
+                    <div class="top-menu__section-dropdown-info-description">Reference information and glossary of the&nbsp;terms used in the&nbsp;documentation.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container">
+                        
+                    </div>
+                </div>
+            </div>       
+        
+            <div class="top-menu__menu-section-item ">
+                <a class="top-menu__menu-section-name not-serchable" href="https://developers.platform.dev/en/en_all_versions.html" data-second-section-id="4">What's new</a>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">What's new</div>
+                    <div class="top-menu__section-dropdown-info-description">Information about documentation updates and changes.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container">
+                        
+                    </div>
+                </div>
+            </div>       
+        
+            <div class="top-menu__menu-section-item has-children">
+                <span class="top-menu__menu-section-name" data-second-section-id="5">☑ Become a client</span>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">☑ Become a client</div>
+                    <div class="top-menu__section-dropdown-info-description">A portal to the world of Platform clients. Apply to get started, or contact us if you have any questions.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container">
+                        <a class="top-menu__child-link" href="https://developers.platform.dev/en/">Apply now</a><a class="top-menu__child-link" href="https://developers.platform.dev/en/">Contact us</a>
+                    </div>
+                </div>
+            </div>       
+        
+        </div>
+    </nav>
+    
+    <nav class="navbar navbar-default navbar-desktop wh_header">
+        <div class="top-menu__menu-section-items-container">
+            
+            <div class="top-menu__menu-section-item  ">
+                <a class="top-menu__menu-section-name" data-second-section-id="0" href="https://developers.platform.dev/en/en_platform_about.html">Platform</a>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">Platform</div>
+                    <div class="top-menu__section-dropdown-info-description">Payment platform, its structure and operation. Refer to this section when you have general questions about working with the platform.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container less-than-four-children">
+                       <div></div>                        
+                       <div></div>                       
+                    </div>
+                </div>
+            </div>              
+        
+            <div class="top-menu__menu-section-item has-children ">
+                <span class="top-menu__menu-section-name" data-second-section-id="1">Tools</span>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">Tools</div>
+                    <div class="top-menu__section-dropdown-info-description">The&nbsp;platform's interfaces and components. Refer to this&nbsp;section when you configure various ways of interaction with the&nbsp;platform.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container less-than-four-children">
+                       <div><a class="top-menu__child-link" href="https://developers.platform.dev/en/en_PP_about.html">Payment Page</a><a class="top-menu__child-link" href="https://developers.platform.dev/en/en_Gate_Integration_About.html">Gate</a><a class="top-menu__child-link" href="https://developers.platform.dev/en/en_dbl_about.html">Dashboard</a></div>                        
+                       <div></div>                       
+                    </div>
+                </div>
+            </div>              
+        
+            <div class="top-menu__menu-section-item  ">
+                <a class="top-menu__menu-section-name" data-second-section-id="2" href="https://developers.platform.dev/en/en_faq.html">FAQ</a>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">FAQ</div>
+                    <div class="top-menu__section-dropdown-info-description">Answers to commonly asked questions concerning the&nbsp;platform and its use.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container less-than-four-children">
+                       <div></div>                        
+                       <div></div>                       
+                    </div>
+                </div>
+            </div>              
+        
+            <div class="top-menu__menu-section-item  ">
+                <a class="top-menu__menu-section-name" data-second-section-id="3" href="https://developers.platform.dev/en/en_directory.html">References</a>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">References</div>
+                    <div class="top-menu__section-dropdown-info-description">Reference information and glossary of the&nbsp;terms used in the&nbsp;documentation.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container less-than-four-children">
+                       <div></div>                        
+                       <div></div>                       
+                    </div>
+                </div>
+            </div>              
+        
+            <div class="top-menu__menu-section-item  ">
+                <a class="top-menu__menu-section-name" data-second-section-id="4" href="https://developers.platform.dev/en/en_all_versions.html">What's new</a>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">What's new</div>
+                    <div class="top-menu__section-dropdown-info-description">Information about documentation updates and changes.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container less-than-four-children">
+                       <div></div>                        
+                       <div></div>                       
+                    </div>
+                </div>
+            </div>              
+        
+            <div class="top-menu__menu-section-item has-children hide-last-element">
+                <span class="top-menu__menu-section-name" data-second-section-id="5">☑ Become a client</span>
+                <div class="top-menu__section-dropdown">
+                  <div class="top-menu__section-dropdown-info">
+                    <div class="top-menu__section-dropdown-info-name">☑ Become a client</div>
+                    <div class="top-menu__section-dropdown-info-description">A portal to the world of Platform clients. Apply to get started, or contact us if you have any questions.</div>
+                  </div>
+                    <div class="top-menu__section-dropdown-children-container less-than-four-children">
+                       <div><a class="top-menu__child-link" href="https://developers.platform.dev/en/">Apply now</a><a class="top-menu__child-link" href="https://developers.platform.dev/en/">Contact us</a></div>                        
+                       <div></div>                       
+                    </div>
+                </div>
+            </div>              
+        
+        </div>
+    </nav>
+    
+    <!-- Search form -->
+    <div class=" wh_search_input navbar-form wh_main_page_search " role="form">
+        <form id="searchForm" method="get" action="https://developers.platform.dev/en/search.html">
+            <div>
+                <input type="search" placeholder="Documentation search…" class="wh_search_textfield" id="textToSearch" name="searchQuery">
+                <button type="submit" class="wh_search_button"></button>
+            </div>
+            <script>
+             <!--
+                $(document).ready(function () {
+                    $('#searchForm').submit(function (e) {
+                        if ($('.wh_search_textfield').val().length < 1) {
+                            e.preventDefault();
+                        }
+                    });
+                });-->
+            </script>
+        </form>
+        <div class="mobile-search-cancel"></div>
+    </div>
+    <!-- КОНВЕРТ -->
+    <a class="user-nav__write-btn" data-trigger=""></a>
+    <!-- СМЕНА ЯЗЫКА -->
+    
+            <div class="lang-switch lang-switch-en"></div>                
+        
+    <div class="top-menu__mobile-menu-toggle"></div>
+</div>
+    </header><div class="top-menu__layout"></div>
+        <main class="main">
+
+            <!-- Technical Works Start -->
+            <div id="warning-message-wrapper" style="display: none;">
+                <div class="warning-message-lines">
+                    <div class="warning-message-container">
+                        <div class="warning-message-icon-and-text">
+                            <div class="warning-message-icon">
+                            </div>
+                            <div class="warning-message-text">
+                                On April 21 between 16:00 and 18:00 UTC the documentation portal may be unavailable due to scheduled maintenance.
+                            </div>
+                        </div>
+                        <div class="warning-message-cross">
+                            <img src="./Platform Documentation_files/old-cross.svg" id="warning-message-cross-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Technical Works End -->
+
+            <section class="tools">
+                <div class="tools__inner">
+                    <div class="tools__header">
+                        <h3 class="tools__subtitle">Innovative tools for e-commerce</h3>
+                        <p class="tools__caption">Explore, connect, and tailor it exactly to your needs</p>
+                    </div>
+                    <div class="tools__list">
+                        <a class="tools__item tools__item--pp" href="https://developers.platform.dev/en/en_PP_about.html">
+                            <div class="tools__item-title">Payment Page</div>
+                            <p class="tools__item-text">Optimised, efficient, and highly customisable payment form
+                            </p>
+                        </a>
+                        <a class="tools__item tools__item--gate" href="https://developers.platform.dev/en/en_Gate_Integration_About.html">
+                            <div class="tools__item-title">Gate</div>
+                            <p class="tools__item-text">Comprehensive payment API that<br>can be easily fine-tuned to
+                                drive performance</p>
+                        </a>
+                        <a class="tools__item tools__item--dash" href="https://developers.platform.dev/en/en_dbl_about.html">
+                            <div class="tools__item-title">Dashboard</div>
+                            <p class="tools__item-text">Convenient tools for controlling, analysing, and managing
+                                payments</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="steps">
+                <div class="steps__inner">
+                    <div class="steps__list tabs" data-tabs=""><a class="steps__item-wrap" data-tab="" href="https://developers.platform.dev/en/#start">
+                        <div class="steps__item"><span class="steps__number">1</span><span class="steps__name">Initiate</span></div>
+                    </a><a class="steps__item-wrap" data-tab="" href="https://developers.platform.dev/en/#plan">
+                        <div class="steps__item"><span class="steps__number">2</span><span class="steps__name">Coordinate</span>
+                        </div>
+                    </a><a class="steps__item-wrap" data-tab="" href="https://developers.platform.dev/en/#integrate">
+                        <div class="steps__item"><span class="steps__number">3</span><span class="steps__name">Integrate</span></div>
+                    </a><a class="steps__item-wrap" data-tab="" href="https://developers.platform.dev/en/#success">
+                        <div class="steps__item"><span class="steps__number">4</span><span class="steps__name">Enjoy</span></div>
+                    </a></div>
+                    <div class="steps__wrapper" data-tabs-content="">
+                        <div class="steps__intro step-dropdown tabs-pane" data-tabs-pane="" id="start">
+                            <div class="step-dropdown__inner">
+                                <div class="step-dropdown__content">
+                                    <p class="step-dropdown__text">
+                                        How to connect to our solutions?<br>
+                                        First of all, your company should submit an application
+                                        form&nbsp;&nbsp;and receive confirmation that&nbsp;everything is ready to begin
+                                        the integration process.<br>
+                                        Once the confirmation is received, your client manager connects you with our
+                                        technical support specialists—to clarify your requirements,
+                                        build your optimal payment scenarios, and move further&nbsp;on.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="steps__intro step-dropdown tabs-pane" data-tabs-pane="" id="plan">
+                            <div class="step-dropdown__inner">
+                                <div class="step-dropdown__content">
+                                    <p class="step-dropdown__text">
+                                        Integration can take anywhere from several hours to several weeks, depending
+                                        on&nbsp;the&nbsp;complexity of&nbsp;the&nbsp;project, qualifications of specialists and the
+                                        willingness of both parties to expedite proceedings.<br>
+                                        Therefore, it is important to initially coordinate with our specialists
+                                        regarding the order of tasks, timeframes and deadlines.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="steps__intro step-dropdown tabs-pane" data-tabs-pane="" id="integrate">
+                            <div class="step-dropdown__inner">
+                                <div class="step-dropdown__content">
+                                    <p class="step-dropdown__text">
+                                        It’s important for us to carry out the integration process with great precision.<br>
+                                        So we create an individual test environment for both parties to test various
+                                        settings and tie up loose ends. Once approved, we shift the integration solution
+                                        from the test mode to the live mode, but it continues to be carefully monitored
+                                        until we are assured of success, at which point our standard support model
+                                        applies.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="steps__intro step-dropdown tabs-pane" data-tabs-pane="" id="success">
+                            <div class="step-dropdown__inner">
+                                <div class="step-dropdown__content">
+                                    <p class="step-dropdown__text">
+                                        We are used to working hard so we have things to be pleased with.<br>
+                                        Once your project passes to the standard support model, you can rest assured
+                                        that Platform will provide reliable
+                                        transaction processing and enjoy it together with us. You can control
+                                        all&nbsp;payment processes in your project from personal Merchant Dashboard.<br>
+                                        And, of course, you can always <a target="_blank" class="text-link text-link--inside" data-trigger="">contact us&nbsp;</a> with any
+                                        queries.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section about">
+                <div class="about__inner">
+                    <div class="about__header">
+                        <h2 class="section__title about__title">Overview</h2>
+                        <p class="section__caption about__caption">Let's discover how it works.</p>
+                    </div>
+                    <div class="about__list-wrap">
+                        <div class="about__sections">
+                            <div class="about__section about__section--merchants">
+                                <div class="about__section-title about__section-title--merchants">Merchants</div>
+                                <div class="about__items about__items--merchants">
+                                    <div class="about__item about__item--users" data-id="1" data-title="Your customers" data-text="Your customers by their actions initiate operations through the Platform platform—when they choose to checkout on your &lt;a class=&quot;about__link&quot; data-link=&quot;Your web service&quot;&gt;web service&lt;/a&gt; (to their, your and our joy)." data-image="dist/img/about-client_1.svg">
+                                        <div class="about__item-inner about__item-inner--users"><span class="about__item-name">Your customers</span></div>
+                                    </div>
+                                    <div class="about__item about__item--web-service" data-id="2" data-title="Your web service" data-text="Your web service provides your &lt;a class=&quot;about__link&quot; data-link=&quot;Your customers&quot;&gt;customers&lt;/a&gt; with services related to conducting operations through the Platform platform (for example, the opportunity to buy something useful). To perform such operations, the web service interacts with the Platform platform through either the API of &lt;a class=&quot;about__link&quot; data-link=&quot;Payment Page&quot;&gt;Payment Page&lt;/a&gt; or the API of &lt;a class=&quot;about__link&quot; data-link=&quot;Gate&quot;&gt;Gate&lt;/a&gt;." data-image="dist/img/about-web_2.svg">
+                                        <div class="about__item-inner about__item-inner--web-service"><span class="about__item-name">Your web service</span></div>
+                                    </div>
+                                    <div class="about__item about__item--staff" data-id="3" data-title="Your employees" data-text="Your employees use &lt;a class=&quot;about__link&quot; data-link=&quot;Dashboard&quot;&gt;Dashboard&lt;/a&gt; to monitor and manage operations of your &lt;a class=&quot;about__link&quot; data-link=&quot;Your web service&quot;&gt;web service&lt;/a&gt; conducted through the Platform platform. Among other things, you can issue payouts to your &lt;a class=&quot;about__link&quot; data-link=&quot;Your customers&quot;&gt;customers&lt;/a&gt; via Dashboard." data-image="dist/img/about-staff_3.svg">
+                                        <div class="about__item-inner about__item-inner--staff"><span class="about__item-name">Your employees</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about__section about__section--e">
+                                <div class="about__section-title about__section-title--e">Platform</div>
+                                <div class="about__items about__items--e">
+                                    <div class="about__item about__item--pp" data-id="4" data-title="Payment Page" data-text="The payment form of Payment Page enables &lt;a class=&quot;about__link&quot; data-link=&quot;Your customers&quot;&gt;customers&lt;/a&gt; to initiate operations through the &lt;a class=&quot;about__link&quot; data-link=&quot;Payment platform&quot;&gt;Platform platform&lt;/a&gt; and view the results. Payment Page can be accessed from your &lt;a class=&quot;about__link&quot; data-link=&quot;Your web service&quot;&gt;web service&lt;/a&gt; by using an API. It provides the required interface for customers and can handle cardholder data in accordance with PCI DSS." data-image="dist/img/about-pp_4.svg">
+                                        <div class="about__item-inner about__item-inner--pp"><span class="about__item-name">Payment Page</span></div>
+                                    </div>
+                                    <div class="about__item about__item--gate" data-id="5" data-title="Gate" data-text="The payment gateway Gate is accessible through an API, enabling your &lt;a class=&quot;about__link&quot; data-link=&quot;Your web service&quot;&gt;web service&lt;/a&gt; to initiate operations through the &lt;a class=&quot;about__link&quot; data-link=&quot;Payment platform&quot;&gt;Platform platform&lt;/a&gt; and observing the results." data-image="dist/img/about-gate_5.svg">
+                                        <div class="about__item-inner about__item-inner--gate"><span class="about__item-name">Gate</span></div>
+                                    </div>
+                                    <div class="about__item about__item--dash" data-id="6" data-title="Dashboard" data-text="The control panel—Dashboard—enables the employees to monitor, analyse, and manage transactions conducted through the &lt;a class=&quot;about__link&quot; data-link=&quot;Payment platform&quot;&gt;Platform platform&lt;/a&gt; for &lt;a class=&quot;about__link&quot; data-link=&quot;Your web service&quot;&gt;the web services&lt;/a&gt;, including the ability to issue payouts to customers." data-image="dist/img/about-dash_6.svg">
+                                        <div class="about__item-inner about__item-inner--dash"><span class="about__item-name">Dashboard</span></div>
+                                    </div>
+                                    <div class="about__item about__item--platform" data-id="7" data-title="Payment platform" data-text="The Platform payment platform ensures registration of all initiated operations and execution of all actions that are necessary to conduct these operations with the participation of payment systems, banks, and/or other parties. The platform is a kind of central node that is connected, on the one hand, with the web services of merchants by using &lt;a class=&quot;about__link&quot; data-link=&quot;Payment Page&quot;&gt;Payment Page&lt;/a&gt;, &lt;a class=&quot;about__link&quot; data-link=&quot;Gate&quot;&gt;Gate&lt;/a&gt;, and &lt;a class=&quot;about__link&quot; data-link=&quot;Dashboard&quot;&gt;Dashboard&lt;/a&gt;, and, on the other hand, with the &lt;a class=&quot;about__link&quot; data-link=&quot;Payment environment&quot;&gt;technical means&lt;/a&gt; of various payment systems and other organizations by using required protocols. At the same time, not only routing tasks are solved on the platform, but also tasks, such as protection against fraud and ensuring high level of passing all accepted operations through all necessary nodes." data-image="dist/img/about-platform_7.svg">
+                                        <div class="about__item-inner about__item-inner--platform"><span class="about__item-name">Payment platform</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about__section about__section--partners">
+                                <div class="about__section-title about__section-title--partners">Partners</div>
+                                <div class="about__items about__items--partners">
+                                    <div class="about__item about__item--env" data-id="8" data-title="Payment environment" data-text="The payment environment allows conducting operations initiated through the &lt;a class=&quot;about__link&quot; data-link=&quot;Payment platform&quot;&gt;platform&lt;/a&gt; with the participation of all involved parties. This environment is a combination of technical means of various organizations, such as international payment systems and banks." data-image="dist/img/about-system_8.svg">
+                                        <div class="about__item-inner about__item-inner--env"><span class="about__item-name">Payment environment</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about__item-details">
+                            <div class="about__section-title">Partners</div>
+                            <div class="about__details-content">
+                                <div class="about__details-img-section"><img class="about__details-img" src="https://developers.platform.dev/en/" width="127" height="166">
+                                    <div class="about__details-name"></div>
+                                </div>
+                                <div class="about__details-text-section">
+                                    <div class="about__details-text-wrap">
+                                        <div class="about__details-text"></div>
+                                    </div>
+                                </div>
+                                <span class="about__details-close"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section examples-section">
+                <div class="examples-section__inner">
+                    <div class="examples-section__header">
+                        <h2 class="section__title">Examples</h2>
+                        <p class="section__caption">Let's see how to use it.</p>
+                    </div>
+                    <div class="examples-section__steps how-to">
+                        <div class="how-to__header">
+                            <div class="how-to__head-title">How to make a payment by using Payment Page</div>
+                            <div class="how-to__types tabs" data-tabs=""><a class="how-to__type active" data-tab="" href="https://developers.platform.dev/en/#api">API</a></div>
+                        </div>
+                        <div class="how-to__list-wrapper" data-tabs-content="">
+                            <div class="how-to__modes how-to__modes--api tabs-pane active" data-tabs-pane="" id="api">
+                                <div class="how-to__mode how-to__mode--purchase">
+                                    <div class="how-to__title">Filling out an application</div>
+                                    <div class="how-to__code">
+                                         <p class="how-to__text-row">You begin by filling out an application to make a payment:
+											we, such and such (project identifier), are requesting 
+											to process a new payment (payment identifier) with the transfer 
+											of funds specified as such (payment currency and amount) from 
+											this customer (customer identifier) to us due to reasons (payment description).</p>
+                                        <pre class="how-to__text-row">/* An initial application for payment */
+{
+"project_id": 112
+// The project identifier obtained from Platform during integration
+
+"payment_id": "test_payment_1542"
+// The payment identifier unique within the project
+
+"payment_currency": "GBP"
+// The payment currency code in the ISO-4217 alpha-3 format
+
+"payment_amount": 31415
+// The payment amount in the smallest currency unit
+
+"customer_id": "customer_51413",
+// The customer identifier unique within the project
+
+"payment_description": "Test payment"
+// The payment description. A recommended parameter
+}</pre>
+                                       <p class="how-to__text-row">All parameters used in this example, with the exception of
+										the payment description, are a minimum required set and 
+										are mandatory for any payment. <a target="_blank" class="text-link text-link--inside" href="https://developers.platform.dev/en/en_PP_Parameters.html">More&nbsp;</a>.</p>
+                                    </div>
+                                </div>
+                                <div class="how-to__mode how-to__mode--tokenize">
+                                    <div class="how-to__title">Certifying the application</div>
+                                    <div class="how-to__code">
+                                        <p class="how-to__text-row">To authenticate the application, you should sign it.
+                                            To generate a signature, use the secret key of your project.</p>
+                                        <pre class="how-to__text-row">/* The application with the secret key */
+{
+	"project_id": 112,
+	"payment_id": "test_payment_1542",
+	"payment_currency": "GBP",
+	"payment_amount": 31415,
+	"customer_id": "customer_51413",
+	"payment_description": "Test payment"
+}
+   "secret key": "secret_key"
+       // The secret key of your project which you received from Platform
+
+/* Generated signature for the application */
+"signature": "fLu7Jcf2xSqomO1TKVILmDNC0+8ZlQQchy+POQwTI7Pz5HJsl..."</pre>
+                                        <p class="how-to__text-row">The signature is generated in the specified way on
+                                            the basis of the application and the secret key (and is not included in the
+                                            application before signing to avoid recursion). <a target="_blank" class="text-link text-link--inside" href="https://developers.platform.dev/en/en_platform_signature.html">More&nbsp;</a>.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="how-to__mode how-to__mode--cashier">
+                                    <div class="how-to__title">Creating a request</div>
+                                    <div class="how-to__code">
+                                        <p class="how-to__text-row">The signed application can be packed into a request
+                                            to the address https://paymentpage.platform.dev. This&nbsp;is&nbsp;the&nbsp;URL for&nbsp;opening a
+                                            payment form with the specified payment parameters.</p>
+                                        <pre class="how-to__text-row">/* The application with the signature */
+{
+	"project_id": 112,
+	"payment_id": "test_payment_1542",
+	"payment_currency": "GBP",
+	"payment_amount": 31415,
+	"customer_id": "customer_51413",
+	"payment_description": "Test payment",
+	"signature": "fLu7Jcf2xSqomO1TKVILmDNC0+8ZlQQchy+POQwTI7Pz5HJsl..."
+}
+
+/* The request to call the payment form */
+https://paymentpage.platform.dev/payment?payment_id=test_payment_1542&amp;payment_amo...</pre>
+                                    </div>
+                                </div>
+                                <div class="how-to__mode how-to__mode--purchase">
+                                    <div class="how-to__title">Sending the request and waiting for a customer</div>
+                                    <div class="how-to__code how-to__code--video">
+                                        <p class="how-to__text-row">By using the generated request, you can call up the
+                                            configured payment form for the customer.
+                                            <!--p.how-to__text-row-->
+                                            <!--    |To feel like a customer, you can click on the link and use a test card with-->
+                                            <!--    |the number 4314 2200 0000 0056 and the random CVV, name of the holder and confirmation code.-->
+                                            <!--    | Or the card with the number 4314 2200 0000 0072, so that the payment is not passed.-->
+                                        </p>
+                                        <p class="how-to__text-row">In this example, we call the payment form in a new
+                                            browser tab. But you can do otherwise. <a target="_blank" class="text-link text-link--inside" href="https://developers.platform.dev/en/en_PP_Integration.html">More&nbsp;</a>.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="how-to__mode how-to__mode--tokenize">
+                                    <div class="how-to__title">Receiving the results</div>
+                                    <div class="how-to__code">
+                                        <p class="how-to__text-row">To receive the results of the initiated payment,
+                                            disassemble the corresponding callback from Platform.
+                                        </p>
+                                        <pre class="how-to__text-row">/* A successful payment callback */
+{
+  "project_id": 112,       // The ID of your project
+  "payment": {             // The payment data
+    "id": "test_payment_1542",        // The payment ID
+    "type": "purchase",  // The type of payment
+    "status": "success", // The status of payment
+    "date": "2018-08-28T09:36:06+0000",  // The date and time of the payment execution
+    "method": "card",  // The payment method
+    "sum": {           // The payment amount and currency
+        "amount": 31415,
+        "currency": "GBP"
+    },
+    "description": "Test payment"  // The payment description
+  },
+  "account": {           // The details of the customer payment instrument
+    "number": "431422******0056",
+    "token": "9cb38282187b7a5b5b91b5814c6b814162741b29c0c486fbbc500cd451abb8b2",
+    "type": "visa",
+    "card_holder": "ADA LOVELACE",
+    "id": 778804,
+    "expiry_month": "11",
+    "expiry_year": "2021"
+  },
+  "operation": {     // The details of the last operation within the payment
+    "id": 2831000001158,  // The ID of the operation
+    "type": "sale",        // The type of the operation
+    "status": "success",   // The status of the operation
+    "date": "2018-08-28T09:36:06+0000", // The date and time of the operation
+    "created_date": "2018-08-28T09:35:20+0000",
+    "request_id": "fa911bca2ac799001549346890bd962ef3...",   // The ID of the request
+    "sum_initial": {
+          // The amount and currency of the operation as specified in the request
+      "amount": 31415,
+      "currency": "GBP"
+    },
+    "sum_converted": {
+          // The amount and currency of the operation based on the conversion rules
+      "amount": 34765,
+      "currency": "EUR"
+    },
+    "provider": {     // The information about the payment from the payment system
+      "id": 6,
+      "payment_id": "15354489664996",
+      "date": "2018-02-07T08:34:24+0000",
+      "auth_code": "563253",
+      "endpoint_id": 6
+     },
+     "code": "0",          // The unified Platform response code
+     "message": "Success", // The description of the unified response code
+     "eci": "05"
+   },
+   "signature": "dqZjvCaMXWGCW23ugWcx/VoQbdbaVFbH1nAM2H..." // The callback signature
+}</pre>
+                                        <p class="how-to__text-row">
+                                            The callback includes a signature and the payment results. More about: <a target="_blank" class="text-link text-link--inside" href="https://developers.platform.dev/en/en_platform_callbacks.html">calbacks&nbsp;</a>, <a target="_blank" class="text-link text-link--inside" href="https://developers.platform.dev/en/en_platform_payment_model.html">payment statuses and operation
+                                            statuses&nbsp;</a>.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer">
+                <div class="footer__inner">
+                    <section class="section questions">
+                        <div class="questions__inner">
+                            <div class="questions__header">
+                                <h2 class="section__title">Support</h2>
+                                <p class="section__caption">Let’s find out how to get assistance.</p>
+                            </div>
+                            <div class="questions__support" data-trigger="">If you have any queries or
+                                recommendations—about working with our company, our technical solutions, <br>or this
+                                portal—you can always contact us at <a target="_blank" data-trigger="">support@platform.dev</a>.
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- start -->
+                <div class="helpful">
+                    <div class="helpful__inner">
+                        <div class="doc-copyright-text">© Platform LTD, 2026</div>
+                        <div class="doc-copyright-line"></div>
+                        <div class="helpful__helpful-container">
+                            <div class="helpful__q">Is this helpful?</div>
+                            <div class="helpful__link-container">
+                                <div class="helpful__btns">
+                                    <div class="answer-popup hidden"><span class="answer-popup__text"><!-- Thank you for the feedback! -->Thank you for the feedback!</span>
+                                    </div>
+                                    <input class="helpful__btn helpful__btn--yes" type="button" name="yes" value="Yes">
+                                    <input class="helpful__btn helpful__btn--no" type="button" name="no" value="No">
+                                </div>
+                                <a class="helpful__link" href="https://developers.platform.dev/en/">Tell
+                                    us more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="helpful__sep-line"></div>
+                </div>
+                <!-- end -->
+            </footer>
+        </main>
+        <div class="modal">
+            <div class="modal__inner">
+                <div class="modal__close" data-close=""></div>
+                <div class="modal__block modal__block--form">
+                    <form role="form" method="POST" id="question-form" action="https://developers.platform.dev/en/mail.php">
+                        <div class="q-form">
+                            <div class="q-form__header">
+                                <h2 class="q-form__title">Questions, ideas, suggestions</h2>
+                                <p class="q-form__caption">Whatever you are concerned about our products and our work,
+                                    write to us</p>
+                            </div>
+                            <div class="q-form__fields">
+                                <div class="q-form__row q-form__row--name">
+                                    <input class="q-form__input js_name-input js_input" type="text" name="name" data-field="" value="" placeholder="Your first and last name *" required=""><span class="q-form__error q-form__error--name"></span>
+                                </div>
+                                <div class="q-form__row q-form__row--company">
+                                    <input class="q-form__input" type="text" name="Company" data-field="" value="" placeholder="Company">
+                                </div>
+                                <div class="q-form__row q-form__row--email">
+                                    <input class="q-form__input js_email-input js_input" type="email" name="email" data-field="" value="" placeholder="E-mail *" required=""><span class="q-form__error q-form__error--email"></span>
+                                </div>
+                                <div class="q-form__row q-form__row--text">
+                                    <textarea class="q-form__textarea js_msg-input js_input" rows="5" name="message" data-field="" placeholder="Message *" required=""></textarea><span class="q-form__error q-form__error--text"></span>
+                                </div>
+                                <i class="q-form__tip">* required fields</i>
+                            </div>
+                            <div class="q-form__bottom"><a class="q-form__mailto" href="mailto:support@platform.dev">Use
+                                an e-mail client</a>
+                                <input class="q-form__submit-btn" type="submit" name="submit" value="Send" disabled="">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal__block modal__block--done" id="done-message" hidden="">
+                    <div class="success">
+                        <h2 class="success__title">Thank you!</h2>
+                        <p class="success__caption">Your message has been sent to Platform support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./Platform Documentation_files/tabby.js"></script>
+        <script src="./Platform Documentation_files/smooth-scrollbar.js"></script>
+        <script src="./Platform Documentation_files/main.js" defer=""></script>
+        <script>tabby.init();</script>
+
+        <!-- top menu js and jquery -->
+        <script src="./Platform Documentation_files/jquery-3.1.1.min.js" defer=""></script>
+        <script src="./Platform Documentation_files/topMenu.js" defer=""></script>
+        <script src="./Platform Documentation_files/helpfull.js" defer=""></script>
+        <!-- Warning messages scripts -->
+        <script src="./Platform Documentation_files/messages.js" defer=""></script>
+    
+</body></html>

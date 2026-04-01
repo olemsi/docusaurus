@@ -1,0 +1,6 @@
+# Индивидуальный дизайн Payment Widget
+
+- ru_pp__design_general_info.dita
+- ru_pp__design_opportunities.dita
+- ru_pp__design_requirements.dita
+- ru_pp__design_contents.ditaru_pp__design_common_page_elements.ditaru_pp__design_payment_method_choice.ditaru_pp__design_bank_cards_payment.ditaru_pp__design_gathering_customer_data.ditaru_pp__design_avs.ditaru_pp__design_preloader.ditaru_pp__design_results.ditaru_pp__design_acs.dita

@@ -1,0 +1,19 @@
+import { ssrRenderAttrs } from "vue/server-renderer";
+import { useSSRContext } from "vue";
+import { _ as _export_sfc } from "./plugin-vue_export-helper.1tPrXgE0.js";
+const __pageData = JSON.parse('{"title":"Monitoring payment processing","description":"","frontmatter":{},"headers":[],"relativePath":"dashboard/dbl-payments-control.md","filePath":"dashboard/dbl-payments-control.md"}');
+const _sfc_main = { name: "dashboard/dbl-payments-control.md" };
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<div${ssrRenderAttrs(_attrs)}><h1 id="monitoring-payment-processing" tabindex="-1">Monitoring payment processing <a class="header-anchor" href="#monitoring-payment-processing" aria-label="Permalink to &quot;Monitoring payment processing&quot;">​</a></h1><p><strong>PaymentsPayments</strong>s<strong>Manual paymentsSubscriptions</strong>,, andhavehasDashboard users can monitor information about amounts, statuses, and other attributes of the processed payments. For this purpose, you can use thesection with the comprehensive information about all payment types and the sections with the information about specific payment types. Each of these sections contains a list with the standard filtering tools (learn more). In addition, sectionpayment information tabs that specify details of individual payments and all operations initiated within them (to open the payment information tab, click the row of the payment you need in the list).</p><p>To monitor information about specific payments:</p><p>However, when you work with lists, keep in mind the following:</p><p>If you have any questions about working with lists, contact your account manager.</p><ul><li>Information in lists and payment information tabs is shown with a time lag which can take up to several minutes. While automatic data refresh is not supported, you can refresh data in the payments list with the use of thebutton located in the left corner above the list.</li><li>The number and the order of columns in the lists can be customised, which means that with the appropriate set of permissions the lists can be arranged according to individual needs.</li><li>Key attributes of payments, which include identifier, type, status, amount, and currency, are by default shown in the first columns of the lists. They are used for filtering data with predefined filters on the filtering panel. It depends on the list which attributes and filters are available for filtering data.</li><li><strong>Amount</strong><em>base amount</em><code>partially refunded</code><strong>RefundedAvailable for refund</strong>For example, if a partial refund for 20 EUR was issued for the payment of 100 EUR, then the statusapplies to the amount of 100 EUR, while the refund amount and the remaining amount are shown in theandfields.<code>Amount</code>Another example is a regular COF purchase. For this payment type, thefield shows the actual amount of the received funds.Thefield shows the payment&#39;sto which the status of the said payment currently applies.</li></ul><ol><li><strong>Payments****Payment links</strong>,<strong>Manual paymentsSubscriptions</strong>,, orSelect the section you need:.</li><li>Find rows with the information about specific payments in the list. Use filters, if necessary.</li><li>Verify the information you need, either in the list or in the payment information tabs, if they are available.</li></ol></div>`);
+}
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("dashboard/dbl-payments-control.md");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const dblPaymentsControl = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
+export {
+  __pageData,
+  dblPaymentsControl as default
+};

@@ -1,0 +1,19 @@
+import { ssrRenderAttrs } from "vue/server-renderer";
+import { useSSRContext } from "vue";
+import { _ as _export_sfc } from "./plugin-vue_export-helper.1tPrXgE0.js";
+const __pageData = JSON.parse('{"title":"Additional capabilities","description":"","frontmatter":{},"headers":[],"relativePath":"payment-page/pp.md","filePath":"payment-page/pp.md"}');
+const _sfc_main = { name: "payment-page/pp.md" };
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<div${ssrRenderAttrs(_attrs)}><h1 id="additional-capabilities" tabindex="-1">Additional capabilities <a class="header-anchor" href="#additional-capabilities" aria-label="Permalink to &quot;Additional capabilities&quot;">​</a></h1><p>Payment Widget supports auxiliary procedures and optional capabilities that improve acceptance rates, adapt the checkout flow to specific business cases, and expose more control over customer experience.</p><h2 id="boosting-payment-acceptance-rates" tabindex="-1">Boosting payment acceptance rates <a class="header-anchor" href="#boosting-payment-acceptance-rates" aria-label="Permalink to &quot;Boosting payment acceptance rates&quot;">​</a></h2><ul><li><a href="./pp-3ds.html"><strong>3-D Secure</strong></a> — customer authentication during card payments.</li><li><a href="./pp-avs.html"><strong>Address Verification (AVS)</strong></a> — cardholder address verification for supported markets.</li><li><a href="./pp-clarification.html"><strong>Additional payment info</strong></a> — collecting extra data required by payment systems or providers.</li><li><a href="./pp-try-again.html"><strong>Try again</strong></a> — additional payment attempts in retry scenarios.</li></ul><h2 id="improving-customer-experience" tabindex="-1">Improving customer experience <a class="header-anchor" href="#improving-customer-experience" aria-label="Permalink to &quot;Improving customer experience&quot;">​</a></h2><ul><li><a href="./pp-conversion.html"><strong>Currency conversion</strong></a> — conversion options and customer currency choice.</li><li><a href="./pp-gathering-customer-data.html"><strong>Collecting customer data</strong></a> — gathering additional customer attributes on the payment form.</li><li><a href="./pp-time-limit.html"><strong>Time limit</strong></a> — limiting how long the payment form remains active.</li><li><a href="./pp-ui-monitoring.html"><strong>Handling events in Payment Widget</strong></a> — front-end event monitoring for embedded Payment Widget flows.</li></ul><h2 id="supporting-specific-scenarios" tabindex="-1">Supporting specific scenarios <a class="header-anchor" href="#supporting-specific-scenarios" aria-label="Permalink to &quot;Supporting specific scenarios&quot;">​</a></h2><ul><li><a href="./pp-availability-info.html"><strong>Payment method availability</strong></a> — showing only relevant methods.</li><li><a href="./pp-saved-data.html"><strong>Saved payment data</strong></a> — reusing stored payment instruments.</li><li><a href="./pp-payment-by-token.html"><strong>Payment by token</strong></a> — shortening checkout for returning customers.</li><li><a href="./pp-debt-repayments.html"><strong>Debt repayments</strong></a> — specialised scenarios for loan and debt payments.</li></ul><h2 id="scope" tabindex="-1">Scope <a class="header-anchor" href="#scope" aria-label="Permalink to &quot;Scope&quot;">​</a></h2><p>Use this section when the default payment flow is not enough and you need extra procedures, data collection, or flow-control options.</p></div>`);
+}
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("payment-page/pp.md");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const pp = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
+export {
+  __pageData,
+  pp as default
+};

@@ -1,0 +1,5 @@
+# Design general info
+
+By default, Payment Widget uses the Platform template as shown in the screenshots in this section. However, this template can be customised.
+
+In the test environment at first, and then in the production environment.Immediately in the production environment.Discuss with your Key Account Manager how our specialists are ready to support the custom template, and whether or not it is required customer acceptance testing. Customer acceptance testing can be implemented:Design a template layout according to the requirements provided in the . The template layout must contain all the required page layouts for the necessary languages.Send the designed template layout to technical support by email support@platform.dev.Receive a confirmation email from technical support that your template layout is correct. If necessary, edit the layout and send it again.Receive a confirmation email that your custom design is ready to use and, if required, perform customer acceptance testing.In order to create the custom Payment Widget template, you should:

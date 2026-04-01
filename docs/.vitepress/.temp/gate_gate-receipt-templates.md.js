@@ -1,0 +1,19 @@
+import { ssrRenderAttrs } from "vue/server-renderer";
+import { useSSRContext } from "vue";
+import { _ as _export_sfc } from "./plugin-vue_export-helper.1tPrXgE0.js";
+const __pageData = JSON.parse('{"title":"Notification design","description":"","frontmatter":{},"headers":[],"relativePath":"gate/gate-receipt-templates.md","filePath":"gate/gate-receipt-templates.md"}');
+const _sfc_main = { name: "gate/gate-receipt-templates.md" };
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<div${ssrRenderAttrs(_attrs)}><h1 id="notification-design" tabindex="-1">Notification design <a class="header-anchor" href="#notification-design" aria-label="Permalink to &quot;Notification design&quot;">​</a></h1><h2 id="standard-template" tabindex="-1">Standard template <a class="header-anchor" href="#standard-template" aria-label="Permalink to &quot;Standard template&quot;">​</a></h2><p><code>purchase\`\`payoutrefund</code>and aas well as the result of issuing aOur standard template can only be used for notifications about the results of operation processing as part of performing a.</p><p>This template includes:</p><ul><li>Date and time of the event that occurred with the time zone of the merchant&#39;s web service specified.</li><li>Logo of Platform or the logo of the merchant.</li><li>Platform orName, current address, and the registered domain name ofthe merchant.</li><li>Type of the payment or operation the result of which is communicated in the notification.</li><li>Status of this payment or operation.</li><li><code>payment_id</code>Payment identifier which corresponds to.</li><li>Description of the payment or operation if it was specified in the initial request.</li><li>Payment method which specifies the payment instrument used.</li><li>Payment amount with the currency code.</li><li>Platform orLink to the email ofthe merchant.</li><li>Link to terms and conditions.</li></ul><h2 id="custom-coded-template" tabindex="-1">Custom coded template <a class="header-anchor" href="#custom-coded-template" aria-label="Permalink to &quot;Custom coded template&quot;">​</a></h2><p>,or the details of the e-wallet registration, a warning about surpassing the daily amount limit for processed operations,or the update of the COF purchase&#39;s termsA custom coded template can be used for sending notifications about the results of operation processing as well as other events that occur during payment processing. Custom coded templates are developed by Platform specialists on the basis of the layouts provided by the merchant. These templates can include the same elements as the standard templates, with the option to modify the order in which the elements appear on the page, or they can include other elements, for example, the list of purchased items. Keep in mind that if you need a customised notification message, or the notification is sent in a language other than English (which is the default notification language), you should provide the text of the notification message to the technical support specialists.</p><p>The following are the examples of custom coded notification templates:</p><ul><li>Notification about the end of the free trial period which does not contain any elements of the standard template (except for the logo of the merchant).</li><li>Notification with the list of purchased items which contains all elements of the standard template.</li></ul></div>`);
+}
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("gate/gate-receipt-templates.md");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const gateReceiptTemplates = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
+export {
+  __pageData,
+  gateReceiptTemplates as default
+};
