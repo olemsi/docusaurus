@@ -225,6 +225,14 @@
   padding-bottom: 68px;
 }
 
+.proof {
+  padding-top: 72px;
+}
+
+.links {
+  padding-top: 80px;
+}
+
 .sectionHead {
   margin-bottom: 22px;
 }
@@ -430,5 +438,13 @@
   .linkCard,
   .heroPanel {
     padding: 18px;
+  }
+
+  .proof {
+    padding-top: 64px;
+  }
+
+  .links {
+    padding-top: 72px;
   }
 }
