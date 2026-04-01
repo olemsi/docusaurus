@@ -9,6 +9,7 @@ const baseUrl = process.env.DOCUSAURUS_BASE_URL || (repoName && !isUserPage ? `/
 const config = {
   title: 'Platform Docs',
   tagline: 'Platform developer documentation',
+  favicon: 'favicon.svg',
   url,
   baseUrl,
   trailingSlash: true,
@@ -76,7 +77,8 @@ const config = {
         { to: '/payment-page/', label: 'Payment Widget', position: 'left' },
         { to: '/payment-methods/', label: 'Payment Methods', position: 'left' },
         { to: '/dashboard/', label: 'Dashboard', position: 'left' },
-        { to: '/api-reference/', label: 'API Reference', position: 'right' }
+        { to: '/api-reference/', label: 'API Reference', position: 'left' },
+        { type: 'custom-ask-ai', position: 'right' }
       ],
     },
     docs: {

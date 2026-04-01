@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './index.module.css';
 
 const mainPaths = [
@@ -52,6 +53,9 @@ const quickLinks = [
 ];
 
 function HomePage() {
+  const gateApiHref = useBaseUrl('/api-reference/gate.html');
+  const dataApiHref = useBaseUrl('/api-reference/data.html');
+
   return (
     <Layout title="Platform Docs" description="Platform developer documentation">
       <main className={styles.home}>
@@ -86,7 +90,7 @@ function HomePage() {
                 <div className={styles.panelLinks}>
                   <Link to="/gate/gate-quickstart">Host-to-host API quickstart</Link>
                   <Link to="/gate/signature-gate">Signature guide</Link>
-                  <Link to="/api-reference/gate.html">API reference</Link>
+                  <Link to="/api-reference/">API reference</Link>
                 </div>
               </div>
             </div>
@@ -150,15 +154,36 @@ function HomePage() {
           </div>
 
           <div className={styles.linksGrid}>
-            {quickLinks.map((item) => (
-              <Link key={item.title} to={item.link} className={styles.linkCard}>
-                <div>
-                  <h3>{item.title}</h3>
-                  <p>{item.desc}</p>
-                </div>
-                <span>Open</span>
-              </Link>
-            ))}
+            {quickLinks.map((item) => {
+              const href =
+                item.link === '/api-reference/gate.html'
+                  ? gateApiHref
+                  : item.link === '/api-reference/data.html'
+                    ? dataApiHref
+                    : null;
+
+              if (href) {
+                return (
+                  <a key={item.title} href={href} className={styles.linkCard}>
+                    <div>
+                      <h3>{item.title}</h3>
+                      <p>{item.desc}</p>
+                    </div>
+                    <span>Open</span>
+                  </a>
+                );
+              }
+
+              return (
+                <Link key={item.title} to={item.link} className={styles.linkCard}>
+                  <div>
+                    <h3>{item.title}</h3>
+                    <p>{item.desc}</p>
+                  </div>
+                  <span>Open</span>
+                </Link>
+              );
+            })}
           </div>
         </section>
       </main>
