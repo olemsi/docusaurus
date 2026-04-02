@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -52,6 +52,89 @@ const quickLinks = [
   { title: 'Data API reference', desc: 'Reporting and retrieval endpoints', link: '/api-reference/data.html' },
 ];
 
+const endpointSuffixSamples = [
+  'merchant-a.platform.dev',
+  'eu.client-brand.io',
+  'storefront.kz',
+  '203.0.113.24',
+];
+
+function EndpointTicker() {
+  const [sampleIndex, setSampleIndex] = useState(0);
+  const [displayValue, setDisplayValue] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [isWaiting, setIsWaiting] = useState(false);
+
+  useEffect(() => {
+    const current = endpointSuffixSamples[sampleIndex];
+    const timeout = window.setTimeout(
+      () => {
+        if (isWaiting) {
+          setIsWaiting(false);
+          setIsDeleting(true);
+          return;
+        }
+
+        if (!isDeleting) {
+          const next = current.slice(0, displayValue.length + 1);
+          setDisplayValue(next);
+          if (next === current) {
+            setIsWaiting(true);
+          }
+          return;
+        }
+
+        const next = current.slice(0, Math.max(0, displayValue.length - 1));
+        setDisplayValue(next);
+        if (next.length === 0) {
+          setIsDeleting(false);
+          setSampleIndex((value) => (value + 1) % endpointSuffixSamples.length);
+        }
+      },
+      isWaiting ? 1150 : isDeleting ? 26 : 40,
+    );
+
+    return () => window.clearTimeout(timeout);
+  }, [displayValue, isDeleting, isWaiting, sampleIndex]);
+
+  const currentSuffix = displayValue || '';
+  const endpointRows = [
+    { key: 'api_base_url', host: `api.${currentSuffix}` },
+    { key: 'paymentpage_base_url', host: `paymentpage.${currentSuffix}` },
+    { key: 'dashboard_base_url', host: `dashboard.${currentSuffix}` },
+  ];
+
+  return (
+    <div className={styles.terminal}>
+      <div className={styles.terminalBar}>
+        <div className={styles.terminalDots}>
+          <span />
+          <span />
+          <span />
+        </div>
+        <div className={styles.terminalTitle}>Merchant-specific endpoints</div>
+      </div>
+      <div className={styles.terminalBody}>
+        {endpointRows.map((row, index) => (
+          <div key={row.key} className={styles.terminalPrompt}>
+            <span className={styles.terminalSymbol}>$</span>
+            <span className={styles.terminalKey}>{row.key}</span>
+            <span className={styles.terminalEquals}>=</span>
+            <span className={styles.terminalValue}>
+              https://{row.host}
+              {index === endpointRows.length - 1 ? <span className={styles.terminalCursor} /> : null}
+            </span>
+          </div>
+        ))}
+        <div className={styles.terminalNote}>
+          Platform provisions merchant-specific SaaS domains in the same pattern for API, Payment Widget, and
+          Dashboard.
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function HomePage() {
   const gateApiHref = useBaseUrl('/api-reference/gate.html');
   const dataApiHref = useBaseUrl('/api-reference/data.html');
@@ -70,8 +153,10 @@ function HomePage() {
                 Integrate payments with the <span className={styles.heroAccent}>right entry point</span>
               </h1>
               <p className={styles.heroDesc}>
-                Choose hosted checkout or server-to-server integration, then follow the matching quickstart.
+                SaaS payment docs for merchant-specific environments. Use the endpoints and credentials that Platform
+                provisions for your account, then follow the matching quickstart.
               </p>
+              <EndpointTicker />
             </div>
 
             <div className={styles.widgetShell}>
