@@ -251,6 +251,6 @@ Do not perform long-running work before replying. If needed, save the payload, e
 
 ## What to read next
 
-- [Basic implementation](./pp-quickstart-basic-implementation)
-- [Opening via JS library](./pp-opening-modal-via-javascript-library)
-- [Opening in iframe via JS library](./pp-opening-iframe-via-javascript-library)
+- [Basic implementation](./pp-quickstart-basic-implementation.md)
+- [Opening via JS library](./pp-opening-modal-via-javascript-library.md)
+- [Opening in iframe via JS library](./pp-opening-iframe-via-javascript-library.md)

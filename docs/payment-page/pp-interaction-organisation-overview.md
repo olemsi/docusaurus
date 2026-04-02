@@ -20,11 +20,11 @@ In the simplest integration, your system does four things:
 
 ## Recommended reading order
 
-- [**Quick start**](./pp-quickstart-overview) — the fastest path to the first working integration.
-- [**Basic implementation**](./pp-quickstart-basic-implementation) — copy-paste examples for signing requests, opening the form, and handling callbacks.
-- [**UX configuration**](./pp-ux-configuration) — choose whether the form opens in a new tab, modal, or iframe.
-- [**Parameters for opening the payment form**](./pp-parameters) — full parameter reference after the basic flow is working.
-- [**Callback format**](./pp-interaction) — payload structure and response expectations.
+- [**Quick start**](./pp-quickstart-overview.md) — the fastest path to the first working integration.
+- [**Basic implementation**](./pp-quickstart-basic-implementation.md) — copy-paste examples for signing requests, opening the form, and handling callbacks.
+- [**UX configuration**](./pp-ux-configuration.md) — choose whether the form opens in a new tab, modal, or iframe.
+- [**Payment Widget API description**](./pp-api.md) — parameters, formats, and test data after the basic flow is working.
+- [**Callback format**](./pp-interaction.md) — payload structure and response expectations.
 
 ## Minimum requirements
 
@@ -37,4 +37,4 @@ In the simplest integration, your system does four things:
 
 The signing step must happen on the server side because it uses your secret key. The form-opening step happens on the client side, either by redirecting the customer to the hosted page or by opening the form with `merchant.js`.
 
-If you need the quickest possible start, begin with [**Basic implementation**](./pp-quickstart-basic-implementation) and return to the reference pages only when the baseline checkout flow already works.
+If you need the quickest possible start, begin with [**Basic implementation**](./pp-quickstart-basic-implementation.md) and return to the reference pages only when the baseline checkout flow already works.

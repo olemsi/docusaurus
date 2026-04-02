@@ -180,6 +180,6 @@ If you later add nested objects or advanced parameters, encode them according to
 
 ## What to read next
 
-- [Quick start](./pp-quickstart-overview)
-- [Basic implementation](./pp-quickstart-basic-implementation)
-- [Callback handling](./pp-interaction)
+- [Quick start](./pp-quickstart-overview.md)
+- [Basic implementation](./pp-quickstart-basic-implementation.md)
+- [Callback handling](./pp-interaction.md)

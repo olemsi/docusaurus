@@ -43,7 +43,7 @@ This is the main tradeoff: maximum control, but also maximum implementation resp
 
 ## Recommended reading order
 
-1. Go to [**Quickstart**](./gate-quickstart) for the shortest launch path.
-2. Use [**Basic implementation**](./gate-quickstart-basic-implementation) for copy-paste request and callback code.
-3. Read [**Interaction concepts**](./gate-interaction-organisation) and [**Request format**](./gate-requests-format) when you need the structure behind the examples.
+1. Go to [**Quickstart**](./gate-quickstart.md) for the shortest launch path.
+2. Use [**Basic implementation**](./gate-quickstart-basic-implementation.md) for copy-paste request and callback code.
+3. Read [**Interaction concepts**](./gate-interaction-organisation.md) and [**Request format**](./gate-requests-format.md) when you need the structure behind the examples.
 4. Move into specific payment flows once the first purchase request is working.

@@ -13,10 +13,10 @@ Dashboard supports two-factor authentication for access according to the require
 
 ## In this section
 
-- [**Core capabilities and role-based access model**](./dbl-overview-main-use) — an overview of the Dashboard interface, its core capabilities, supported access roles, and distribution of access rights.
-- [**Interaction with the interface**](./dbl-interface-overview) — essential interface elements: main menu, sections, and lists.
-- [**Managing projects**](./dbl-projects) — individual settings of your projects you can configure in Dashboard and working with callback settings.
-- [**Monitoring and performing payments**](./dbl-payments-overview) — monitoring payments, performing purchases, refunds, and payouts, as well as managing COF purchases (subscriptions).
-- [**Monitoring balances**](./dbl-balances-overview) — balances and the special aspects of their use, as well as monitoring balances and financial statements.
-- [**Risk management**](./dbl-fraud-operations-control-overview) — monitoring fraudulent operations and using whitelists and blacklists.
-- [**Using Data API**](./dbl-api-protocol) — features and technical aspects of the Data API interface for retrieving data about operations, chargebacks, and balances.
+- [**Core capabilities and role-based access model**](./dbl-overview-main-use.md) — an overview of the Dashboard interface, its core capabilities, supported access roles, and distribution of access rights.
+- [**Interaction with the interface**](./dbl-interface-overview.md) — essential interface elements: main menu, sections, and lists.
+- [**Managing projects**](./dbl-projects.md) — individual settings of your projects you can configure in Dashboard and working with callback settings.
+- [**Monitoring and performing payments**](./dbl-payments-overview.md) — monitoring payments, performing purchases, refunds, and payouts, as well as managing COF purchases (subscriptions).
+- [**Monitoring balances**](./dbl-balances-overview.md) — balances and the special aspects of their use, as well as monitoring balances and financial statements.
+- [**Risk management**](./dbl-fraud-operations-control-overview.md) — monitoring fraudulent operations and using whitelists and blacklists.
+- [**Using Data API**](./dbl-api-protocol.md) — features and technical aspects of the Data API interface for retrieving data about operations, chargebacks, and balances.

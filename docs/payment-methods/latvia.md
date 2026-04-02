@@ -93,6 +93,6 @@ Start here:
 
 ## Read next
 
-- [Open Banking overview](./openbanking)
+- [Open Banking overview](./openbanking.md)
 - [Payment Widget docs](/payment-page/)
 - [Host-to-host API docs](/gate/)

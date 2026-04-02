@@ -11,9 +11,9 @@ Gate can be used to verify a payment instrument before a later purchase or payou
 
 ## Related materials
 
-- [**Using tokens**](./gate-token) — working with stored payment credentials.
-- [**Auxiliary procedures**](./gate-procedures) — additional steps that may accompany verification.
-- [**API Description**](./gate-sts-protocol) — technical reference for request and callback formats.
+- [**Using tokens**](./gate-token.md) — working with stored payment credentials.
+- [**Auxiliary procedures**](./gate-procedures.md) — additional steps that may accompany verification.
+- [**API Description**](./gate-sts-protocol.md) — technical reference for request and callback formats.
 
 ## Scope
 

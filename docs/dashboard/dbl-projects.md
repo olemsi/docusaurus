@@ -4,7 +4,7 @@ The **Projects** section in Dashboard contains project-level settings that affec
 
 ## In this section
 
-- [**Project settings**](./dbl-projects-overview) — available project tabs and what can be configured there.
+- [**Project settings**](./dbl-projects-overview.md) — available project tabs and what can be configured there.
 
 ## What this section is for
 

@@ -10,9 +10,9 @@ Gate lets you refund completed purchases in full or in part, subject to the rule
 
 ## Related materials
 
-- [**One-time purchases**](./gate-purchase) — purchase flows that can later be refunded.
-- [**Request format**](./gate-requests-format) — common Gate request structure.
-- [**API Description**](./gate-sts-protocol) — technical reference for Gate requests, responses, and callbacks.
+- [**One-time purchases**](./gate-purchase.md) — purchase flows that can later be refunded.
+- [**Request format**](./gate-requests-format.md) — common Gate request structure.
+- [**API Description**](./gate-sts-protocol.md) — technical reference for Gate requests, responses, and callbacks.
 
 ## Scope
 

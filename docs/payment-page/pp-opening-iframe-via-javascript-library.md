@@ -149,6 +149,6 @@ def payment_page_iframe_config():
 
 ## What to read next
 
-- [Opening in a modal via JS library](./pp-opening-modal-via-javascript-library)
-- [Basic implementation](./pp-quickstart-basic-implementation)
-- [Callback handling](./pp-interaction)
+- [Opening in a modal via JS library](./pp-opening-modal-via-javascript-library.md)
+- [Basic implementation](./pp-quickstart-basic-implementation.md)
+- [Callback handling](./pp-interaction.md)

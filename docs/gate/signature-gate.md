@@ -306,6 +306,6 @@ In the standard Gate request shape, place the generated signature into:
 
 ## What to read next
 
-- [Quickstart](./gate-quickstart)
-- [Basic implementation](./gate-quickstart-basic-implementation)
-- [Request format](./gate-requests-format)
+- [Quickstart](./gate-quickstart.md)
+- [Basic implementation](./gate-quickstart-basic-implementation.md)
+- [Request format](./gate-requests-format.md)

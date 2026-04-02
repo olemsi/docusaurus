@@ -24,6 +24,18 @@ const config = {
     locales: ['en'],
   },
   staticDirectories: ['docs/public'],
+  plugins: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        docsRouteBasePath: '/',
+        indexBlog: false,
+        indexPages: true,
+        highlightSearchTermsOnTargetPage: true,
+      },
+    ],
+  ],
   presets: [
     [
       'classic',
@@ -78,6 +90,7 @@ const config = {
         { to: '/payment-methods/', label: 'Payment Methods', position: 'left' },
         { to: '/dashboard/', label: 'Dashboard', position: 'left' },
         { to: '/api-reference/', label: 'API Reference', position: 'left' },
+        { type: 'search', position: 'right' },
         { type: 'custom-ask-ai', position: 'right' }
       ],
     },

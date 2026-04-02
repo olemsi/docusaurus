@@ -148,6 +148,6 @@ def payment_page_config():
 
 ## What to read next
 
-- [Basic implementation](./pp-quickstart-basic-implementation)
-- [Opening in iframe via JS library](./pp-opening-iframe-via-javascript-library)
-- [Callback handling](./pp-interaction)
+- [Basic implementation](./pp-quickstart-basic-implementation.md)
+- [Opening in iframe via JS library](./pp-opening-iframe-via-javascript-library.md)
+- [Callback handling](./pp-interaction.md)

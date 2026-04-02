@@ -4,9 +4,9 @@ Payment link purchases are initiated through Gate but completed by the customer 
 
 ## In this section
 
-- [**Payment link overview**](./gate-invoice-overview) — how payment links are generated and used.
-- [**Payment link workflow**](./gate-invoice-workflow) — the end-to-end processing sequence.
-- [**Request format**](./gate-invoice-format-request) — parameters used to create the link and configure the purchase.
+- [**Payment link overview**](./gate-invoice-overview.md) — how payment links are generated and used.
+- [**Payment link workflow**](./gate-invoice-workflow.md) — the end-to-end processing sequence.
+- [**Request format**](./gate-invoice-format-request.md) — parameters used to create the link and configure the purchase.
 
 ## Scope
 

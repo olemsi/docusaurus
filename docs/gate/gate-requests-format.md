@@ -87,6 +87,6 @@ The final payment result should still be taken from the callback flow, not from 
 
 ## What to read next
 
-- [Basic implementation](./gate-quickstart-basic-implementation)
-- [Signature generation](./signature-gate)
-- [One-time purchases](./gate-purchase)
+- [Basic implementation](./gate-quickstart-basic-implementation.md)
+- [Signature generation](./signature-gate.md)
+- [One-time purchases](./gate-purchase.md)

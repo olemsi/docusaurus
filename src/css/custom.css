@@ -75,6 +75,26 @@ main {
   color: #e6dcff;
 }
 
+.navbar__search {
+  margin-left: 6px;
+}
+
+.navbar__search-input {
+  width: 176px;
+  height: 34px;
+  border: 1px solid rgba(183, 166, 255, 0.1);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.03);
+  color: #ededed;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.navbar__search-input:focus {
+  outline: none;
+  border-color: rgba(183, 166, 255, 0.24);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
 .ask-ai-nav {
   position: relative;
   margin-left: 8px;
@@ -192,12 +212,6 @@ main {
   white-space: nowrap;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
   z-index: 31;
-}
-
-@media (max-width: 996px) {
-  .ask-ai-nav {
-    display: none;
-  }
 }
 
 .theme-doc-sidebar-container,
@@ -348,12 +362,124 @@ pre {
     --ifm-navbar-padding-horizontal: 16px;
   }
 
+  .navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   .navbar__inner {
     padding: 0;
   }
 
+  .navbar__brand {
+    margin-left: 0;
+  }
+
+  .navbar__title {
+    font-size: 1.05rem;
+  }
+
+  .navbar__toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-left: 8px;
+    border: 1px solid rgba(183, 166, 255, 0.12);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .navbar__search {
+    margin-left: auto;
+    margin-right: 8px;
+  }
+
+  .navbar__search-input {
+    width: 132px;
+    height: 32px;
+  }
+
+  .navbar-sidebar {
+    width: min(92vw, 360px);
+    background: rgba(6, 6, 8, 0.98);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+  }
+
+  .navbar-sidebar__brand {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: none;
+  }
+
+  .navbar-sidebar__items {
+    height: calc(100% - var(--ifm-navbar-height));
+  }
+
+  .navbar-sidebar__item {
+    padding: 12px;
+  }
+
+  .navbar-sidebar .navbar__item {
+    display: block;
+    padding: 0;
+  }
+
+  .navbar-sidebar .navbar__link {
+    display: flex;
+    align-items: center;
+    min-height: 46px;
+    padding: 0 14px;
+    border-radius: 12px;
+    background: transparent;
+  }
+
+  .navbar-sidebar .navbar__link:hover,
+  .navbar-sidebar .navbar__link--active {
+    background: rgba(183, 166, 255, 0.08);
+  }
+
+  .navbar-sidebar .navbar__search {
+    display: block;
+    margin: 0 0 12px;
+  }
+
+  .navbar-sidebar .navbar__search-input {
+    width: 100%;
+    height: 42px;
+  }
+
+  .navbar-sidebar .ask-ai-nav {
+    display: block;
+    margin: 12px 0 0;
+  }
+
+  .navbar-sidebar .ask-ai-nav__button {
+    width: 100%;
+    justify-content: center;
+    height: 42px;
+    border-radius: 12px;
+  }
+
+  .navbar__items--right > .ask-ai-nav {
+    display: none;
+  }
+
   .theme-doc-sidebar-menu {
     padding: 14px 12px 18px;
+  }
+
+  .theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible,
+  .theme-doc-sidebar-item-link-level-1 > .menu__link {
+    min-height: 44px;
+    font-size: 14px;
+  }
+
+  .menu__list .menu__list .menu__link {
+    min-height: 38px;
+    font-size: 13px;
   }
 
   .main-wrapper .container {

@@ -4,11 +4,11 @@ Payment Widget supports the main payment scenarios required for customer-facing 
 
 ## In this section
 
-- [**Purchase processing**](./pp-purchase) — one-step purchases with immediate debiting.
-- [**Authorisation hold**](./pp-purchase-auth) — the first step of a two-step purchase flow.
-- [**COF purchase registration**](./pp-recurring) — registering payment credentials for future recurring debits.
-- [**Payment instrument verification**](./pp-account-verification) — zero-amount or non-zero validation flows.
-- [**Tokenization**](./pp-token) — collecting payment data and creating a reusable token.
+- [**Purchase processing**](./pp-purchase.md) — one-step purchases with immediate debiting.
+- [**Authorisation hold**](./pp-purchase-auth.md) — the first step of a two-step purchase flow.
+- [**COF purchase registration**](./pp-recurring.md) — registering payment credentials for future recurring debits.
+- [**Payment instrument verification**](./pp-account-verification.md) — zero-amount or non-zero validation flows.
+- [**Tokenization**](./pp-token.md) — collecting payment data and creating a reusable token.
 
 ## Scope
 

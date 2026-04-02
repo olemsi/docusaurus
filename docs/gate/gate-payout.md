@@ -11,9 +11,9 @@ Gate supports payouts from merchant to customer for the payment methods and prov
 
 ## Related materials
 
-- [**Using tokens**](./gate-token) — token-based payout scenarios.
-- [**Request format**](./gate-requests-format) — common Gate request structure.
-- [**API Description**](./gate-sts-protocol) — technical reference for request, response, and callback formats.
+- [**Using tokens**](./gate-token.md) — token-based payout scenarios.
+- [**Request format**](./gate-requests-format.md) — common Gate request structure.
+- [**API Description**](./gate-sts-protocol.md) — technical reference for request, response, and callback formats.
 
 ## Scope
 

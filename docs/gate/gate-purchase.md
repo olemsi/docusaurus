@@ -4,8 +4,8 @@ Gate supports both one-step and two-step one-time purchase flows. These flows ar
 
 ## In this section
 
-- [**One-step purchase**](./gate-payment-sale) — immediate debiting of customer funds.
-- [**Two-step purchase**](./gate-payment-auth) — authorisation hold followed by capture or cancellation.
+- [**One-step purchase**](./gate-payment-sale.md) — immediate debiting of customer funds.
+- [**Two-step purchase**](./gate-payment-auth.md) — authorisation hold followed by capture or cancellation.
 
 ## Scope
 

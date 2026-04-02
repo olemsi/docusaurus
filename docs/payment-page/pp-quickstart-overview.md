@@ -30,7 +30,7 @@ If you do not have them yet, ask your Platform account manager or technical supp
 
 ## If you only need the first opening request
 
-Go straight to [**Basic implementation**](./pp-quickstart-basic-implementation). That page shows:
+Go straight to [**Basic implementation**](./pp-quickstart-basic-implementation.md). That page shows:
 
 - the Payment Widget base URL
 - the exact parameter set
@@ -38,14 +38,14 @@ Go straight to [**Basic implementation**](./pp-quickstart-basic-implementation).
 - how to open the form
 - how to receive the callback
 
-If you only need the signing part, go straight to [**Signature generation**](./pp-signature-generation).
+If you only need the signing part, go straight to [**Signature generation**](./pp-signature-generation.md).
 
 ## Best path for first integration
 
-1. Read [**Brief theory**](./pp-quickstart-theory) if you need the architecture in one page.
-2. Read [**Signature generation**](./pp-signature-generation) if signing is the only missing piece.
-3. Go straight to [**Basic implementation**](./pp-quickstart-basic-implementation) for copy-paste code.
-4. After the first successful payment, continue with [**UX configuration**](./pp-ux-configuration) and [**Parameters**](./pp-parameters).
+1. Read [**Brief theory**](./pp-quickstart-theory.md) if you need the architecture in one page.
+2. Read [**Signature generation**](./pp-signature-generation.md) if signing is the only missing piece.
+3. Go straight to [**Basic implementation**](./pp-quickstart-basic-implementation.md) for copy-paste code.
+4. After the first successful payment, continue with [**UX configuration**](./pp-ux-configuration.md) and [**Payment Widget API description**](./pp-api.md).
 
 ## Recommended implementation style
 

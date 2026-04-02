@@ -4,9 +4,9 @@ This section covers the technical data required to open Payment Widget and proce
 
 ## In this section
 
-- [**Parameters for opening the payment form**](./pp-parameters) — request parameters and their purpose.
-- [**Data formats**](./pp-formats) — encoding and general format rules.
-- [**Test cards**](./pp-testcards) — test data for checkout scenarios.
+- **Parameters for opening the payment form** — request parameters, formats, and related technical reference.
+- [**Data formats**](./pp-formats.md) — encoding and general format rules.
+- [**Test cards**](./pp-testcards.md) — test data for checkout scenarios.
 
 ## Scope
 

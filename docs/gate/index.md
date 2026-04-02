@@ -13,28 +13,28 @@ Processing card payments through Host-to-host API requires your side of the paym
 
 ## Start here
 
-- [**Quickstart**](./gate-quickstart) — shortest path to a first working Host-to-host API integration.
-- [**Basic implementation**](./gate-quickstart-basic-implementation) — request signing, purchase request, response handling, and callbacks with copy-paste code.
-- [**Integration overview**](./gate-how-to-integrate) — when Host-to-host API is the right interface and how the architecture works.
+- [**Quickstart**](./gate-quickstart.md) — shortest path to a first working Host-to-host API integration.
+- [**Basic implementation**](./gate-quickstart-basic-implementation.md) — request signing, purchase request, response handling, and callbacks with copy-paste code.
+- [**Integration overview**](./gate-how-to-integrate.md) — when Host-to-host API is the right interface and how the architecture works.
 
 ## Integration guides
 
-- [**Section map**](./gate-integration-about) — overview of the Host-to-host API documentation tree.
-- [**Interaction concepts**](./gate-interaction-organisation) — roles of your web service and the platform.
-- [**Request format**](./gate-requests-format) — how to structure POST requests to the API.
-- [**Signature generation**](./signature-gate) — how to sign requests and verify callbacks.
+- [**Section map**](./gate-integration-about.md) — overview of the Host-to-host API documentation tree.
+- [**Interaction concepts**](./gate-interaction-organisation.md) — roles of your web service and the platform.
+- [**Request format**](./gate-requests-format.md) — how to structure POST requests to the API.
+- [**Signature generation**](./signature-gate.md) — how to sign requests and verify callbacks.
 
 ## Payment flows
 
-- [**One-time purchases**](./gate-purchase) — one-step and two-step customer-to-merchant payments.
-- [**Payment link purchases**](./gate-invoice) — Payment Widget-backed purchases initiated by a link.
-- [**Credential-on-file (COF) purchases**](./gate--payments-on-saved-data) — recurring and saved-credential flows.
-- [**Purchase refunds**](./gate-refund) — full and partial refunds.
-- [**Payouts**](./gate-payout) — merchant-to-customer transfers.
-- [**Payment instrument verification**](./gate-account-verification) — validating cards and other instruments.
+- [**One-time purchases**](./gate-purchase.md) — one-step and two-step customer-to-merchant payments.
+- [**Payment link purchases**](./gate-invoice.md) — Payment Widget-backed purchases initiated by a link.
+- [**Credential-on-file (COF) purchases**](./gate--payments-on-saved-data.md) — recurring and saved-credential flows.
+- [**Purchase refunds**](./gate-refund.md) — full and partial refunds.
+- [**Payouts**](./gate-payout.md) — merchant-to-customer transfers.
+- [**Payment instrument verification**](./gate-account-verification.md) — validating cards and other instruments.
 
 ## Advanced and reference
 
-- [**Auxiliary procedures**](./gate-procedures) — 3-D Secure, clarification, AVS, conversion, and other required procedures.
-- [**Additional capabilities**](./gate) — payment status requests, cascading, receipts, tokens, and related capabilities.
-- [**API Description**](./gate-sts-protocol) — technical reference and endpoint details.
+- [**Auxiliary procedures**](./gate-procedures.md) — 3-D Secure, clarification, AVS, conversion, and other required procedures.
+- **Additional capabilities** — payment status requests, cascading, receipts, tokens, and related capabilities.
+- [**API Description**](./gate-sts-protocol.md) — technical reference and endpoint details.

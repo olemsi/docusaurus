@@ -4,20 +4,20 @@ Gate includes optional capabilities that help monitor payments, improve acceptan
 
 ## Monitoring payment processing
 
-- [**Payment status overview**](./gate-payment-status-request-overview) — retrieving current payment status on demand.
+- [**Payment status overview**](./gate-payment-status-request-overview.md) — retrieving current payment status on demand.
 
 ## Boosting payment acceptance rates
 
-- [**Cascading option**](./gate-cascading-cards) — retrying payment processing through an alternative provider when supported.
+- [**Cascading option**](./gate-cascading-cards.md) — retrying payment processing through an alternative provider when supported.
 
 ## Using payment data
 
-- [**Using tokens**](./gate-token) — processing by stored payment credentials.
-- [**General information on data migration**](./gate-data-migration-overview) — migrating saved payment data and recurring records.
+- [**Using tokens**](./gate-token.md) — processing by stored payment credentials.
+- [**General information on data migration**](./gate-data-migration-overview.md) — migrating saved payment data and recurring records.
 
 ## Informing customers
 
-- [**Receipts overview**](./gate-receipts-overview) — sending customer notifications and receipts.
+- [**Receipts overview**](./gate-receipts-overview.md) — sending customer notifications and receipts.
 
 ## Scope
 

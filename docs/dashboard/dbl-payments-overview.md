@@ -4,11 +4,11 @@ Dashboard lets you monitor payment processing across consolidated and specialise
 
 ## In this section
 
-- [**Monitoring payment processing**](./dbl-payments-control) — working with payment registers, filters, and payment detail tabs.
-- [**Performing purchases**](./dbl-payments-purchases-overview) — payment links, MO/TO payments, and two-step purchase operations.
-- [**Issuing refunds**](./dbl-payments-refunds) — full and partial refunds for supported purchase types.
-- [**Performing payouts**](./dbl-payments-payouts-overview) — single and batch payouts in Dashboard.
-- [**Managing subscriptions**](./dbl-payments-subscriptions-overview) — creating, updating, retrying, and cancelling recurring debits.
+- [**Monitoring payment processing**](./dbl-payments-control.md) — working with payment registers, filters, and payment detail tabs.
+- [**Performing purchases**](./dbl-payments-purchases-overview.md) — payment links, MO/TO payments, and two-step purchase operations.
+- [**Issuing refunds**](./dbl-payments-refunds.md) — full and partial refunds for supported purchase types.
+- [**Performing payouts**](./dbl-payments-payouts-overview.md) — single and batch payouts in Dashboard.
+- [**Managing subscriptions**](./dbl-payments-subscriptions-overview.md) — creating, updating, retrying, and cancelling recurring debits.
 
 ## Scope
 

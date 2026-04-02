@@ -41,7 +41,7 @@ The most important engineering rules are:
 
 ## What to read next
 
-- [Quickstart](./gate-quickstart)
-- [Basic implementation](./gate-quickstart-basic-implementation)
-- [Request format](./gate-requests-format)
-- [Signature generation](./signature-gate)
+- [Quickstart](./gate-quickstart.md)
+- [Basic implementation](./gate-quickstart-basic-implementation.md)
+- [Request format](./gate-requests-format.md)
+- [Signature generation](./signature-gate.md)

@@ -62,7 +62,7 @@ No matter how you open Payment Widget, these rules do not change:
 
 ## What to read next
 
-- [Quick start](./pp-quickstart-overview)
-- [Basic implementation](./pp-quickstart-basic-implementation)
-- [Opening in a modal via JS library](./pp-opening-modal-via-javascript-library)
-- [Opening in an iframe via JS library](./pp-opening-iframe-via-javascript-library)
+- [Quick start](./pp-quickstart-overview.md)
+- [Basic implementation](./pp-quickstart-basic-implementation.md)
+- [Opening in a modal via JS library](./pp-opening-modal-via-javascript-library.md)
+- [Opening in an iframe via JS library](./pp-opening-iframe-via-javascript-library.md)

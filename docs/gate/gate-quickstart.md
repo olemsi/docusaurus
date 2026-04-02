@@ -31,7 +31,7 @@ If you do not have them yet, the next action is simple: ask your Platform accoun
 
 ## If you only need the first request
 
-Go straight to [**Basic implementation**](./gate-quickstart-basic-implementation). That page shows:
+Go straight to [**Basic implementation**](./gate-quickstart-basic-implementation.md). That page shows:
 
 - the exact Gate URL
 - the exact JSON payload shape
@@ -40,9 +40,9 @@ Go straight to [**Basic implementation**](./gate-quickstart-basic-implementation
 
 ## Best path for first integration
 
-1. Read [**Integration overview**](./gate-how-to-integrate) if you need the architecture in one page.
-2. Go straight to [**Basic implementation**](./gate-quickstart-basic-implementation) for copy-paste code.
-3. After the first successful request, continue with [**One-time purchases**](./gate-purchase), [**Request format**](./gate-requests-format), and [**Signature generation**](./signature-gate).
+1. Read [**Integration overview**](./gate-how-to-integrate.md) if you need the architecture in one page.
+2. Go straight to [**Basic implementation**](./gate-quickstart-basic-implementation.md) for copy-paste code.
+3. After the first successful request, continue with [**One-time purchases**](./gate-purchase.md), [**Request format**](./gate-requests-format.md), and [**Signature generation**](./signature-gate.md).
 
 ## Recommended implementation style
 

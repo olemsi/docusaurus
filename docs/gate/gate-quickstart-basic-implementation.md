@@ -439,7 +439,7 @@ def gate_callback():
 
 ## What to read next
 
-- [Quickstart](./gate-quickstart)
-- [One-time purchases](./gate-purchase)
-- [Request format](./gate-requests-format)
-- [Signature generation](./signature-gate)
+- [Quickstart](./gate-quickstart.md)
+- [One-time purchases](./gate-purchase.md)
+- [Request format](./gate-requests-format.md)
+- [Signature generation](./signature-gate.md)

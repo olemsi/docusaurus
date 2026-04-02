@@ -4,10 +4,10 @@ Payment Widget can be opened in different UI modes and can return customers to y
 
 ## In this section
 
-- [**Opening in new tab**](./pp-opening-html-overview) — opening Payment Widget as a separate browser page.
-- [**Opening in modal**](./pp-opening-modal-overview) — rendering the form over the current web-service page.
-- [**Opening in iframe**](./pp-opening-iframe-overview) — embedding the form into the merchant page.
-- [**Redirect options**](./pp) — preliminary, intermediate, and final redirection scenarios.
+- [**Opening in new tab**](./pp-opening-html-overview.md) — opening Payment Widget as a separate browser page.
+- [**Opening in modal**](./pp-opening-modal-overview.md) — rendering the form over the current web-service page.
+- [**Opening in iframe**](./pp-opening-iframe-overview.md) — embedding the form into the merchant page.
+- [**Redirect options**](./pp.md) — preliminary, intermediate, and final redirection scenarios.
 
 ## Scope
 

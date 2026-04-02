@@ -4,11 +4,11 @@ Dashboard combines operational, financial, analytical, and administrative tools.
 
 ## In this section
 
-- [**Main facts and key features**](./dbl-overview-main-use) — what Dashboard is for and which core tasks it supports.
-- [**How to access**](./dbl-overview-access) — access model, permissions, and two-factor authentication basics.
-- [**Capabilities**](./dbl-roles-overview-capabilities) — major capability groups supported in Dashboard.
-- [**Access roles**](./dbl-roles-overview-roles) — default roles and the typical responsibilities associated with them.
-- [**Access rights**](./dbl-roles-overview-rights) — permissions by section and operation.
+- [**Main facts and key features**](./dbl-overview-main-use.md) — what Dashboard is for and which core tasks it supports.
+- [**How to access**](./dbl-overview-access.md) — access model, permissions, and two-factor authentication basics.
+- [**Capabilities**](./dbl-roles-overview-capabilities.md) — major capability groups supported in Dashboard.
+- [**Access roles**](./dbl-roles-overview-roles.md) — default roles and the typical responsibilities associated with them.
+- [**Access rights**](./dbl-roles-overview-rights.md) — permissions by section and operation.
 
 ## Summary
 

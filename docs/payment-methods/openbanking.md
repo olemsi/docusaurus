@@ -24,24 +24,24 @@ Compared with card payments, the main integration differences are:
 
 The country-specific method pages are:
 
-- [Austria](./austria)
-- [Belgium](./belgium)
-- [Estonia](./estonia)
-- [Finland](./finland)
-- [France](./france)
-- [Germany](./germany)
-- [Greece](./greece)
-- [Hungary](./hungary)
-- [Latvia](./latvia)
-- [Lithuania](./lithuania)
-- [Netherlands](./netherlands)
-- [Norway](./norway)
-- [Poland](./poland)
-- [Portugal](./portugal)
-- [Romania](./romania)
-- [Spain](./spain)
-- [Sweden](./sweden)
-- [UK](./uk)
+- [Austria](./austria.md)
+- [Belgium](./belgium.md)
+- [Estonia](./estonia.md)
+- [Finland](./finland.md)
+- [France](./france.md)
+- [Germany](./germany.md)
+- [Greece](./greece.md)
+- [Hungary](./hungary.md)
+- [Latvia](./latvia.md)
+- [Lithuania](./lithuania.md)
+- [Netherlands](./netherlands.md)
+- [Norway](./norway.md)
+- [Poland](./poland.md)
+- [Portugal](./portugal.md)
+- [Romania](./romania.md)
+- [Spain](./spain.md)
+- [Sweden](./sweden.md)
+- [UK](./uk.md)
 
 ## What you usually need before integration
 
@@ -77,9 +77,9 @@ Because the customer leaves your interface during the bank step, redirect handli
 
 Start with the country page you actually need. For example:
 
-- [Germany](./germany)
-- [Netherlands](./netherlands)
-- [Poland](./poland)
+- [Germany](./germany.md)
+- [Netherlands](./netherlands.md)
+- [Poland](./poland.md)
 
 Then move to your integration interface:
 

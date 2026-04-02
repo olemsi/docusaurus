@@ -4,9 +4,9 @@ Gate supports purchases that use previously saved payment credentials, including
 
 ## In this section
 
-- [**COF on platform side**](./gate-cof-gate-side-overview) — recurring debits performed on the platform side.
-- [**Registering COF purchase**](./gate-payment-recurring-registration) — initial registration of stored credentials for future debits.
-- [**Managing COF debiting**](./gate-payment-recurring-manage) — retrieving series information, updating settings, and cancelling debits.
+- [**COF on platform side**](./gate-cof-gate-side-overview.md) — recurring debits performed on the platform side.
+- [**Registering COF purchase**](./gate-payment-recurring-registration.md) — initial registration of stored credentials for future debits.
+- [**Managing COF debiting**](./gate-payment-recurring-manage.md) — retrieving series information, updating settings, and cancelling debits.
 
 ## Scope
 

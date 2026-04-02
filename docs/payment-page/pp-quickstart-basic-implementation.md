@@ -73,7 +73,7 @@ What matters:
 - generate `signature` last
 - generate the signature on the server side only
 
-If you want the signing algorithm in isolation, go to [**Signature generation**](./pp-signature-generation).
+If you want the signing algorithm in isolation, go to [**Signature generation**](./pp-signature-generation.md).
 
 ## Step 1. Generate a signed Payment Widget URL
 
@@ -372,7 +372,7 @@ For the first end-to-end test, validate only the baseline flow:
 
 ## What to read next
 
-- [**UX configuration**](./pp-ux-configuration) — if you want modal or iframe checkout
-- [**Parameters for opening the payment form**](./pp-parameters) — if you need optional parameters
-- [**Callback format**](./pp-interaction) — if you need the full response structure
-- [**Test cards**](./pp-testcards) — for broader payment testing
+- [**UX configuration**](./pp-ux-configuration.md) — if you want modal or iframe checkout
+- [**Payment Widget API description**](./pp-api.md) — if you need optional parameters, formats, and test data
+- [**Callback format**](./pp-interaction.md) — if you need the full response structure
+- [**Test cards**](./pp-testcards.md) — for broader payment testing
