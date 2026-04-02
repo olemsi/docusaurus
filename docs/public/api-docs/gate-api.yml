@@ -3,7 +3,7 @@ x-stoplight:
   id: n7f80q7qbdce3
 info:
   title: Host-to-host API
-  description: "Server-to-server API for merchants that need direct control over payment creation, callbacks, refunds, payouts, and payment status checks.\r\n\r\n**Base URL**\r\n\r\n`https://api.platform.dev`\r\n\r\n**You need before start**\r\n\r\n- `project_id`\r\n- `secret_key`\r\n- backend callback URL\r\n- server-side signature generation\r\n\r\n**Start here**\r\n\r\n- [Quickstart](/gate/gate-quickstart)\r\n- [Basic implementation](/gate/gate-quickstart-basic-implementation)\r\n- [Signature generation](/gate/signature-gate)\r\n\r\n**First endpoint to try**\r\n\r\n`POST /v2/payment/card/sale`\r\n\r\n**Important rule**\r\n\r\nBuild the full payload first, generate `general.signature` last, and treat callbacks as the source of the final payment result."
+  description: "Server-to-server API for merchants that need direct control over payment creation, callbacks, refunds, payouts, and payment status checks.\r\n\r\n**Base URL**\r\n\r\n`https://api.platform.dev`\r\n\r\n**You need before start**\r\n\r\n- `project_id`\r\n- `secret_key`\r\n- backend callback URL\r\n- server-side signature generation\r\n\r\n**Start here**\r\n\r\n- [Quickstart](../gate/gate-quickstart/)\r\n- [Basic implementation](../gate/gate-quickstart-basic-implementation/)\r\n- [Signature generation](../gate/signature-gate/)\r\n\r\n**First endpoint to try**\r\n\r\n`POST /v2/payment/card/sale`\r\n\r\n**Important rule**\r\n\r\nBuild the full payload first, generate `general.signature` last, and treat callbacks as the source of the final payment result."
   version: 3.28.0
 servers:
   - url: 'https://api.<host_name>'

@@ -2,7 +2,7 @@
   "openapi": "3.0.2",
   "info": {
     "title": "Host-to-host API",
-    "description": "Server-to-server API for merchants that need direct control over payment creation, callbacks, refunds, payouts, and payment status checks.\n\n**Base URL**\n\n`https://api.platform.dev`\n\n**You need before start**\n\n- `project_id`\n- `secret_key`\n- backend callback URL\n- server-side signature generation\n\n**Start here**\n\n- [Quickstart](/gate/gate-quickstart)\n- [Basic implementation](/gate/gate-quickstart-basic-implementation)\n- [Signature generation](/gate/signature-gate)\n\n**First endpoint to try**\n\n`POST /v2/payment/card/sale`\n\n**Important rule**\n\nBuild the full payload first, generate `general.signature` last, and treat callbacks as the source of the final payment result.",
+    "description": "Server-to-server API for merchants that need direct control over payment creation, callbacks, refunds, payouts, and payment status checks.\n\n**Base URL**\n\n`https://api.platform.dev`\n\n**You need before start**\n\n- `project_id`\n- `secret_key`\n- backend callback URL\n- server-side signature generation\n\n**Start here**\n\n- [Quickstart](../gate/gate-quickstart/)\n- [Basic implementation](../gate/gate-quickstart-basic-implementation/)\n- [Signature generation](../gate/signature-gate/)\n\n**First endpoint to try**\n\n`POST /v2/payment/card/sale`\n\n**Important rule**\n\nBuild the full payload first, generate `general.signature` last, and treat callbacks as the source of the final payment result.",
     "version": "3.0.4"
   },
   "servers": [

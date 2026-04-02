@@ -74,21 +74,56 @@ function HomePage() {
               </p>
             </div>
 
-            <div className={styles.heroPanel}>
-              <div className={styles.panelHeading}>Recommended start</div>
-              <div className={styles.panelStack}>
-                <Link to="/payment-page/pp-quickstart-overview" className={`${styles.panelRow} ${styles.panelRowPrimary}`}>
-                  <div>
-                    <div className={styles.panelKicker}>Recommended for most merchants</div>
-                    <div className={styles.panelTitle}>Payment Widget quickstart</div>
-                  </div>
-                  <span>Open</span>
-                </Link>
+            <div className={styles.widgetShell}>
+              <div className={styles.widgetChrome}>
+                <div className={styles.widgetDots}>
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <div className={styles.widgetBadge}>Payment Widget</div>
               </div>
-              <div className={styles.panelMeta}>
-                <span>Need backend control instead?</span>
-                <div className={styles.panelLinks}>
-                  <Link to="/gate/gate-quickstart">Host-to-host API quickstart</Link>
+              <div className={styles.widgetCard}>
+                <div className={styles.widgetHeader}>
+                  <div>
+                    <div className={styles.widgetLabel}>Pay</div>
+                    <div className={styles.widgetAmount}>1.00 EUR</div>
+                  </div>
+                  <div className={styles.widgetLocale}>EN</div>
+                </div>
+
+                <div className={styles.widgetSection}>
+                  <div className={styles.widgetFieldLabel}>Card number</div>
+                  <div className={styles.widgetField}>4242 4242 4242 4242</div>
+                </div>
+
+                <div className={styles.widgetSplit}>
+                  <div className={styles.widgetSection}>
+                    <div className={styles.widgetFieldLabel}>Expiry date</div>
+                    <div className={styles.widgetField}>12 / 26</div>
+                  </div>
+                  <div className={styles.widgetSection}>
+                    <div className={styles.widgetFieldLabel}>CVV</div>
+                    <div className={styles.widgetField}>•••</div>
+                  </div>
+                </div>
+
+                <div className={styles.widgetSection}>
+                  <div className={styles.widgetFieldLabel}>Card holder</div>
+                  <div className={styles.widgetField}>TEST TEST</div>
+                </div>
+
+                <div className={styles.widgetCheck}>
+                  <span className={styles.widgetCheckBox} />
+                  <span>Save payment card</span>
+                </div>
+
+                <Link to="/payment-page/pp-quickstart-overview" className={styles.widgetCta}>
+                  Open Payment Widget quickstart
+                </Link>
+
+                <div className={styles.widgetLinks}>
+                  <Link to="/gate/gate-quickstart">Host-to-host quickstart</Link>
                   <Link to="/gate/signature-gate">Signature guide</Link>
                   <Link to="/api-reference/">API reference</Link>
                 </div>

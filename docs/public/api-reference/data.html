@@ -41,6 +41,9 @@
       text-decoration: none; padding: 6px 12px; border-radius: 6px;
     }
     .topbar-right a:hover { color: #ededed; background: rgba(255,255,255,0.06); }
+    .mobile-actions,
+    .mobile-drawer,
+    .mobile-backdrop { display: none; }
 
     .ask-ai-wrap { position: relative; }
     .ask-ai-btn {
@@ -77,6 +80,99 @@
     @keyframes fadeInOut { 0% { opacity:0; transform:translateY(-4px); } 10% { opacity:1; transform:translateY(0); } 80% { opacity:1; } 100% { opacity:0; } }
 
     rapi-doc { height: calc(100vh - 56px); }
+
+    @media (max-width: 768px) {
+      .topbar {
+        padding: 0 12px;
+        gap: 10px;
+      }
+      .topbar-left,
+      .topbar-right {
+        gap: 10px;
+      }
+      .topbar-nav {
+        display: none;
+      }
+      .topbar-brand {
+        font-size: 14px;
+      }
+      .topbar-right a {
+        display: none;
+      }
+      .ask-ai-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+      }
+      .mobile-actions {
+        display: flex;
+        gap: 10px;
+        padding: 12px;
+        border-bottom: 1px solid #1a1a1a;
+        background: rgba(0, 0, 0, 0.86);
+      }
+      .mobile-actions button,
+      .mobile-actions a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 38px;
+        padding: 0 14px;
+        border: 1px solid rgba(183, 166, 255, 0.14);
+        border-radius: 11px;
+        background: rgba(255,255,255,0.03);
+        color: #e6dcff;
+        font: inherit;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .mobile-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.45);
+        z-index: 190;
+      }
+      .mobile-drawer {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-height: 72vh;
+        padding: 18px 16px 22px;
+        border-top: 1px solid rgba(183, 166, 255, 0.14);
+        border-top-left-radius: 18px;
+        border-top-right-radius: 18px;
+        background: #09090b;
+        overflow-y: auto;
+        z-index: 200;
+      }
+      .mobile-drawer.open,
+      .mobile-backdrop.open {
+        display: block;
+      }
+      .mobile-drawer h3 {
+        margin-bottom: 12px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+      .mobile-drawer-section + .mobile-drawer-section {
+        margin-top: 18px;
+      }
+      .mobile-drawer a {
+        display: block;
+        padding: 10px 0;
+        color: #c8baff;
+        font-size: 14px;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+      }
+      .mobile-drawer a:last-child {
+        border-bottom: 0;
+      }
+      rapi-doc { height: calc(100vh - 106px); }
+    }
   </style>
 </head>
 <body>
@@ -106,9 +202,46 @@
       <a href="../">← Back to Docs</a>
     </div>
   </nav>
+  <div class="mobile-actions">
+    <button type="button" onclick="toggleDrawer('docsDrawer')">Docs</button>
+    <button type="button" onclick="toggleDrawer('endpointsDrawer')">Endpoints</button>
+    <a href="../">Back to Docs</a>
+  </div>
+  <div id="drawerBackdrop" class="mobile-backdrop" onclick="closeDrawers()"></div>
+  <div id="docsDrawer" class="mobile-drawer">
+    <div class="mobile-drawer-section">
+      <h3>Documentation</h3>
+      <a href="../dashboard/">Dashboard docs</a>
+      <a href="../dashboard/dbl-api-protocol/">Using Data API</a>
+      <a href="./gate.html">Open Host-to-host API reference</a>
+      <a href="./index.html">API reference hub</a>
+    </div>
+  </div>
+  <div id="endpointsDrawer" class="mobile-drawer">
+    <div class="mobile-drawer-section">
+      <h3>Endpoints</h3>
+      <div id="endpointLinks"></div>
+    </div>
+  </div>
   <div id="toast" class="ask-ai-toast" style="display:none"></div>
   <script>
+    const endpointSpecUrl = '../api-docs/data-api.json';
+
     function toggleAI() { document.getElementById('aiMenu').classList.toggle('open'); }
+    function closeDrawers() {
+      document.getElementById('drawerBackdrop').classList.remove('open');
+      document.getElementById('docsDrawer').classList.remove('open');
+      document.getElementById('endpointsDrawer').classList.remove('open');
+    }
+    function toggleDrawer(id) {
+      const drawer = document.getElementById(id);
+      const isOpen = drawer.classList.contains('open');
+      closeDrawers();
+      if (!isOpen) {
+        document.getElementById('drawerBackdrop').classList.add('open');
+        drawer.classList.add('open');
+      }
+    }
     document.addEventListener('click', (e) => {
       if (!e.target.closest('.ask-ai-wrap')) document.getElementById('aiMenu').classList.remove('open');
     });
@@ -141,9 +274,50 @@
       showToast('Copied to clipboard');
       document.getElementById('aiMenu').classList.remove('open');
     }
+    function endpointAnchor(method, path) {
+      return `#${method.toLowerCase()}-${path}`;
+    }
+    async function buildEndpointLinks() {
+      try {
+        const spec = await fetch(endpointSpecUrl).then((r) => r.json());
+        const container = document.getElementById('endpointLinks');
+        const items = [];
+        Object.entries(spec.paths || {}).forEach(([pathKey, methods]) => {
+          Object.keys(methods).forEach((method) => {
+            items.push({ method: method.toUpperCase(), path: pathKey });
+          });
+        });
+        container.innerHTML = items.slice(0, 30).map((item) =>
+          `<a href="${endpointAnchor(item.method, item.path)}" onclick="closeDrawers()">${item.method} ${item.path}</a>`
+        ).join('');
+      } catch (error) {
+        document.getElementById('endpointLinks').innerHTML = '<a href="#content" onclick="closeDrawers()">Open spec content</a>';
+      }
+    }
+    function styleRapiDoc() {
+      const el = document.querySelector('rapi-doc');
+      if (!el) return;
+      const apply = () => {
+        const shadow = el.shadowRoot;
+        if (!shadow || shadow.getElementById('platform-mobile-style')) return;
+        const style = document.createElement('style');
+        style.id = 'platform-mobile-style';
+        style.textContent = `
+          a, a:visited { color: #c8baff !important; }
+          .nav-bar-tag-and-paths, .nav-bar-info { scrollbar-color: #2a2a30 #111; }
+        `;
+        shadow.appendChild(style);
+      };
+      apply();
+      const observer = new MutationObserver(apply);
+      observer.observe(el, { childList: true, subtree: true });
+    }
+    buildEndpointLinks();
+    styleRapiDoc();
   </script>
 
   <rapi-doc
+    id="content"
     spec-url="../api-docs/data-api.json"
     render-style="focused"
     show-header="false"
